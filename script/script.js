@@ -1,6 +1,18 @@
+var breakpoint = 650;
 
-
-
+$(window).resize(function() {
+    var browserWidth = $(window).width();
+    var isDisplay = $('.menu').css('display');
+    
+    if ((browserWidth >= breakpoint) && (isDisplay == 'none')){
+        $('.menu').css('display', 'inherit');
+    } else {
+       $('.menu').css('display', 'none'); 
+    }
+    
+    
+    
+ });
 
 
 $(document).ready(function(e){
@@ -8,12 +20,7 @@ $(document).ready(function(e){
     $('#pull').click(function () {
         toggleMenu();
     });
-    
-    
-    
-    
-    
-    
+   
 });
 
 
