@@ -76,6 +76,9 @@
     Works off the assumption of a 1.5 line height @ 20px. Again, change	as necessary.
 \*------------------------------------------- */
 
+html {
+	font: 100%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+}
 
 p, .p, ul, ol, hr, table, form, pre,
 h1, .alpha, h2 {
@@ -107,16 +110,6 @@ hr {
 	border: none;
 	border-bottom: 1px solid rgba(0,0,0,.1);
 	margin-top: -1px;
-}
-
-
-/* ------------------------------------------ *\
-    MAIN
-\*------------------------------------------- */
-
-
-html {
-	font: 100%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
 @media screen and (max-width: 720px) {
@@ -174,9 +167,10 @@ nav li {
     #toggle-menu ul {
         width: 40px;
     }
-    #toggle-menu li{
+    #toggle-menu li {
         float: right;
-        width:50px;
+        width: 50px;
+        background-color: #fff;
     }
     .menu {
         display: none;   
@@ -191,15 +185,22 @@ nav li {
         display: list-item;
         margin-top: 50px;
         width: 100%;   
-        height: auto; 
+        height: auto;
+        background-color: #27afef;
     }
-    nav li {  
+    .menu li {  
         width: 50%;  
         float: left;  
-        position: relative;  
-    }  
-    nav a {   
-        width: 100%;   
+        position: relative;
+        min-height: 40px;
+        background-color: #27afef;
+        text-align: center;
+        padding-top: 10px
+    }
+    .menu a {   
+        width: 100%;
+        padding: 0px;
+        color: #fff; 
     }  
 
 }
@@ -214,7 +215,6 @@ nav li {
 }
 
 
-
 /* ------------------------------------------ *\
     Content
 \*------------------------------------------- */
@@ -224,6 +224,7 @@ nav li {
     text-align: center;
     color: #333;
     overflow: visible;
+    margin-bottom: 30px;
 }
 
 
@@ -240,7 +241,6 @@ nav li {
     background-color: #27afef;
     padding: 10px 20px;
 }
-
 
 
 /* ------------------------------------------ *\
@@ -267,6 +267,3 @@ footer li {
     display: inline-block;
     float:right; 
 }
-
-
-
