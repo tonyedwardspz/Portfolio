@@ -1,18 +1,5 @@
 var breakpoint = 650;
-
-$(window).resize(function() {
-    var browserWidth = $(window).width();
-    var isDisplay = $('.menu').css('display');
-    
-    if ((browserWidth >= breakpoint) && (isDisplay == 'none')){
-        $('.menu').css('display', 'inherit');
-    } else {
-       $('.menu').css('display', 'none'); 
-    }
-    
-    
-    
- });
+var resizeTimeout;
 
 
 $(document).ready(function(e){
@@ -22,6 +9,24 @@ $(document).ready(function(e){
     });
    
 });
+
+
+
+$(window).resize(function() {
+    var browserWidth = $(window).width();
+    var isDisplay = $('.menu').css('display');
+    
+    
+    // display the menu if the screen is resized when the menu is 
+    // set to 'display: none;'
+    if ((browserWidth >= breakpoint) && (isDisplay == 'none')){
+        $('.menu').css('display', 'block');
+    }    
+});
+  
+
+
+
 
 
 function toggleMenu(){
