@@ -14,7 +14,8 @@
         <script src="script/html5shiv.js"></script>
     <![endif]-->
     
-    <script type="text/javascript" src="script/jQuery-1-1.js" /></script> 
+    <script type="text/javascript" src="script/jQuery-1-1.js" /></script>
+    <script type="text/javascript" src="script/script.js" /></script>
 
 </head>
 
@@ -23,37 +24,34 @@
     <div class="container">
         <div class="grid">
             
-            <div class="header">  
+            <header class="unit full-width">  
                 
-                <div class="navigation unit">
-
-                    <ul class="nav">
-                        <li><a href="#" title="">Home</a></li>
-                        <li><a href="#" title="">About</a></li>
-                        <li><a href="#" title="">Portfolio</a></li>
-                        <li><a href="#" title="">Blog</a></li>
-                        <li><a href="#" title="">Contact</a></li>
+                <nav>
+                    <ul class="toggle-menu">
+                        <li><a href="#" id="pull"><img src="images/nav-icon.png" /></a></li>
                     </ul>
+                    <ul class="menu">
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+   
+                <span><img src="images/tony_edwards.png" alt="Tony Edwards Web App Developer"></a></span>
 
-                </div>
-                
-                <div class="beta unit">
-                
-                    <p>Purely Web Design</p>
-                
-                </div>
-
-            </div>
+            </header>
             
             <div class="content">
                 
-                <div class="unit full-width">
+                <div class="unit full-width in-your-face">
                 
                     <h1>Hey, I'm Tony</h1>
                     
                     <p>I have a passion for creating interesting things that use the internet.</p>
                     <p>I study Web Application Development at Plymouth University.</p>
-                    <p>Work with me</p>
+                    <span class="button gamma">Work with me</span>
                 
                 </div>
                 
@@ -85,7 +83,7 @@
         </div>   
     </div>
 
-    <div class="footer">
+    <footer>
         <div class="container">
             
             <span id="footer-text">Get in touch</span>
@@ -98,7 +96,7 @@
             </ul>
             
         </div>
-    </div>
+    </footer>
 
 </body>
 </html>
