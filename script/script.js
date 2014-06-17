@@ -7,7 +7,24 @@ $(document).ready(function(e){
     $('#pull').click(function () {
         toggleMenu();
     });
+    
+    // change the default psuedo classes for the main 
+    // navigation on smaller screens
+//    if ($(window).width() < breakpoint) {
+//        $('.menu').removeClass('force-darkgrey');
+//        $('.menu').addClass('force-white');
+//        
+//    } 
+//    if ($(window).width() >= breakpoint) {
+//        $('.menu').removeClass('force-white');
+//        $('.menu').addClass('force-darkgrey');
+//        
+//    }
    
+    
+    
+    
+    
 });
 
 $(window).resize(function() {
@@ -16,7 +33,7 @@ $(window).resize(function() {
     // Remove any attached styles to prevent
     // missing navigation on window resize.
     if (browserWidth <= breakpoint) {
-        $('.menu').removeAttr("style")
+        $('.menu').removeAttr('style');
     }
 });
 
