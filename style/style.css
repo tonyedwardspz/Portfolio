@@ -48,8 +48,10 @@
 	margin-left: 3%;
 	margin-right: -.25em;
 	/* Clearfix */
+/*
 	overflow: hidden;
 	*overflow: visible;
+*/
 }
 
 .full-width { width: 97%;}
@@ -308,6 +310,10 @@ nav li {
     margin-bottom: 30px;
 }
 
+.content-block {
+    margin-bottom: 1.5em;
+}
+
 
 /* ------------------------------------------ *\
     ELEMENT STYLINGS
@@ -329,6 +335,10 @@ nav li {
 
 .button:hover {   
     background-color: #2ecc71;
+}
+
+.breadcrumbs {
+    
 }
 
 
@@ -356,3 +366,4 @@ footer li {
     display: inline-block;
     float:right; 
 }
+
