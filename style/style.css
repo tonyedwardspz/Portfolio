@@ -1,4 +1,14 @@
 /*-----------------------------------*\
+    
+    TODO
+
+    - add css to handle menu toggle fallback
+
+\*-----------------------------------*/
+
+
+
+/*-----------------------------------*\
     RESET
 \*-----------------------------------*/
 
@@ -156,6 +166,27 @@ a:active {
     color: #fff;
 }
 
+.seperator{
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 20px;
+
+}
+
+.seperatorRight {
+    float: right;
+    height: 8px;
+    width: 8px;
+    background-color: #dbdbdb;
+    margin-top: -8px;
+}
+
+.hover-margin {
+    margin:2px;
+}
+
 
 /* ------------------------------------------ *\
     HEADER & NAVIGATION
@@ -180,7 +211,8 @@ nav {
 }
 
 nav a{
-    padding: 10px 15px;   
+    padding: 10px 15px;
+    color: #555;
 }
 
 nav ul {
