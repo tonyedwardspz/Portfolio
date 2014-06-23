@@ -59,7 +59,7 @@
 .one-of-two { width: 47%; }
 
 .one-of-three { width: 30.36%; }
-.two-of-three { width: 63.666666666%; }
+.two-of-three { width: 62.666666666%; }
 
 .one-of-four { width: 22.05%; }
 .three-of-four { width: 72%; }
@@ -103,6 +103,7 @@ h1, .alpha {
 	font-size: 3rem;
 	font-weight: 700;
 	line-height: 1;
+    margin-top: 20px;
 }
 
 h2, .beta {
@@ -125,7 +126,15 @@ hr {
 }
 
 @media screen and (max-width: 720px) {
-	
+	html {
+        font: 90%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+    }
+    
+    h1, .alpha {
+	font-size: 30px;
+	font-size: 1.5rem;
+}
+
 }
 
 
@@ -280,6 +289,7 @@ nav li {
         width: 100%;   
         height: auto;
         background-color: #27afef;
+        z-index: 10;
     }
     .menu li {  
         width: 50%;  
@@ -298,6 +308,7 @@ nav li {
 }
 
 
+/*
 @media screen and (min-width: 721px) {
     
     .menu {
@@ -305,6 +316,7 @@ nav li {
     }
 
 }
+*/
 
 
 /* ------------------------------------------ *\
@@ -330,6 +342,62 @@ nav li {
 
 .portfolioItemText {
     
+}
+
+
+/* ------------------------------------------ *\
+    BLOG
+\*------------------------------------------- */
+
+
+.blog-archive-item {
+    margin-bottom: 40px;
+    display: inline-block;
+}
+
+.blog-archive {
+    
+}
+
+.post-meta {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.previous-post {
+    float: left;
+}
+
+.next-post {
+    float: right;
+}
+
+.blog-image {
+    padding: 15px;
+    border: 1px solid #c2c2c9;
+    margin-bottom: 20px;
+}
+
+.post-info {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+
+/* ------------------------------------------ *\
+    SIDEBAR
+\*------------------------------------------- */
+
+
+.sidebar{
+    margin: 20px 0;                             
+    padding-left: 20px;
+}
+
+@media screen and (max-width: 720px) {
+    .sidebar{
+        padding-left: 0;
+    }
 }
 
 
@@ -384,6 +452,8 @@ footer li {
     display: inline-block;
     float:right; 
 }
+
+
 
 
 

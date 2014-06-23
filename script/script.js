@@ -28,8 +28,7 @@ $(document).ready(function(e){
 });
 
 
-
-
+// detect window resize
 $(window).resize(function() {
     var browserWidth = $(window).width();
     
