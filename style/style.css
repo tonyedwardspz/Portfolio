@@ -168,6 +168,15 @@ a:active {
     color: #fff;
 }
 
+img {
+    max-width: 100%;
+}
+
+.imgOverlay {
+    
+    
+}
+
 .seperator{
     border: 0;
     height: 0;
@@ -314,6 +323,15 @@ nav li {
     margin-bottom: 1.5em;
 }
 
+.portfolioItem {
+    background-color: rgb(245, 245, 245);
+    margin-bottom: 20px;
+}
+
+.portfolioItemText {
+    
+}
+
 
 /* ------------------------------------------ *\
     ELEMENT STYLINGS
@@ -366,4 +384,6 @@ footer li {
     display: inline-block;
     float:right; 
 }
+
+
 
