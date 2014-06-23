@@ -37,7 +37,6 @@ $(window).resize(function() {
         $('.menu').removeAttr('style');
     }
     
-    toggleMenu();
     changeMenuColor();
 
 });
