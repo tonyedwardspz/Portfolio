@@ -1,12 +1,65 @@
+/*
+Theme Name:     Tony Edwards Protfolio
+Theme URI:      http://www.purelywebdesign.co.uk
+Description:    The wordpress theme for my personal portfolio website
+Version:        1.0
+Author:         Joe Casabona
+Aurhor URI:     http://www.purelywebdesign.co.uk
+*/
+
 /*-----------------------------------*\
     
     TODO
 
-    - add css to handle menu toggle fallback
+    - add css fallback for the menu toggle 
 
 \*-----------------------------------*/
 
 
+/*-----------------------------------*\
+    IMPORT
+\*-----------------------------------*/
+
+@import url("style/normalize.css");
+    
+
+/*-----------------------------------*\
+    WORDPRESS DEFAULT STYLES
+\*-----------------------------------*/
+    
+img.centered, .aligncenter, div.aligncenter{
+    display:block;
+    margin: 0 auto;
+}
+
+.alignleft{
+    float: left;
+}
+
+.alignright{
+    float: right;
+}
+
+.wp-caption {
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: #d4d4d4;
+    padding-top: 4px;
+    margin: 10px;
+}
+
+wp-caption img {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 0.85em;
+    line-height:  1.214em;
+    padding: 0 4px 5px;
+    margin: 0;
+}
 
 /*-----------------------------------*\
     RESET
@@ -379,7 +432,7 @@ nav li {
 }
 
 .post-info {
-    display: inline-block;
+    display: block;
     margin-bottom: 5px;
 }
 
@@ -392,6 +445,10 @@ nav li {
 .sidebar{
     margin: 20px 0;                             
     padding-left: 20px;
+}
+
+.sidebar-item li {
+    list-style: none;
 }
 
 @media screen and (max-width: 720px) {
@@ -457,3 +514,7 @@ footer li {
 
 
 
+
+.sidebar-item {
+    margin-bottom: 15px;
+}
