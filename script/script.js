@@ -1,27 +1,27 @@
 var breakpoint = 720;
+var $j = jQuery.noConflict();
 
-
-$(document).ready(function(e){
+$j(document).ready(function(e){
    
     // Handle the menu icon click.
-    $('#pull').click(function () {
+    $j('#pull').click(function () {
         toggleMenu();
     });
     
-     $('.social-links img').hover(function () {
+     $j('.social-links img').hover(function () {
         
-        var elmHeight = $(this).height() - 4;
-        var elmWidth = $(this).width() - 4;
+        var elmHeight = $j(this).height() - 4;
+        var elmWidth = $j(this).width() - 4;
         
-        $(this).css(
+        $j(this).css(
             'width', elmHeight + 'px',
             'height',elmWidth + 'px'
         );
-         $(this).addClass('hover-margin');
+         $j(this).addClass('hover-margin');
         
     }, function() {
-        $(this).removeAttr('style');
-        $(this).removeClass('hover-margin');
+        $j(this).removeAttr('style');
+        $j(this).removeClass('hover-margin');
         
     });
        
@@ -29,11 +29,11 @@ $(document).ready(function(e){
 
 
 // detect window resize
-$(window).resize(function() {
+$j(window).resize(function() {
     var browserWidth = $(window).width();
     
     if (browserWidth <= breakpoint) {
-        $('.menu').removeAttr('style');
+        $j('.menu').removeAttr('style');
     }
     
     changeMenuColor();
@@ -43,12 +43,12 @@ $(window).resize(function() {
 
 // Insert inline css into 'menu' to show / hide menu.
 function toggleMenu(){
-    var isDisplay = $('.menu').css('display');
+    var isDisplay = $j('.menu').css('display');
     
     if (isDisplay == 'none'){
-        $('.menu').css('display', 'block');
+        $j('.menu').css('display', 'block');
     }else if (isDisplay == 'block'){
-        $('.menu').css('display', 'none');
+        $j('.menu').css('display', 'none');
     }
     
     changeMenuColor();
@@ -58,14 +58,14 @@ function toggleMenu(){
 // change the default psuedo classes for the main navigation on smaller screens
 function changeMenuColor() {
     
-    if ($(window).width() < breakpoint) {
-        $('.menu').removeClass('force-darkgrey');
-        $('.menu').addClass('force-white');
+    if ($j(window).width() < breakpoint) {
+        $j('.menu').removeClass('force-darkgrey');
+        $j('.menu').addClass('force-white');
         
     } 
-    if ($(window).width() >= breakpoint) {
-        $('.menu').removeClass('force-white');
-        $('.menu').addClass('force-darkgrey');
-        $('.menu').css('display', 'block');
+    if ($j(window).width() >= breakpoint) {
+        $j('.menu').removeClass('force-white');
+        $j('.menu').addClass('force-darkgrey');
+        $j('.menu').css('display', 'block');
     }
 }

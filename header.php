@@ -7,7 +7,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
     
-    <link rel="stylesheet" type="text/css" href="style/normalize.css" />
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     
@@ -15,11 +14,10 @@
         <script src="script/html5shiv.js"></script>
     <![endif]-->
     
-    <script type="text/javascript" src="script/jQuery-1-1.js" /></script>
-    <script type="text/javascript" src="script/script.js" /></script>
+    
 
     <?php wp_head(); ?>
-
+<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/script/script.js" /></script>
 </head>
 
 <body>

@@ -3,6 +3,7 @@ define( 'TEMPPATH', get_bloginfo('stylesheet_directory'));
 define( 'IMAGES', TEMPPATH. "/images");
 
 add_theme_support( 'nav-menus' );
+add_theme_support( 'post-thumbnails' ); 
 
 if ( function_exists( 'register_nav_menus' ) ) {
 	register_nav_menus(
@@ -24,5 +25,12 @@ if ( function_exists( 'register_sidebar' ) ) {
 		'after_title' => '</h3>',
 	) );
 }
+
+function mh_load_my_script() {
+    wp_enqueue_script( 'jquery' );
+}
+
+add_action( 'wp_enqueue_scripts', 'mh_load_my_script' );
+
 
 ?>
