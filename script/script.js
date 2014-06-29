@@ -30,7 +30,7 @@ $j(document).ready(function(e){
 
 // detect window resize
 $j(window).resize(function() {
-    var browserWidth = $(window).width();
+    var browserWidth = $j(window).width();
     
     if (browserWidth <= breakpoint) {
         $j('.menu').removeAttr('style');
