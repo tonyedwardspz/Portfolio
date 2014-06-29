@@ -4,14 +4,13 @@
                 <div class="blog-archive">   
                     
                     
-                    
                     <?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
         
                     <div class="unit blog-archive-item two-of-three">
                         
                         <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                         
-                        <?php the_content('<span class="button gamma force-white"><a href="blog-post.html">Read More</a></span>'); ?>
+                        <?php the_content('Read More'); ?>
                         
                     </div>
                     

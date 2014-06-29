@@ -11,7 +11,11 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     
     <!--[if lt IE 9]>
-        <script src="script/html5shiv.js"></script>
+        <script src="<?php echo SCRIPT; ?>/html5shiv.js"></script>
+    <![endif]-->
+    
+    <!--[if lt IE 7]>
+        <link rel="stylesheet" type="text/css" href="<?php echo STYLE.'/ie.css'; ?>" />
     <![endif]-->
     
     
@@ -28,7 +32,7 @@
             <header class="unit full-width">  
                 
                 <?php $logo= get_option('portfolio_logo', IMAGES.'/tony_edwards.png'); ?>
-                <span><a href="index.html"><img src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>" /></a></span>
+                <span><a href="#"><img src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>" /></a></span>
                 
                 <ul id="toggle-menu">
                         <li><a href="#" id="pull"><img src="<?php echo IMAGES ?>/nav-icon.png" /></a></li>

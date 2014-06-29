@@ -1,0 +1,5 @@
+/* sets max-width for IE6 */ 
+.container {
+    max-width: 1000px;  
+  _width:expression(this.scrollWidth > 1000 ? "1000px" : "auto"); 
+}  

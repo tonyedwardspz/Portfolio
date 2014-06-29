@@ -87,7 +87,7 @@ wp-caption img {
 
 
 .container {
-	max-width: 1100px;
+	max-width: 1000px;
 	margin: 0 auto;
 	padding: 0 30px;
 	padding: 0 1.5rem;
@@ -237,7 +237,7 @@ a:active {
 
 img {
     max-width: 100%;
-    max-height: auto;
+/*    max-height: 100%;*/
 }
 
 .imgOverlay {
@@ -469,21 +469,23 @@ nav li {
 \*------------------------------------------- */
 
 
-.button{
+.more-link{
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
     color: #fff;
     background-color: #27afef;
     padding: 10px 20px;
+    margin-top: 25px;
+    text-decoration: none;
 }
 
-.button a {
-    text-decoration: none;    
-}
-
-.button:hover {   
+.more-link:hover {   
     background-color: #2ecc71;
+}
+
+.post-readmore {
+    margin-top: 15px;
 }
 
 .breadcrumbs {
