@@ -237,6 +237,7 @@ a:active {
 
 img {
     max-width: 100%;
+    max-height: auto;
 }
 
 .imgOverlay {

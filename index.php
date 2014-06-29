@@ -17,10 +17,9 @@
                     
                     <div class="unit one-of-three post-meta">
                         
-<!--                        <img src="images/dummy-image.jpg" alt="dummy image" class="blog-image">-->
                         <?php
                             if ( has_post_thumbnail() ) {
-                                the_post_thumbnail();
+                                the_post_thumbnail('blog-post-thumb');
                             }
                         ?>
                         

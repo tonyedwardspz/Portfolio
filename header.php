@@ -30,22 +30,9 @@
                 <?php $logo= get_option('portfolio_logo', IMAGES.'/tony_edwards.png'); ?>
                 <span><a href="index.html"><img src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>" /></a></span>
                 
-<!--
-                <nav>
-                    <ul id="toggle-menu">
-                        <li><a href="#" id="pull"><img src="images/nav-icon.png" /></a></li>
+                <ul id="toggle-menu">
+                        <li><a href="#" id="pull"><img src="<?php echo IMAGES ?>/nav-icon.png" /></a></li>
                     </ul>
-                    
-                    <ul class="menu force-darkgrey">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
--->
-                
                 <?php wp_nav_menu( array('menu' => 'Main', 'container' => 'nav' )); ?>
 
             </header>
