@@ -1,4 +1,4 @@
-var breakpoint = 720;
+var breakpoint = 734; // 16px less than css breakpoint
 var $j = jQuery.noConflict();
 
 $j(document).ready(function(e){
@@ -8,7 +8,7 @@ $j(document).ready(function(e){
         toggleMenu();
     });
     
-     $j('.social-links img').hover(function () {
+    $j('.social-links img').hover(function () {
         
         var elmHeight = $j(this).height() - 4;
         var elmWidth = $j(this).width() - 4;
@@ -24,6 +24,8 @@ $j(document).ready(function(e){
         $j(this).removeClass('hover-margin');
         
     });
+    
+    changeMenuColor();
        
 });
 

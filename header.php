@@ -32,7 +32,7 @@
             <header class="unit full-width">  
                 
                 <?php $logo= get_option('portfolio_logo', IMAGES.'/tony_edwards.png'); ?>
-                <span><a href="#"><img src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>" /></a></span>
+                <span><a href="http://localhost/wordpress/"><img src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>" /></a></span>
                 
                 <ul id="toggle-menu">
                         <li><a href="#" id="pull"><img src="<?php echo IMAGES ?>/nav-icon.png" /></a></li>
