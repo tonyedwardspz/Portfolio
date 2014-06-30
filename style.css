@@ -189,9 +189,9 @@ hr {
     }
     
     h1, .alpha {
-	font-size: 30px;
-	font-size: 1.5rem;
-}
+        font-size: 30px;
+        font-size: 1.5rem;
+    }
 
 }
 
@@ -264,6 +264,10 @@ img {
 
 .hover-margin {
     margin:2px;
+}
+
+header a {
+    text-decoration: none;
 }
 
 
@@ -403,6 +407,12 @@ nav li {
     
 }
 
+@media screen and (max-width: 720px) {
+	.content {
+        margin-top: 60px;;
+    }
+}
+
 
 /* ------------------------------------------ *\
     BLOG
@@ -448,12 +458,12 @@ nav li {
 \*------------------------------------------- */
 
 
-.sidebar{
+.widget{
     margin: 20px 0;                             
     padding-left: 20px;
 }
 
-.sidebar-item li {
+.widget li {
     list-style: none;
 }
 
@@ -523,6 +533,4 @@ footer li {
 
 
 
-.sidebar-item {
-    margin-bottom: 15px;
-}
+

@@ -11,6 +11,10 @@ define( 'STYLE', TEMPPATH. "/style");
 define( 'SCRIPT', TEMPPATH. "/script");
 
 
+// set up custom post types
+require_one( 'portfolio-post.php' )
+
+
 // add support for customise post thumbnails
 add_theme_support( 'post-thumbnails' ); 
 add_image_size( 'blog-post-thumb', 340, 9999, true ); //300 pixels x unlimited height
@@ -65,7 +69,6 @@ function wrap_readmore($more_link) {
     return '<div class="post-readmore force-white">'.$more_link.'</div>';
 }
 add_filter('the_content_more_link', 'wrap_readmore', 10, 1);
-
 
 
 ?>
