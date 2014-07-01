@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 <?php get_header(); ?>        
 
             <div class="unit full-width">
@@ -32,5 +30,3 @@
             </div>
 
 <?php get_footer(); ?>
-=======
->>>>>>> parent of fd1b705... 1.0.4

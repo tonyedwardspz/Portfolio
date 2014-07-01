@@ -11,8 +11,8 @@ define( 'STYLE', TEMPPATH. "/style");
 define( 'SCRIPT', TEMPPATH. "/script");
 
 
-// set up custom post types
-require_one( 'portfolio-post.php' )
+//// set up custom post types
+//require_once( 'portfolio-post.php' );
 
 
 // add support for customise post thumbnails
