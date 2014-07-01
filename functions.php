@@ -12,7 +12,7 @@ define( 'SCRIPT', TEMPPATH. "/script");
 
 
 // set up custom post types
-require_once( 'portfolio-post.php' );
+require_one( 'portfolio-post.php' )
 
 
 // add support for customise post thumbnails
