@@ -127,7 +127,7 @@ wp-caption img {
 .three-of-five { width: 57%; }
 .four-of-five { width: 77%; }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 720px) {
 	.grid {
 		margin-left: 0;
 		max-width: none;
@@ -183,7 +183,7 @@ hr {
 	margin-top: -1px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 720px) {
 	html {
         font: 90%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
     }
@@ -270,10 +270,6 @@ header a {
     text-decoration: none;
 }
 
-.post-title a{
-    text-decoration: none;
-}
-
 
 /* ------------------------------------------ *\
     HEADER & NAVIGATION
@@ -327,11 +323,11 @@ nav li {
     display: inherit;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 720px) {
 	
     #toggle-menu {
         display: inherit;
-        margin-top: -50px;
+        margin-top: -60px;
     }
     #toggle-menu ul {
         width: 40px;
@@ -483,7 +479,7 @@ nav li {
     list-style: none;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 720px) {
     .sidebar{
         padding-left: 0;
     }
