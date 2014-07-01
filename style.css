@@ -402,14 +402,7 @@ nav li {
     margin-bottom: 1.5em;
 }
 
-.portfolioItem {
-    background-color: rgb(245, 245, 245);
-    margin-bottom: 20px;
-}
 
-.portfolioItemText {
-    
-}
 
 @media screen and (max-width: 720px) {
 	.content {
@@ -454,6 +447,25 @@ nav li {
 .post-info {
     display: block;
     margin-bottom: 5px;
+}
+
+
+/* ------------------------------------------ *\
+    PORTFOLIO
+\*------------------------------------------- */
+
+
+.portfolioItem {
+    background-color: rgb(245, 245, 245);
+    margin-bottom: 20px;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border: 1px solid #696a6b;
+}
+
+.portfolioItemText {
+    
 }
 
 
