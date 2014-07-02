@@ -18,7 +18,7 @@
 
 									if($te_link){
 							?>
-									<a href="<?php print $te_link; ?>" class="button">Visit the Site</a>
+									<a href="<?php echo $te_link; ?>" class="button">Visit the Site</a>
 							<?php 
 									}
 								} ?>
