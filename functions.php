@@ -11,10 +11,6 @@ define( 'STYLE', TEMPPATH. "/style");
 define( 'SCRIPT', TEMPPATH. "/script");
 
 
-//// set up custom post types
-//require_once( 'portfolio-post.php' );
-
-
 // add support for customise post thumbnails
 add_theme_support( 'post-thumbnails' ); 
 add_image_size( 'blog-post-thumb', 340, 9999, true ); //300 pixels x unlimited height
