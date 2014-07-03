@@ -48,7 +48,31 @@
                         <div class="seperatorRight"></div>
                     </div>
                     
-                </div>     
+                </div>  
+                
+                <div class="unit full-width">
+                    
+                    <h2>What i'm workin on now.</h2>
+                    
+                </div>
+                
+                <?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => 3 ) ); ?>
+<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+
+            <div class="unit one-of-three portfolioItem">
+
+                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('te_project'); ?></a>
+
+                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+
+                <br />
+                <span class="button gamma force-white"><a href="<?php the_permalink(); ?>">View Project</a></span>
+
+            </div>
+
+            <?php endwhile; wp_reset_query(); ?>
+                
             </div>
 
 

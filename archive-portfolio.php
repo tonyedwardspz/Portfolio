@@ -10,9 +10,7 @@
 
             </div>
 
-            <?php if (have_posts()) : ?>
-
-            <?php while (have_posts()) : the_post(); ?>
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
             <div class="unit one-of-three portfolioItem">
 

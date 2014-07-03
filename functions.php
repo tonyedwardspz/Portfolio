@@ -67,4 +67,25 @@ function wrap_readmore($more_link) {
 add_filter('the_content_more_link', 'wrap_readmore', 10, 1);
 
 
+// show the portfolio post type on the front page. MOVE TO PLUGIN????
+add_filter( 'pre_get_posts', 'my_get_posts' );
+
+function my_get_posts( $query ) {
+	if ( ( is_home() && $query->is_main_query() ) || is_feed() )
+		$query->set( 'post_type', array( 'post', 'portfolio' ) );
+
+	return $query;
+}
+
+
+//add_action( 'pre_get_posts',  'change_posts_number_home_page'  );
+//function change_posts_number_home_page( $query ) {
+//
+//    if ( is_home() )
+//        $query->set( 'posts_per_page', 3 );
+//
+//    return $query;
+//}
+
+
 ?>
