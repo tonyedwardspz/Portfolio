@@ -1,21 +1,12 @@
 <?php get_header(); ?>
 
                 <div class="blog-archive">   
-                    
+                   
                     <?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
         
-                    <div class="unit blog-archive-item two-of-three">
+                    <div class="unit blog-archive-item full-width">
                         
-                        <h2><span class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span></h2>
-                        
-                        <?php
-                            if ( has_post_thumbnail() ) {
-                                the_post_thumbnail('blog-post-thumb');
-                            }
-                        ?>
-                        
-                        <span class="post-info"><a href="<?php the_permalink(); ?>"><?php the_time('l F d, Y'); ?></a></span>
-                        <span class="post-info">Tag, another tag, i love tags</span>
+                        <h2><span class="post-title"><?php the_title(); ?></span></h2>
                         
                         <?php the_content('Read More'); ?>
                         
@@ -24,9 +15,7 @@
                     <?php endwhile ; else: ?>
                         <p><?php _e('No posts were found. Sorry!'); ?></p>
                     <?php endif; ?>
-                    
-                    <?php get_sidebar(); ?>
                 
-                </div>             
+                </div>            
 
 <?php get_footer(); ?>

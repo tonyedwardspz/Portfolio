@@ -78,14 +78,4 @@ function my_get_posts( $query ) {
 }
 
 
-//add_action( 'pre_get_posts',  'change_posts_number_home_page'  );
-//function change_posts_number_home_page( $query ) {
-//
-//    if ( is_home() )
-//        $query->set( 'posts_per_page', 3 );
-//
-//    return $query;
-//}
-
-
 ?>

@@ -3,18 +3,9 @@ Theme Name:     Tony Edwards Protfolio
 Theme URI:      http://www.purelywebdesign.co.uk
 Description:    The wordpress theme for my personal portfolio website
 Version:        1.0
-Author:         Joe Casabona
+Author:         Tony Edwards
 Aurhor URI:     http://www.purelywebdesign.co.uk
 */
-
-
-/*-----------------------------------*\
-    
-    TODO
-
-    - add css fallback for the menu toggle 
-
-\*-----------------------------------*/
 
 
 /*-----------------------------------*\
@@ -105,11 +96,9 @@ wp-caption img {
 	vertical-align: top;
 	margin-left: 3%;
 	margin-right: -.25em;
-	/* Clearfix */
-/*
-	overflow: hidden;
+    overflow: hidden;
 	*overflow: visible;
-*/
+
 }
 
 .full-width { width: 97%;}
@@ -192,7 +181,6 @@ hr {
         font-size: 30px;
         font-size: 1.5rem;
     }
-
 }
 
 
@@ -226,6 +214,7 @@ a:active {
 .force-darkgrey a:hover, 
 .force-darkgrey a:active {
     color: #555;
+    text-decoration: none;
 }
 
 .force-white a:link, 
@@ -233,6 +222,7 @@ a:active {
 .force-white a:hover, 
 .force-white a:active {
     color: #fff;
+    text-decoration: none;
 }
 
 img {
@@ -266,10 +256,6 @@ img {
     margin:2px;
 }
 
-header a {
-    text-decoration: none;
-}
-
 
 /* ------------------------------------------ *\
     HEADER & NAVIGATION
@@ -290,7 +276,7 @@ header a {
 
 nav {
     float: right;
-    margin-top: 50px;
+    margin-top: 35px;
 }
 
 nav a{
@@ -327,7 +313,7 @@ nav li {
 	
     #toggle-menu {
         display: inherit;
-        margin-top: -60px;
+        margin-top: -50px;
     }
     #toggle-menu ul {
         width: 40px;
@@ -371,17 +357,6 @@ nav li {
 }
 
 
-/*
-@media screen and (min-width: 721px) {
-    
-    .menu {
-        display: block;   
-    }
-
-}
-*/
-
-
 /* ------------------------------------------ *\
     CONTENT
 \*------------------------------------------- */
@@ -399,12 +374,34 @@ nav li {
 }
 
 
-
 @media screen and (max-width: 720px) {
 	.content {
-        margin-top: 60px;;
+        margin-top: 60px;
     }
 }
+
+
+/* ------------------------------------------ *\
+    HOMEPAGE
+\*------------------------------------------- */
+
+
+.i-use li{
+    margin-left:15px;
+}
+
+
+@media screen and (max-width: 720px) {
+   .i-use li:first-child{
+        margin-left: 15px;
+    } 
+    
+    .i-use li{
+        margin-left: 30px;
+        display: inline-block;
+    }
+}
+
 
 
 /* ------------------------------------------ *\
@@ -464,6 +461,117 @@ nav li {
     
 }
 
+.view-project {
+    display: none;
+    text-align: center;
+}
+
+@media screen and (max-width: 720px) {
+	.view-project {
+        display: block;
+    }
+}
+
+/* ------------------------------------------ *\
+    PORTFOLIO TRANSITIONS
+\*------------------------------------------- */
+
+.view-first img {
+   -webkit-transition: all 0.2s linear;
+   -moz-transition: all 0.2s linear;
+   -o-transition: all 0.2s linear;
+   -ms-transition: all 0.2s linear;
+   transition: all 0.2s linear;
+}
+.view-first .mask {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   background-color: rgba(219,127,8, 0.7);
+   -webkit-transition: all 0.4s ease-in-out;
+   -moz-transition: all 0.4s ease-in-out;
+   -o-transition: all 0.4s ease-in-out;
+   -ms-transition: all 0.4s ease-in-out;
+   transition: all 0.4s ease-in-out;
+}
+.view-first h2 {
+   -webkit-transform: translateY(-100px);
+   -moz-transform: translateY(-100px);
+   -o-transform: translateY(-100px);
+   -ms-transform: translateY(-100px);
+   transform: translateY(-100px);
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   -ms-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+}
+
+.view-first:hover img {
+   -webkit-transform: scale(1.1,1.1);
+   -moz-transform: scale(1.1,1.1);
+   -o-transform: scale(1.1,1.1);
+   -ms-transform: scale(1.1,1.1);
+   transform: scale(1.1,1.1);
+}
+
+.view-first:hover .mask {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+}
+
+.view-first:hover h2 {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+   -webkit-transform: translateY(0px);
+   -moz-transform: translateY(0px);
+   -o-transform: translateY(0px);
+   -ms-transform: translateY(0px);
+   transform: translateY(0px);
+}
+				
+.view {
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   -webkit-box-shadow: 1px 1px 2px #e6e6e6;
+   -moz-box-shadow: 1px 1px 2px #e6e6e6;
+   box-shadow: 1px 1px 2px #e6e6e6;
+   cursor: default;
+}
+
+.view .mask,.view .content {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+
+.view img {
+   display: block;
+   position: relative;
+}
+
+.view h2 {
+   text-transform: uppercase;
+   color: #fff;
+   position: relative;
+   font-size: 17px;
+   padding: 10px;
+   background: rgba(0, 0, 0, 0.8);
+   margin: 30px 0 0 0;
+}
+
+.view a:hover {
+   color: #2ecc71;
+}
 
 /* ------------------------------------------ *\
     SIDEBAR
@@ -499,7 +607,6 @@ nav li {
     background-color: #27afef;
     padding: 10px 20px;
     margin-top: 25px;
-    text-decoration: none;
 }
 
 .more-link:hover {   
@@ -521,10 +628,6 @@ nav li {
     color: #fff;
     background-color: #27afef;
     padding: 10px 20px;
-}
-
-.button a {
-    text-decoration: none;    
 }
 
 .button:hover {   
@@ -556,10 +659,3 @@ footer li {
     display: inline-block;
     float:right; 
 }
-
-
-
-
-
-
-

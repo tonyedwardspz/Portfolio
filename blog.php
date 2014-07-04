@@ -1,13 +1,19 @@
+<?php
+/*
+* Template Name: Blog Posts
+*/
+?>
+
 <?php get_header(); ?>
 
 
                 <div class="blog-archive">   
-                   
+                    
                     <?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
         
                     <div class="unit blog-archive-item two-of-three">
                         
-                        <h2><span class="post-title"><?php the_title(); ?></span></h2>
+                        <h2><span class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span></h2>
                         
                         <?php the_content('Read More'); ?>
                         
