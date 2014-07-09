@@ -14,7 +14,14 @@
 
             <div class="unit one-of-three portfolioItem">
 
+                <div class="view view-first">
                 <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('te_project'); ?></a>
+                    
+                    <div class="mask">
+                        <h2 class="force-white"><a href="<?php the_permalink(); ?>">View Project</a></h2>
+                        <p></p>
+                    </div>
+                </div>
 
                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 

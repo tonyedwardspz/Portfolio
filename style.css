@@ -96,8 +96,10 @@ wp-caption img {
 	vertical-align: top;
 	margin-left: 3%;
 	margin-right: -.25em;
+/*
     overflow: hidden;
 	*overflow: visible;
+*/
 
 }
 
@@ -615,6 +617,7 @@ nav li {
 
 .post-readmore {
     margin-top: 15px;
+    overflow: visible;
 }
 
 .breadcrumbs {
@@ -628,6 +631,7 @@ nav li {
     color: #fff;
     background-color: #27afef;
     padding: 10px 20px;
+    overflow: visible;
 }
 
 .button:hover {   

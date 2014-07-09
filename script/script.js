@@ -2,6 +2,8 @@ var breakpoint = 720;
 var $j = jQuery.noConflict();
 
 $j(document).ready(function(e){
+    
+    changeMenuColor();
    
     // Handle the menu icon click.
     $j('#pull').click(function () {
