@@ -26,9 +26,21 @@ $j(document).ready(function(e){
         $j(this).removeClass('hover-margin');
         
     });
-       
+
+    resizePortfolioWrapper();
+    
+    // $j('.porfolioCategory').click(function(){
+    //     var category = $j(this).data("value");
+    //     showHidePortfolioItems(category);
+    // });
+
+    $j('#mixPortfolio').mixItUp();
+    resizePortfolioWrapper();
 });
 
+$j(window).load(function() {
+        $j('.flexslider').flexslider();
+      });
 
 // detect window resize
 $j(window).resize(function() {
@@ -41,6 +53,26 @@ $j(window).resize(function() {
     changeMenuColor();
 
 });
+
+//change the size of the porfolio wrapper to prevent unnessesary painting during transitions
+function resizePortfolioWrapper(){
+
+    //get the wrapper height
+    var height = $j('.portfolioWrapper').height();
+    height += 130;
+
+    $j('.portfolioWrapper').css('height', height)
+}
+
+
+function showHidePortfolioItems(category){
+
+    if(category === 'ALL'){
+        $j('.portfolioItem').show();
+    } else {
+        $j(".portfolioItem:not(."+category+")").hide();
+    }
+}
 
 
 // Insert inline css into 'menu' to show / hide menu.

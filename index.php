@@ -22,7 +22,7 @@
                         ?>
                         
                         <span class="post-info"><a href="<?php the_permalink(); ?>"><?php the_time('l F d, Y'); ?></a></span>
-                        <span class="post-info">Tag, another tag, i love tags</span>
+                        <span class="post-info"><?php the_tags(); ?></span>
                     
                     </div>
                     

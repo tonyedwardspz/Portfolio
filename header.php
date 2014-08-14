@@ -22,7 +22,7 @@
     
 
     <?php wp_head(); ?>
-<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/script/script.js" /></script>
+    <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/script/script.js" /></script>
 </head>
 
 <body>

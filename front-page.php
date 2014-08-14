@@ -57,19 +57,13 @@
                     <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('te_project'); ?></a>
                     
                     <div class="mask">
-                        <h2 class="force-white"><a href="<?php the_permalink(); ?>">View Project</a></h2>
+                        <h2 class="force-white"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                         <p></p>
                     </div>
                 </div>  
                 
-                <div class=" view-project">
-
-                    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-
-                    <br />
-                    <span class="button gamma force-white"><a href="<?php the_permalink(); ?>">View Project</a></span>
-                </div>
-
+                
+                
             </div>
 
             <?php endwhile; wp_reset_query(); ?>

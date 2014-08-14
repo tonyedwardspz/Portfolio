@@ -77,5 +77,4 @@ function my_get_posts( $query ) {
 	return $query;
 }
 
-
 ?>
