@@ -1,4 +1,9 @@
-<?php get_header(); ?>        
+<?php get_header(); 
+
+
+
+
+?>        
 
           
                 
@@ -11,7 +16,6 @@
 						<h1><?php the_title(); ?></h1>
 						
 						<?php the_content(); ?>
-
 							
 				</div>
 
@@ -34,28 +38,18 @@
 
 				</div>
 
-				<div class="unit full-width">
+				<!-- <div class="unit full-width"> -->
+				<div class="unit full-width sliderWrap">
+					<div class="slider">
+						<ul>
+						    <?php getAttachedImages(); ?>
 
-					<!-- <?php the_post_thumbnail('te_project'); ?> -->
-
-					<!-- Place somewhere in the <body> of your page -->
-					<div class="flexslider">
-					  <ul class="slides">
-					    <li>
-					      <?php the_post_thumbnail('te_project'); ?>
-					    </li>
-					    <li>
-					      <?php the_post_thumbnail('te_project'); ?>
-					    </li>
-					    <li>
-					      <?php the_post_thumbnail('te_project'); ?>
-					    </li>
-					  </ul>
+						</ul>
 					</div>
-
-
-
 				</div>
+
+
+				<!-- </div> -->
 
 				<?php endwhile; ?>
                 

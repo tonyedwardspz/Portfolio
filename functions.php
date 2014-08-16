@@ -61,6 +61,7 @@ function wpse63748_add_morelink_class( $link, $text )
 }
 add_action( 'the_content_more_link', 'wpse63748_add_morelink_class', 10, 2 );
 
+
 function wrap_readmore($more_link) {
     return '<div class="post-readmore force-white">'.$more_link.'</div>';
 }
@@ -75,6 +76,17 @@ function my_get_posts( $query ) {
 		$query->set( 'post_type', array( 'post', 'portfolio' ) );
 
 	return $query;
+}
+
+
+// Get all attached images for a post, wrapping them in <li>'s
+// Used with the slider on single portfolio pages
+function getAttachedImages(){
+	$attachments = get_attached_media( 'image', $post->ID );
+
+	foreach ($attachments as $attachment_id => $attachment) {
+		echo "<li>".wp_get_attachment_image( $attachment_id, 'large' )."</li>";
+	}
 }
 
 ?>

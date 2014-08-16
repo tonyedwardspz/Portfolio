@@ -28,19 +28,11 @@ $j(document).ready(function(e){
     });
 
     resizePortfolioWrapper();
-    
-    // $j('.porfolioCategory').click(function(){
-    //     var category = $j(this).data("value");
-    //     showHidePortfolioItems(category);
-    // });
-
     $j('#mixPortfolio').mixItUp();
-    resizePortfolioWrapper();
+
+    imageSlider();
 });
 
-$j(window).load(function() {
-        $j('.flexslider').flexslider();
-      });
 
 // detect window resize
 $j(window).resize(function() {
@@ -51,8 +43,67 @@ $j(window).resize(function() {
     }
     
     changeMenuColor();
+    resizeSliderWrap();
 
 });
+
+// call the resize after assets are loaded to prevent an 
+// incorrect li height size due to unloaded image.
+$j(window).bind("load", function() { 
+    resizeSliderWrap();
+});
+
+function imageSlider() { 
+    // settings
+    var $slider = $j('.slider');
+    var $slide = 'li';
+    var $transition_time = 1000;
+    var $time_between_slides = 6000;
+
+    function slides(){
+        return $slider.find($slide);
+    }
+
+    slides().fadeOut();
+
+    // set active classes
+    slides().first().addClass('active');
+    slides().first().fadeIn($transition_time);
+
+    // auto scroll 
+    $interval = setInterval(
+    function(){
+        var $i = $slider.find($slide + '.active').index();
+
+        slides().eq($i).removeClass('active');
+        slides().eq($i).fadeOut($transition_time);
+
+        if (slides().length == $i + 1) $i = -1; // loop to start
+
+        slides().eq($i + 1).fadeIn($transition_time);
+        slides().eq($i + 1).addClass('active');
+    }
+    , $transition_time +  $time_between_slides 
+    
+    );
+    resizeSliderWrap();
+};
+
+
+// make sure the containing li for the slider images is the same size as the 
+// contained image. Called on page load and resize
+function resizeSliderWrap(){
+    
+    // get the height of a porfolio image
+    var listHeight = $j('li.active img').height();
+
+    if (listHeight <= 200){
+        listHeight = 736;
+    }
+    
+    //update it
+    $j('.slider').height(listHeight);
+}
 
 //change the size of the porfolio wrapper to prevent unnessesary painting during transitions
 function resizePortfolioWrapper(){

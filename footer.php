@@ -20,13 +20,6 @@
 
     <?php wp_footer(); ?>
     <script src="<?php echo get_template_directory_uri(); ?>/script/jquery.mixitup.min.js"></script>
-    <script src="<?php echo get_template_directory_uri(); ?>/script/jquery.flexslider-min.js"></script>
-
-    <!-- Place in the <head>, after the three links 
-    <script type="text/javascript" charset="utf-8">
-      $(window).load(function() {
-        $('.flexslider').flexslider();
-      });
-    </script>-->
+    
 </body>
 </html>
