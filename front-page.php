@@ -6,15 +6,15 @@
                 
                     <h1>Hey, I'm Tony</h1>
                     
-                    <p>I have a passion for creating interesting things that use the internet.</p>
-                    <p>I study Web Application Development at Plymouth University.</p>
+                    <p>I'm a front end web developer with a passion for all things web.</p>
+                    <p>I'm currently studying Web Application Development at Plymouth University.</p>
                     <span class="button gamma force-white"><a href="#">Work with me</a></span>
                 
                 </div>
             
                 <div class="unit three-of-four">
                 
-                    <p>Donec id elit non <a href="http://www.thisdomain.co.uk">mi porta gravida</a> at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+                    <p>I started</p>
                     
                     <p>Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
                 
@@ -26,12 +26,12 @@
                 
                 <div class="unit one-of-four">
                 
-                    <p>I reguarly use...</p>
+                    <p>My toolkit includes:</p>
                     
                     <ul class="i-use">
                         <li><i class="fa-li fa fa-check-square"></i>HTML</li>
-                        <li><i class="fa-li fa fa-check-square"></i>CSS</li>
-                        <li><i class="fa-li fa fa-check-square"></i>Javascript</li>
+                        <li><i class="fa-li fa fa-check-square"></i>CSS & SASS</li>
+                        <li><i class="fa-li fa fa-check-square"></i>Javascript & jQuery</li>
                         <li><i class="fa-li fa fa-check-square"></i>PHP</li>
                         <li><i class="fa-li fa fa-check-square"></i>Wordpress</li>
                     </ul>

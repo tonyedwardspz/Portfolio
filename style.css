@@ -201,11 +201,16 @@ a:visited {
 
 a:hover {
     color: #2ecc71;
+    transition: color 0.2s linear;
 }
 
 a:active {
     color: #f39c12;
 }
+
+
+
+
 
 /* 
  Force a single colour to all pseudo classes when needed.
@@ -553,10 +558,14 @@ nav li {
 
 .slider {
   margin: 10px auto;
-  max-width: 798px; /* Update to your slider width */
-  height: 736px; /* Update to your slider height */
+  max-width: 700px; /* Update to your slider width */
+  height: 560px; /* Update to your slider height */
   position: relative;
   overflow: hidden;
+}
+
+.slider ul{
+    margin: 0 auto;
 }
 
 .slider li {
@@ -581,7 +590,7 @@ nav li {
    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
    filter: alpha(opacity=0);
    opacity: 0;
-   background-color: rgba(219,127,8, 0.7);
+   background-color: rgba(219s,127,8, 0.7);
    -webkit-transition: all 0.4s ease-in-out;
    -moz-transition: all 0.4s ease-in-out;
    -o-transition: all 0.4s ease-in-out;
@@ -784,6 +793,7 @@ nav li {
     background-color: #27afef;
     padding: 10px 20px;
     overflow: visible;
+    transition: background-color 0.2s linear;
 }
 
 .button:hover {   
@@ -814,4 +824,18 @@ footer li {
 .social-links{
     display: inline-block;
     float:right; 
+}
+
+
+/* ------------------------------------------ *\
+    MISC
+\*------------------------------------------- */
+
+.menu-menu-1-container a:hover{
+    border-bottom: 5px solid #27afef;
+    transition: all 0.2s ease;
+}
+
+.menu-menu-1-container a:active{
+    border-bottom: 5px solid #f39c12;    
 }

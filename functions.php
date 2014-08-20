@@ -16,6 +16,9 @@ add_theme_support( 'post-thumbnails' );
 add_image_size( 'blog-post-thumb', 340, 9999, true ); //300 pixels x unlimited height
 
 
+// get the theme's custom options
+require_once('theme-options.php');
+
 // add support for custom nav menus
 add_theme_support( 'nav-menus' );
 if ( function_exists( 'register_nav_menus' ) ) {

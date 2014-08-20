@@ -23,7 +23,7 @@
             <div class="unit one-of-three portfolioItem mix <?php echo custom_taxonomies_terms_links();?>">
 
                 <div class="view view-first">
-                <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('te_project'); ?></a>
+                <a href="<?php the_permalink(); ?>" class="portImage"><?php the_post_thumbnail('te_project'); ?></a>
                     
                     <div class="mask">
                         <h2 class="force-white"><a href="<?php the_permalink(); ?>">View Project</a></h2>
