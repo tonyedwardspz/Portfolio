@@ -39,7 +39,16 @@
     </footer>
 
     <?php wp_footer(); ?>
-    <script src="<?php echo get_template_directory_uri(); ?>/script/jquery.mixitup.min.js"></script>
+
+    
+    <?php 
+
+    //insert the analytics code if set via the admin interface
+    $analyticsCode = get_option('portfolio_analytics');
+    if ($analyticsCode) {
+        print $analyticsCode;
+    }
+    ?>
     
 </body>
 </html>

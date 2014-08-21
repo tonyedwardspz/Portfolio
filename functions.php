@@ -44,12 +44,52 @@ if ( function_exists( 'register_sidebar' ) ) {
 }
 
 
-// load the inbuilt jQuery library
-// refrence it at $j in the script
+//enqueue scripts, loading them in the footer
 function mh_load_my_script() {
-    wp_enqueue_script( 'jquery' );
-}
+
+	if ( !is_admin() ) { // do not load scripts on admin page
+		//de register the built in jquery
+		wp_deregister_script('jquery');
+
+		// build the jQuery CDN link 
+		$googleCDN = "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js";
+		
+		//register all scripts
+		// wp_register_script($handle, $src, $deps, $ver, $in_footer);
+	    wp_register_script('jquery', $googleCDN, false, null, true);
+	    wp_register_script('myScript', get_template_directory_uri().'/script/script.js', array('jquery'), null, true);
+	    wp_register_script('mixitup', get_template_directory_uri().'/script/jquery.mixitup.min.js', array('jquery'), null, true);
+
+	    // enqueue scripts for every page
+	    wp_enqueue_script('jquery');
+	    wp_enqueue_script('myScript');
+
+	    // handle page specific scripts
+	    if (is_post_type_archive( 'portfolio' )){
+		    wp_enqueue_script('mixitup');
+	    } 
+	}
+} 
 add_action( 'wp_enqueue_scripts', 'mh_load_my_script' );
+
+// function wptuts_scripts_load_cdn()
+// {
+//     // Deregister the included library
+//     wp_deregister_script( 'jquery' );
+     
+//     // Register the library again from Google's CDN
+//     wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', array(), null, false );
+     
+//     // Register the script like this for a plugin:
+//     wp_register_script( 'custom-script', plugins_url( '/js/custom-script.js', __FILE__ ), array( 'jquery' ) );
+//     // or
+//     // Register the script like this for a theme:
+//     wp_register_script( 'custom-script', get_template_directory_uri() . '/js/custom-script.js', array( 'jquery' ) );
+ 
+//     // For either a plugin or a theme, you can then enqueue the script:
+//     wp_enqueue_script( 'custom-script' );
+// }
+// add_action( 'wp_enqueue_scripts', 'wptuts_scripts_load_cdn' );
 
 
 // modify the more link to introduce styling

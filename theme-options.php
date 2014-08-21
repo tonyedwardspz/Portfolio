@@ -87,9 +87,9 @@ function portfolio_settings_page(){ ?>
 		</tr>
 
 		<tr valign="top">
-		<th scope="row">Twitter Link:</th>
+		<th scope="row">Analytics Code:</th>
 		<td>
-			<textarea name="portfolio_analytics"><?php print get_option('portfolio_analytics'); ?>" </textarea>
+			<textarea name="portfolio_analytics"><?php print get_option('portfolio_analytics'); ?></textarea>
 		</td>
 		</tr>
 
