@@ -2,7 +2,10 @@
         <?php if ( !function_exists( 'dynamic_sidebar' ) || !dynamic_sidebar('Primary Sidebar') ) : ?>
         
         <div class="widget">
-            <h3>Search</h3>
+            <?php 
+                    if (function_exists("popular_popularity_list")) {
+                       popular_popularity_list();
+                    } ?>
             
         </div>
         <?php endif; ?>

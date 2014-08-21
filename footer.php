@@ -42,7 +42,6 @@
 
     
     <?php 
-
     //insert the analytics code if set via the admin interface
     $analyticsCode = get_option('portfolio_analytics');
     if ($analyticsCode) {

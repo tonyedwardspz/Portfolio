@@ -26,10 +26,13 @@ $j(document).ready(function(e){
         $j(this).removeClass('hover-margin');
         
     });
-
-    resizePortfolioWrapper();
-    $j('#mixPortfolio').mixItUp();
-
+    
+    // call the mixItUp method on the portfolio page 
+    // (the script is enqueued to load only on this page)
+    if ($j('ul.filterList').length > 0){
+        resizePortfolioWrapper();
+        $j('#mixPortfolio').mixItUp();
+    }
     imageSlider();
 });
 

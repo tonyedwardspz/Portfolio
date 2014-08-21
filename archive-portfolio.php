@@ -18,7 +18,10 @@
             </div>
             <div id="mixPortfolio" class="portfolioWrapper">
 
-            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+            <?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => 12 ) ); ?>
+                <?php //while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+            <?php if (have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
 
             <div class="unit one-of-three portfolioItem mix <?php echo custom_taxonomies_terms_links();?>">
 
@@ -37,7 +40,7 @@
 
             </div>
 
-            <?php endwhile; ?>
+            <?php endwhile; wp_reset_query();?>
 
             <?php endif; ?>
 

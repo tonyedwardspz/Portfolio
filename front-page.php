@@ -49,7 +49,7 @@
                 </div>
                 
                 <?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => 3 ) ); ?>
-<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+                <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
                 <div class="unit one-of-three portfolioItem">
 
@@ -69,6 +69,8 @@
             <?php endwhile; wp_reset_query(); ?>
                 
             </div>
+
+
 
 
 <?php get_footer(); ?>

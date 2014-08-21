@@ -29,7 +29,6 @@ if ( function_exists( 'register_nav_menus' ) ) {
 	);
 }
 
-
 // create a custom sidebar for widgets
 if ( function_exists( 'register_sidebar' ) ) {
 	register_sidebar( array (
