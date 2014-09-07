@@ -1,4 +1,4 @@
-var breakpoint = 720;
+var breakpoint = 704;
 var $j = jQuery.noConflict();
 
 $j(document).ready(function(e){

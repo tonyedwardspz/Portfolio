@@ -8,38 +8,8 @@
                     
                     <p>I'm a front end web developer with a passion for all things web.</p>
                     <p>I'm currently studying Web Application Development at Plymouth University.</p>
-                    <span class="button gamma force-white"><a href="#">Work with me</a></span>
+                    <div>Social links</div>
                 
-                </div>
-            
-                <div class="unit three-of-four">
-                
-                    <p>I started</p>
-                    
-                    <p>Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-                
-                    <div class="seperator">
-                        <div class="seperatorRight"></div>
-                    </div>
-                    
-                </div>
-                
-                <div class="unit one-of-four">
-                
-                    <p>My toolkit includes:</p>
-                    
-                    <ul class="i-use">
-                        <li><i class="fa-li fa fa-check-square"></i>HTML</li>
-                        <li><i class="fa-li fa fa-check-square"></i>CSS & SASS</li>
-                        <li><i class="fa-li fa fa-check-square"></i>Javascript & jQuery</li>
-                        <li><i class="fa-li fa fa-check-square"></i>PHP</li>
-                        <li><i class="fa-li fa fa-check-square"></i>Wordpress</li>
-                    </ul>
-                    
-                    <div class="seperator">
-                        <div class="seperatorRight"></div>
-                    </div>
-                    
                 </div>
                 
                 <div class="unit full-width">
@@ -53,20 +23,66 @@
 
                 <div class="unit one-of-three portfolioItem">
 
-                <div class="view view-first">
-                    <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('te_project'); ?></a>
-                    
-                    <div class="mask">
-                        <h2 class="force-white"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                        <p></p>
-                    </div>
-                </div>  
-                
-                
-                
-            </div>
+                    <div class="view view-first">
+                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('te_project'); ?></a>
+                        
+                        <div class="mask">
+                            <h2 class="force-white"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                            <p></p>
+                        </div>
+                    </div>  
+                </div>
 
-            <?php endwhile; wp_reset_query(); ?>
+                <?php endwhile; wp_reset_query(); ?>
+
+                <div class="unit full-width">
+                    <span class="button gamma force-white"><a href="#">View my full portfolio</a></span>
+                </div>
+
+                <div class="seperator unit full-width">
+                    <div class="seperatorRight"></div>
+                </div>
+
+                <div class="unit full-width">
+                    <h2>A little bit about me</h2>
+                </div>
+
+                <div class="unit one-of-three">
+                
+                    <p>I created my first website way back in 2002, teaching myself the basics of web development the old 
+                        fashioned way (stealing others code)</p>
+                    
+                    <p>Since then I've worked on a variety of projects for myself and clients, alongside my day job.</p>
+                    
+                </div>
+
+                <div class="unit one-of-three">
+                
+                    <p>Until recently I worked in management for a national retail chain for over seven years.
+                    This was great fun and I learned alot about business, but it wasn't my passion.</p>
+                    <p>Realising that web development had changed in a big way, I decided to head to University to perfect my craft.</p>
+                    
+                    
+                </div>
+
+                <div class="unit one-of-three front-page-bio">
+                
+                    <p>Today I create fast and clean web sites using up to date tools and techniques. Day to day I use:</p>
+                    
+                    <ul>
+                        <li>Valid HTML</li>
+                        <li>Valid CSS</li>
+                        <li>Sass</li>
+                        <li>PHP</li>
+                        <li>Wordpress</li>
+                        <li>MySQL</li>
+                    </ul>
+                    
+                </div>
+
+                <div class="seperator unit full-width">
+                    <div class="seperatorRight"></div>
+                </div>
                 
             </div>
 

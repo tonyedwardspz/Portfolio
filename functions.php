@@ -71,25 +71,6 @@ function mh_load_my_script() {
 } 
 add_action( 'wp_enqueue_scripts', 'mh_load_my_script' );
 
-// function wptuts_scripts_load_cdn()
-// {
-//     // Deregister the included library
-//     wp_deregister_script( 'jquery' );
-     
-//     // Register the library again from Google's CDN
-//     wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js', array(), null, false );
-     
-//     // Register the script like this for a plugin:
-//     wp_register_script( 'custom-script', plugins_url( '/js/custom-script.js', __FILE__ ), array( 'jquery' ) );
-//     // or
-//     // Register the script like this for a theme:
-//     wp_register_script( 'custom-script', get_template_directory_uri() . '/js/custom-script.js', array( 'jquery' ) );
- 
-//     // For either a plugin or a theme, you can then enqueue the script:
-//     wp_enqueue_script( 'custom-script' );
-// }
-// add_action( 'wp_enqueue_scripts', 'wptuts_scripts_load_cdn' );
-
 
 // modify the more link to introduce styling
 // (WPSE 63748)
@@ -130,5 +111,81 @@ function getAttachedImages(){
 		echo "<li>".wp_get_attachment_image( $attachment_id, 'large' )."</li>";
 	}
 }
+
+
+	// Add a summary metabox to all posts to use in theme
+	function smry_custom_meta(){
+		// post types to apply extra metabox too. 
+		$postTypes = array('post', 'portfolio');
+
+		// loop the array of post types
+		foreach ($postTypes as $postType) {
+			add_meta_box(
+				'summary-meta-box', // id
+				__('Post Summary'), // title
+				'smry_show_meta_box', // callback
+				$postType, // post type
+				'normal' // position
+				);
+		}
+	}
+	add_action('add_meta_boxes', 'smry_custom_meta');
+
+	function smry_show_meta_box(){
+		// get the stored meta values	
+		global $post;
+		$meta = get_post_meta($post->ID, 'smry_text', true);
+
+		//Use nonce for verification
+		// echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';
+
+		//build the input area ?>
+		<p>
+			<label>Summary Text</label>
+			<textarea name="smry_text" id="smry_text" cols="60" rows="5">
+				<?php echo $meta; ?>
+			</textarea>
+		</p>
+		<?php
+	}
+
+	function save_summary_meta($post_id){
+		//verify the nonce
+		// if (!wp_verify_nonce($_POST['custom_meta_box_nonce'], basename(__FILE__))){
+		// 	return $post_id;
+		// }
+
+		//check for saving
+		if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE){
+			return $post_id;
+		}
+
+		//retrieve the values
+		$old = get_post_meta($post_id, 'smry_text', true);
+		$new = $_POST["smry_text"];
+
+		//save new values if changes are made
+		if ($new && $new != $old){
+			update_post_meta($post_id, 'smry_text', $new);
+		} elseif ('' == $new && $old){
+			delete_post_meta($post_id, 'smry_text', $old);
+		}
+	}
+	add_action('save_post', 'save_summary_meta');
+
+
+// get the custom meta summary
+function get_smry_text($post){
+
+	// retriev the summary from the database
+	$smry = get_post_meta($post->ID, 'smry_text', true);
+
+	if ($smry != ""){
+		echo $smry;
+	}else {
+		echo 'There is no summary';
+	}
+}
+
 
 ?>

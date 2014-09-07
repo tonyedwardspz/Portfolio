@@ -1,0 +1,773 @@
+/*
+Theme Name:     Tony Edwards Protfolio
+Theme URI:      http://www.purelywebdesign.co.uk
+Description:    The wordpress theme for my personal portfolio website
+Version:        1.0
+Author:         Tony Edwards
+Aurhor URI:     http://www.purelywebdesign.co.uk
+*/
+
+
+/*-----------------------------------*\
+    NORMALIZE CSS
+\*-----------------------------------*/
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none}[hidden]{display:none}html{font-size:100%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}body,button,input,select,textarea{font-family:sans-serif}a{color:#00e}a:visited{color:#551a8b}a:focus{outline:thin dotted}a:hover,a:active{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}pre,code,kbd,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}ul,ol{margin:1em 0;padding:0 0 0 10px;list-style:none}dd{margin:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+* {margin: 0;padding: 0;/*position: relative;*/box-sizing: border-box;}
+/*-----------------------------------*\
+    WORDPRESS DEFAULT STYLES
+\*-----------------------------------*/
+    
+
+img.centered, .aligncenter, div.aligncenter{
+    display:block;
+    margin: 0 auto;
+}
+
+.alignleft{
+    float: left;
+}
+
+.alignright{
+    float: right;
+}
+
+.wp-caption {
+    border: 1px solid #ddd;
+    text-align: center;
+    background-color: #d4d4d4;
+    padding-top: 4px;
+    margin: 10px;
+}
+
+wp-caption img {
+    margin: 0;
+    padding: 0;
+    border: 0 none;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 0.85em;
+    line-height:  1.214em;
+    padding: 0 4px 5px;
+    margin: 0;
+}
+
+/*-----------------------------------*\
+    GRID
+\*-----------------------------------*/
+
+
+.container {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 0 30px;
+	padding: 0 1.5rem;
+}
+
+.grid {
+	margin-left: -3%;
+	max-width: 105%;
+}
+
+.unit {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: top;
+	margin-left: 3%;
+	margin-right: -.25em;
+/*
+    overflow: hidden;
+	*overflow: visible;
+*/
+
+}
+
+.full-width { width: 97%;}
+
+.one-of-two { width: 47%; }
+
+.one-of-three { width: 30.36%; }
+.two-of-three { width: 62.666666666%; }
+
+.one-of-four { width: 22.05%; }
+.three-of-four { width: 72%; }
+
+.one-of-five { width: 17.07%; }
+.two-of-five { width: 37%; }
+.three-of-five { width: 57%; }
+.four-of-five { width: 77%; }
+
+@media screen and (max-width: 720px) {
+	.grid {
+		margin-left: 0;
+		max-width: none;
+	}
+
+	.unit {
+		width: auto;
+		margin-left: 0;
+		display: block;
+	}
+}
+
+
+/* ------------------------------------------ *\
+    TYPOGRAPHY
+    Works off the assumption of a 1.5 line height @ 20px.
+\*------------------------------------------- */
+
+html {
+	font: 100%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+p, .p, ul, ol, hr, table, form, pre,
+h1, .alpha, h2 {
+	margin-bottom: 30px;
+	margin-bottom: 1.5rem;
+}
+
+h1, .alpha {
+	font-size: 60px;
+	font-size: 3rem;
+	font-weight: 700;
+	line-height: 1;
+    margin-top: 20px;
+}
+
+h2, .beta {
+	font-size: 30px;
+	font-size: 1.5rem;
+	font-weight: 400;
+	line-height: 2;
+}
+
+h3, .gamma {
+	font-size: 20px;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+hr {
+	border: none;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+	margin-top: -1px;
+}
+
+@media screen and (max-width: 720px) {
+	html {
+        font: 90%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
+    }
+    
+    h1, .alpha {
+        font-size: 30px;
+        font-size: 1.5rem;
+    }
+}
+
+
+/* ------------------------------------------ *\
+    GLOBAL STYLINGS
+\*------------------------------------------- */
+
+
+a:link {
+    color: #27afef;
+    transition: all 0.2s ease;
+}
+
+a:visited {
+    color: #9b59b6;
+}
+
+a:hover {
+    color: #2ecc71;
+    transition: color 0.2s linear;
+}
+
+a:active {
+    color: #f39c12;
+}
+
+/* 
+ Force a single colour to all pseudo classes when needed.
+ If you know a better way of doing this please let me know.
+ */
+.force-darkgrey a:link, 
+.force-darkgrey a:visited, 
+.force-darkgrey a:hover, 
+.force-darkgrey a:active {
+    color: #555;
+    text-decoration: none;
+}
+
+.force-white a:link, 
+.force-white a:visited, 
+.force-white a:hover, 
+.force-white a:active {
+    color: #fff;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height:auto;
+}
+
+.imgOverlay {
+    
+    
+}
+
+.seperator{
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.seperatorRight {
+    float: right;
+    height: 8px;
+    width: 8px;
+    background-color: #dbdbdb;
+    margin-top: -8px;
+}
+
+.hover-margin {
+    margin:2px;
+}
+
+
+/* ------------------------------------------ *\
+    HEADER & NAVIGATION
+\*------------------------------------------- */
+
+
+header {
+    margin-top: 10px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.activeLink {
+    border-bottom: 2px solid #fcbf32;
+}
+
+nav {
+    float: right;
+    margin-top: 35px;
+}
+
+nav a{
+    padding: 10px 15px;
+    color: #555;
+}
+
+nav li {
+    display: inline-block;
+}
+
+#toggle-menu {
+    display: none;
+    z-index: 1;
+}
+
+.menu {
+    display: block;
+}
+
+.small-screen-nav {
+    display: inherit;
+}
+
+@media screen and (max-width: 720px) {
+	
+    #toggle-menu {
+        display: inherit;
+        margin-top: -50px;
+    }
+    #toggle-menu ul {
+        width: 40px;
+    }
+    #toggle-menu li {
+        float: right;
+        width: 50px;
+        background-color: #fff;
+    }
+    .menu {
+        display: none;   
+    }
+    nav {
+        margin-top: 10px;
+        height: auto;
+        width: 100%;
+    }
+    nav ul {
+        margin-bottom: 0;
+        display: list-item;
+        margin-top: 50px;
+        width: 100%;   
+        height: auto;
+        background-color: #27afef;
+        z-index: 10;
+    }
+    .menu li {  
+        width: 50%;  
+        float: left;  
+        position: relative;
+        min-height: 40px;
+        background-color: #27afef;
+        text-align: center;
+        padding-top: 10px
+    }
+    .menu a {   
+        width: 100%;
+        padding: 0px;
+        color: #fff; 
+    }
+}
+
+
+/* ------------------------------------------ *\
+    CONTENT
+\*------------------------------------------- */
+
+
+.in-your-face {
+    text-align: center;
+    color: #333;
+    overflow: visible;
+    margin-bottom: 30px;
+}
+
+.content-block {
+    margin-bottom: 1.5em;
+}
+
+.sumtext{
+    background-color: grey;
+
+    p{
+
+    }
+}
+
+.sumSlant{
+    transform:skewY(25deg);
+    background-color:grey;
+}
+
+
+@media screen and (max-width: 720px) {
+	.content {
+        margin-top: 60px;
+    }
+}
+
+
+/* ------------------------------------------ *\
+    HOMEPAGE
+\*------------------------------------------- */
+
+
+.i-use li{
+    margin-left:15px;
+}
+
+
+
+@media screen and (max-width: 720px) {
+   .i-use li:first-child{
+        margin-left: 15px;
+    } 
+    
+    .i-use li{
+        margin-left: 30px;
+        display: inline-block;
+    }
+}
+
+
+
+/* ------------------------------------------ *\
+    BLOG
+\*------------------------------------------- */
+
+
+.blog-archive-item {
+    margin-bottom: 40px;
+    display: inline-block;
+}
+
+.post-meta {
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.previous-post {
+    float: left;
+}
+
+.next-post {
+    float: right;
+}
+
+.blog-image {
+    padding: 15px;
+    border: 1px solid #c2c2c9;
+    margin-bottom: 20px;
+}
+
+.post-info {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+/* ------------------------------------------ *\
+    PORTFOLIO
+\*------------------------------------------- */
+
+
+.portfolioItem {
+    margin-bottom: 20px;
+    padding:8px;
+    border-radius: 6px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border: 1px solid #696a6b;
+    height: 210px;
+    overflow: hidden;
+    transition:height 2s;
+}
+
+.portfolioItem h3{
+    padding-top: 10px;
+}
+
+.portfolioWrapper .portfolioItem:hover{
+    height:350px;
+    transition:all 1s;
+}
+
+.portfolioWrapper{
+    min-height: 700px;
+}
+
+.skills-tools ul, .front-page-bio ul{
+    padding-left: 0;
+}
+
+.skills-tools li, .front-page-bio li{
+    display: inline-block;
+    padding: 5px 15px;
+    margin: 0 5px 5px 0;
+    background-color: #d8c5e7;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.portfolioSide{
+    margin-top: 20px;
+}
+
+.filterList li{
+    display: inline-block;
+    padding: 5px 10px;
+}
+
+.filterList{
+    padding-left: 0;
+}
+
+.filterList li {
+  width: auto;
+  cursor: pointer;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.filterList li:hover {
+  background: #e7e2eb;
+  border-bottom: none;
+}
+.filterList li.active {
+  background: #d8c5e7;
+  border-bottom: none;
+}
+
+#mixPortfolio .mix{
+    display: none;
+}
+
+.view-project {
+    display: none;
+    text-align: center;
+}
+
+@media screen and (max-width: 720px) {
+	.view-project {
+        display: block;
+    }
+    .view img{
+        margin: 0 auto;
+    }
+}
+
+/* ------------------------------------------ *\
+    PORTFOLIO SLIDER
+\*------------------------------------------- */
+
+.slider {
+  margin: 10px auto;
+  max-width: 700px; /* Update to your slider width */
+  height: 560px; /* Update to your slider height */
+  position: relative;
+  overflow: hidden;
+}
+
+.slider ul{
+    margin: 0 auto;
+}
+
+.slider li {
+  display: none;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+}
+
+/* ------------------------------------------ *\
+    PORTFOLIO TRANSITIONS
+\*------------------------------------------- */
+
+.view-first img {
+   transition: all 0.2s linear;
+}
+.view-first .mask {
+   filter: alpha(opacity=0);
+   opacity: 0;
+   background-color: rgba(219,127,8, 0.7);
+   transition: all 0.4s ease-in-out;
+}
+.view-first h2 {
+   transform: translateY(-100px);
+   filter: alpha(opacity=0);
+   opacity: 0;
+   transition: all 0.2s ease-in-out;
+}
+
+.view-first:hover img {
+   transform: scale(1.1,1.1);
+}
+
+.view-first:hover .mask {
+   filter: alpha(opacity=100);
+   opacity: 1;
+}
+
+.view-first:hover h2 {
+   filter: alpha(opacity=100);
+   opacity: 1;
+   transform: translateY(0px);
+}
+				
+.view {
+   overflow: hidden;
+   position: relative;
+   text-align: center;
+   box-shadow: 1px 1px 2px #e6e6e6;
+   cursor: default;
+}
+
+.view .mask,.view .content {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   overflow: hidden;
+   top: 0;
+   left: 0;
+}
+
+.view img {
+   display: block;
+   position: relative;
+}
+
+.view h2 {
+   text-transform: uppercase;
+   color: #fff;
+   position: relative;
+   font-size: 17px;
+   padding: 10px;
+   background: rgba(0, 0, 0, 0.8);
+   margin: 30px 0 0 0;
+}
+
+.view a:hover {
+   color: #2ecc71;
+}
+
+/* ------------------------------------------ *\
+    CONTACT FORM
+\*------------------------------------------- */
+
+.wpcf7 form{
+    text-align: left;
+}
+
+.wpcf7 form div{
+    margin: 15px 0;
+
+}
+
+.wpcf7 form label{
+    display: block;
+    font-weight: bold;
+    width:100%;
+}
+
+.wpcf7 form input, .wpcf7 form select, .wpcf7 form textarea{
+    padding: 5px;
+}
+
+.wpcf7 form textarea{
+    width: 60%;
+}
+
+.wpcf7 form textarea {
+    height: 150px;
+    display: block;
+}
+
+.wpcf7 form input[type="submit"]{
+    border-radius: 10px;
+    border: 1px sold #999999;
+    width:25%;
+}
+
+.wpcf7 form input[type="submit"]:hover{
+    border: 2px solid #cfcfcf;
+}
+
+@media screen and (max-width: 720px) {
+
+    .wpcf7 form div{
+        width:100%;
+    }
+
+    .wpcf7 form label{
+        width:100%;
+    }
+
+    .wpcf7 form input, .wpcf7 form select, .wpcf7 form textarea, .wpcf7 form input[type="submit"]{
+        width: 100%;
+    }
+}
+
+
+/* ------------------------------------------ *\
+    SIDEBAR
+\*------------------------------------------- */
+
+
+.widget{
+    margin: 20px 0;                             
+    padding-left: 20px;
+}
+
+.widget li {
+    list-style: none;
+}
+
+@media screen and (max-width: 720px) {
+    .sidebar{
+        padding-left: 0;
+    }
+}
+
+
+/* ------------------------------------------ *\
+    ELEMENT STYLINGS
+\*------------------------------------------- */
+
+
+.more-link{
+    border-radius: 10px;
+    color: #fff;
+    background-color: #27afef;
+    padding: 10px 20px;
+    margin-top: 25px;
+}
+
+.more-link:hover {   
+    background-color: #2ecc71;
+}
+
+.post-readmore {
+    margin-top: 15px;
+    overflow: visible;
+}
+
+.button{
+    border-radius: 10px;
+    color: #fff;
+    background-color: #27afef;
+    padding: 10px 20px;
+    overflow: visible;
+    transition: background-color 0.2s linear;
+}
+
+.button:hover {   
+    background-color: #2ecc71;
+}
+
+
+/* ------------------------------------------ *\
+    FOOTER
+\*------------------------------------------- */
+
+
+footer{
+    color:#fff;
+    background-color:#2B2B2B;
+    width:100%;
+    margin-top:50px;
+    min-height: 50px;
+    overflow: hidden;
+    padding: 30px 0 10px 0;
+}
+
+footer li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-links{
+    display: inline-block;
+    float:right; 
+}
+
+
+/* ------------------------------------------ *\
+    MISC
+\*------------------------------------------- */
+
+.menu-menu-1-container a:link{
+    transition: all 0.2s ease;
+}
+
+.menu-menu-1-container a:hover{
+    border-bottom: 5px solid #27afef;
+    transition: all 0.2s ease;
+}
+
+.menu-menu-1-container a:active{
+    border-bottom: 5px solid #f39c12;    
+}

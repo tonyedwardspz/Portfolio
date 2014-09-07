@@ -7,7 +7,13 @@
         
                     <div class="unit blog-archive-item two-of-three">
                         
-                        <h2><span class="post-title"><?php the_title(); ?></span></h2>
+                        <h1><span class="post-title"><?php the_title(); ?></span></h1>
+
+                    <div class="sumText">
+                        <p>This is the description</p>
+                        <p><?php get_smry_text($post); ?></p>
+                    </div>
+                    <div class="sumSlant"></div>
                         
                         <?php the_content('Read More'); ?>
                         

@@ -5,7 +5,7 @@
     <footer>
         <div class="container">
             
-            <span id="footer-text">Made with <3</span>
+            <span id="footer-text">Made with love and coffee by <a href="<?php echo home_url(); ?>" title="Plymouth Web Developer">Tony Edwards</a></span>
 
             <?php
             // get the social links entered via the theme options page
