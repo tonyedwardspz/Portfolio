@@ -5,21 +5,21 @@
                    
                     <?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
         
-                    <div class="unit blog-archive-item two-of-three">
+                    <div class="unit blog-archive-item blog-content-width">
                         
                         <h1><span class="post-title"><?php the_title(); ?></span></h1>
-
-                    <div class="sumText">
-                        <p>This is the description</p>
-                        <p><?php get_smry_text($post); ?></p>
-                    </div>
-                    <div class="sumSlant"></div>
-                        
+                    
+                        <div class="summaryWrap">
+                            <div class="sumText">
+                                <p><?php get_smry_text($post); ?></p>
+                            </div>
+                        </div>
+                            
                         <?php the_content('Read More'); ?>
                         
                     </div>
                     
-                    <div class="unit one-of-three post-meta">
+                    <div class="unit side-width post-meta">
                         
                         <?php
                             if ( has_post_thumbnail() ) {

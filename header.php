@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,700' rel='stylesheet' type='text/css'>
     
     <!--[if lt IE 9]>
         <script src="<?php echo SCRIPT; ?>/html5shiv.js"></script>
@@ -26,7 +27,7 @@
 
 <body>
 
-    <div class="container">
+    <div class="container containerBackground">
         <div class="grid">
             
             <header class="unit full-width">  

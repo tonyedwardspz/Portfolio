@@ -260,6 +260,10 @@ table {
     WORDPRESS DEFAULT STYLES
 \*-----------------------------------*/
 
+body {
+  background-image: url("images/halftone.png");
+}
+
 img.centered,
 .aligncenter,
 div.aligncenter {
@@ -297,14 +301,13 @@ wp-caption img {
 }
 
 /*-----------------------------------*\
-    GRID
+    LAYOUT
 \*-----------------------------------*/
 
 .container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 0 30px;
-  padding: 0 1.5rem;
+  padding: 0 30px 30px 30px;
 }
 
 .grid {
@@ -319,10 +322,6 @@ wp-caption img {
   vertical-align: top;
   margin-left: 3%;
   margin-right: -.25em;
-  /*
-      overflow: hidden;
-  	*overflow: visible;
-  */
 }
 
 .full-width {
@@ -363,6 +362,14 @@ wp-caption img {
 
 .four-of-five {
   width: 77%;
+}
+
+.side-width {
+  width: 24.36%;
+}
+
+.blog-content-width {
+  width: 68.666666666%;
 }
 
 @media screen and (max-width: 720px) {
@@ -515,6 +522,10 @@ img {
   margin: 2px;
 }
 
+.containerBackground {
+  background-color: #fff;
+}
+
 /* ------------------------------------------ *\
     HEADER & NAVIGATION
 \*------------------------------------------- */
@@ -626,20 +637,35 @@ nav li {
   margin-bottom: 1.5em;
 }
 
-.sumtext {
-  background-color: grey;
+.summaryWrap {
+  width: 100%;
 }
 
-.sumSlant {
-  -webkit-transform: skewY(25deg);
-  -ms-transform: skewY(25deg);
-  transform: skewY(25deg);
-  background-color: grey;
+.sumText {
+  background: #15181a;
+  background: -webkit-gradient(linear, top left, top right, from(#15181a), color-stop(52%, #292724), to(rgba(59, 53, 45, 0.98)));
+  background: -webkit-linear-gradient(left, #15181a 0%, #292724 52%, rgba(59, 53, 45, 0.98) 100%);
+  background: linear-gradient(to right, #15181a 0%, #292724 52%, rgba(59, 53, 45, 0.98) 100%);
+  border-radius: 6px 0px 0px 6px;
+  width: 80%;
+  margin: 0 0 15px 20%;
+  float: right;
+}
+
+.sumText p {
+  color: #fff;
+  padding: 10px 5px;
+  margin: 0;
 }
 
 @media screen and (max-width: 720px) {
   .content {
     margin-top: 60px;
+  }
+
+  .sumText {
+    width: 100%;
+    margin: 0 0 10px 0;
   }
 }
 
@@ -1017,7 +1043,6 @@ footer {
   color: #fff;
   background-color: #2B2B2B;
   width: 100%;
-  margin-top: 50px;
   min-height: 50px;
   overflow: hidden;
   padding: 30px 0 10px 0;
@@ -1050,4 +1075,50 @@ footer li {
 
 .menu-menu-1-container a:active {
   border-bottom: 5px solid #f39c12;
+}
+
+.FAageSocialIcons ul {
+  margin-left: 0;
+}
+
+.FAageSocialIcons ul li {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin-right: 5px;
+  -webkit-transition: background-color 0.7s ease;
+  transition: background-color 0.7s ease;
+  background-color: #C1C0C0;
+  border-radius: 3px;
+}
+
+.FAageSocialIcons a {
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  line-height: 40px;
+}
+
+.twitter:hover {
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  background-color: #00aced;
+}
+
+.github:hover {
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  background-color: #000;
+}
+
+.googlePlus:hover {
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  background-color: #d34836;
+}
+
+.linkedIn:hover {
+  -webkit-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease;
+  background-color: #0e76a8;
 }

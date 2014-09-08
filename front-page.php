@@ -8,7 +8,7 @@
                     
                     <p>I'm a front end web developer with a passion for all things web.</p>
                     <p>I'm currently studying Web Application Development at Plymouth University.</p>
-                    <div>Social links</div>
+                    <?php include 'social-icons.php'; ?>
                 
                 </div>
                 
