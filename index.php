@@ -1,9 +1,14 @@
 <?php get_header(); ?>
 
 
-                <div class="blog-archive">   
+                <div class="blog-archive">
                     
-                    <?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
+
+                    <?php 
+                    // limit the loop to non custom post types (i.e only blog posts)
+                    query_posts("post_type=post"); 
+                    
+                    if (have_posts() ) : while (have_posts() ) : the_post(); ?>
         
                     <div class="unit blog-archive-item two-of-three">
                         
