@@ -11,37 +11,6 @@
                     <?php include 'social-icons.php'; ?>
                 
                 </div>
-                
-                <div class="unit full-width">
-                    
-                    <h2>My Work</h2>
-                    
-                </div>
-                
-                <?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => 3 ) ); ?>
-                <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
-
-                <div class="unit one-of-three portfolioItem">
-
-                    <div class="view view-first">
-                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('te_project'); ?></a>
-                        
-                        <div class="mask">
-                            <h2 class="force-white"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                            <p></p>
-                        </div>
-                    </div>  
-                </div>
-
-                <?php endwhile; wp_reset_query(); ?>
-
-                <div class="unit full-width">
-                    <span class="button gamma force-white"><a href="#">View my full portfolio</a></span>
-                </div>
-
-                <div class="seperator unit full-width">
-                    <div class="seperatorRight"></div>
-                </div>
 
                 <div class="unit full-width">
                     <h2>A little bit about me</h2>
@@ -70,14 +39,41 @@
                     <p>Today I create fast and clean web sites using up to date tools and techniques. Day to day I use:</p>
                     
                     <ul>
-                        <li>Valid HTML</li>
-                        <li>Valid CSS</li>
-                        <li>Sass</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>SASS</li>
                         <li>PHP</li>
+                        <li>javascript</li>
+                        <li>jQuery</li>
                         <li>Wordpress</li>
                         <li>MySQL</li>
                     </ul>
                     
+                </div>
+
+                <div class="seperator unit full-width">
+                    <div class="seperatorRight"></div>
+                </div>
+                
+                <?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => 3 ) ); ?>
+                <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+                <div class="unit one-of-three portfolioItem">
+
+                    <div class="view view-first">
+                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('te_project'); ?></a>
+                        
+                        <div class="mask">
+                            <h2 class="force-white"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                            <p></p>
+                        </div>
+                    </div>  
+                </div>
+
+                <?php endwhile; wp_reset_query(); ?>
+
+                <div class="unit full-width homeButton">
+                    <span class="button gamma force-white"><a href="#">My Portfolio</a></span>
                 </div>
 
                 <div class="seperator unit full-width">

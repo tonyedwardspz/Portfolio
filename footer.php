@@ -22,7 +22,7 @@
                 <li><a href="<?php print $linkedin; ?>"><img src="<?php echo IMAGES ?>/social/linkedin-48x48.png" alt="linkedin" /></a></li>
                 <?php endif; ?>
                 <?php if($dribbble): ?>
-                <li><a href="<?php print $dribbble; ?>"><img src="<?php echo IMAGES ?>/social/dribbble-48x48.png" alt="Dribble" /></a></li>
+                <!-- <li><a href="<?php print $dribbble; ?>"><img src="<?php echo IMAGES ?>/social/dribbble-48x48.png" alt="Dribble" /></a></li> -->
                 <?php endif; ?>
                 <?php if($twitter): ?>
                 <li><a href="<?php print $twitter; ?>"><img src="<?php echo IMAGES ?>/social/twitter-48x48.png" alt="Twitter" /></a></li>

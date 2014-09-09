@@ -42,7 +42,7 @@ img.centered, .aligncenter, div.aligncenter{
     margin: 10px;
 }
 
-wp-caption img {
+.wp-caption img {
     margin: 0;
     padding: 0;
     border: 0 none;
@@ -245,28 +245,36 @@ img {
 
 header {
     margin-top: 10px;
-}
-
-header a {
-    text-decoration: none;
+    
+    a {
+        text-decoration: none;
+    }
 }
 
 .activeLink {
     border-bottom: 2px solid #fcbf32;
 }
 
+/*.current-menu-item > a,
+.current-menu-ancestor > a,
+.current_page_parent > a,
+.current_page_item > a,
+.current_page_ancestor > a {
+    border-bottom: 2px solid #fcbf32;
+}*/
+
 nav {
     float: right;
     margin-top: 35px;
-}
+    
+    a{
+        padding: 10px 15px;
+        color: #555;
+    }
 
-nav a{
-    padding: 10px 15px;
-    color: #555;
-}
-
-nav li {
-    display: inline-block;
+    li {
+        display: inline-block;
+    }
 }
 
 #toggle-menu {
@@ -386,7 +394,9 @@ nav li {
     margin-left:15px;
 }
 
-
+.homeButton{
+    margin-bottom: 20px;
+}
 
 @media screen and (max-width: 720px) {
    .i-use li:first-child{
@@ -445,16 +455,14 @@ nav li {
     margin-bottom: 20px;
     padding:8px;
     border-radius: 6px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
     border: 1px solid #696a6b;
     height: 210px;
     overflow: hidden;
     transition:height 2s;
-}
 
-.portfolioItem h3{
-    padding-top: 10px;
+    h3{
+        padding-top: 10px;
+    }
 }
 
 .portfolioWrapper .portfolioItem:hover{
@@ -475,8 +483,6 @@ nav li {
     padding: 5px 15px;
     margin: 0 5px 5px 0;
     background-color: #d8c5e7;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
     border-radius: 3px;
 }
 
@@ -484,22 +490,18 @@ nav li {
     margin-top: 20px;
 }
 
-.filterList li{
-    display: inline-block;
-    padding: 5px 10px;
-}
-
 .filterList{
     padding-left: 0;
+
+    li{
+        display: inline-block;
+        padding: 5px 10px;
+        width: auto;
+        cursor: pointer;
+        border-radius: 3px;
+    }
 }
 
-.filterList li {
-  width: auto;
-  cursor: pointer;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  border-radius: 3px;
-}
 .filterList li:hover {
   background: #e7e2eb;
   border-bottom: none;
@@ -537,17 +539,17 @@ nav li {
   height: 560px; /* Update to your slider height */
   position: relative;
   overflow: hidden;
-}
 
-.slider ul{
-    margin: 0 auto;
-}
+    ul{
+        margin: 0 auto;
+    }
 
-.slider li {
-  display: none;
-  position: absolute; 
-  top: 0; 
-  left: 0; 
+    li {
+        display: none;
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+    }
 }
 
 /* ------------------------------------------ *\
@@ -631,7 +633,6 @@ nav li {
 
 .wpcf7 form div{
     margin: 15px 0;
-
 }
 
 .wpcf7 form label{
@@ -747,17 +748,18 @@ footer{
     width:100%;
     min-height: 50px;
     overflow: hidden;
-    padding: 30px 0 10px 0;
-}
+    padding: 10px 0 10px 0;
 
-footer li {
-    display: inline-block;
-    margin: 0 10px;
+    li {
+        display: inline-block;
+        margin: 0 10px;
+    }
 }
 
 .social-links{
     display: inline-block;
-    float:right; 
+    float:right;
+    margin:0;
 }
 
 
