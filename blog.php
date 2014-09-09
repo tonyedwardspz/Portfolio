@@ -8,14 +8,12 @@
 
 
                 <div class="blog-archive">   
-                    <?php query_posts("post_type=post"); ?>
+                    
                     <?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
         
                     <div class="unit blog-archive-item two-of-three">
                         
                         <h1><span class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span></h1>
-
-
                         
                         <?php the_content('Read More'); ?>
                         

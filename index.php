@@ -14,7 +14,7 @@
                         
                         <h2><span class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span></h2>
                         
-                        <?php the_content('Read More'); ?>
+                        <?php the_excerpt(); ?>
                         
                     </div>
                     
@@ -25,7 +25,7 @@
                                 the_post_thumbnail('blog-post-thumb');
                             }
                         ?>
-                        
+                        <span class="post-info">By <?php the_author(); ?></span>
                         <span class="post-info"><a href="<?php the_permalink(); ?>"><?php the_time('l F d, Y'); ?></a></span>
                         <span class="post-info"><?php the_tags(); ?></span>
                     
