@@ -8,9 +8,7 @@
 				
 						<h1><?php the_title(); ?></h1>
 						
-						<p><?php get_smry_text($post); ?></p>
-
-                        <p><a href="<?php the_permalink(); ?>" title="View Porfolio Item">View portfolio item</a></p>
+						<p><?php the_content('Read More'); ?></p>
 							
 				</div>
 

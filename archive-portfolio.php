@@ -12,6 +12,7 @@
                     <li class="filter" data-filter=".Website">Websites</li>
                     <li class="filter" data-filter=".WordPress">WordPress</li>
                     <li class="filter" data-filter=".Games">Games</li>
+                    <li class="filter" data-filter=".University">University Projects</li>
                     <li class="filter" data-filter=".Other">Other</li>
                 <ul>
 
@@ -36,7 +37,7 @@
 
                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 
-                <p><?php echo get_the_excerpt(); ?> <a href="<?php the_permalink(); ?>">read more...</a></p>
+                <p><?php get_smry_text($post); ?></p>
 
             </div>
 
