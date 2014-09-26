@@ -73,7 +73,7 @@
                 <?php endwhile; wp_reset_query(); ?>
 
                 <div class="unit full-width homeButton">
-                    <span class="button gamma force-white"><a href="#">My Portfolio</a></span>
+                    <span class="button gamma force-white"><a href="http://purelywebdesign.co.uk/?post_type=portfolio">My Portfolio</a></span>
                 </div>
 
                 <div class="seperator unit full-width">

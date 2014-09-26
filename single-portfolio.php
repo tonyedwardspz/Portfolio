@@ -8,9 +8,9 @@
 				
 						<h1><?php the_title(); ?></h1>
 						
-						<h2><?php get_smry_text($post); ?></h2>
+						<p><?php get_smry_text($post); ?></p>
 
-						<?php the_content(); ?>
+                        <p><a href="<?php the_permalink(); ?>" title="View Porfolio Item">View portfolio item</a></p>
 							
 				</div>
 

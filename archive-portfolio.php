@@ -10,7 +10,7 @@
                 <ul class="filterList">
                     <li class="filter" data-filter="all">All</li>
                     <li class="filter" data-filter=".Website">Websites</li>
-                    <li class="filter" data-filter=".Wordpress">Wordpress</li>
+                    <li class="filter" data-filter=".WordPress">WordPress</li>
                     <li class="filter" data-filter=".Games">Games</li>
                     <li class="filter" data-filter=".Other">Other</li>
                 <ul>

@@ -142,9 +142,7 @@ function getAttachedImages(){
 		//build the input area ?>
 		<p>
 			<label>Summary Text</label>
-			<textarea name="smry_text" id="smry_text" cols="60" rows="5">
-				<?php echo $meta; ?>
-			</textarea>
+			<textarea name="smry_text" id="smry_text" cols="60" rows="5"><?php echo $meta; ?></textarea>
 		</p>
 		<?php
 	}
