@@ -30,8 +30,9 @@
                 <a href="<?php the_permalink(); ?>" class="portImage"><?php the_post_thumbnail('te_project'); ?></a>
                     
                     <div class="mask">
-                        <h2 class="force-white"><a href="<?php the_permalink(); ?>">View Project</a></h2>
-                        <p></p>
+                        <a href="<?php the_permalink(); ?>" class="forceLink">
+                        <h2 class="force-white">View Project</h2>
+                        <p></p></a>
                     </div>
                 </div>
 

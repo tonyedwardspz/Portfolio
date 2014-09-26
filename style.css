@@ -6,27 +6,14 @@ Version:        1.0
 Author:         Tony Edwards
 Aurhor URI:     http://www.purelywebdesign.co.uk
 */
-
 /*-----------------------------------*\
     NORMALIZE CSS
 \*-----------------------------------*/
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section {
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
   display: block;
 }
 
-audio,
-canvas,
-video {
+audio, canvas, video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
@@ -51,11 +38,7 @@ body {
   margin: 0;
 }
 
-body,
-button,
-input,
-select,
-textarea {
+body, button, input, select, textarea {
   font-family: sans-serif;
 }
 
@@ -71,8 +54,7 @@ a:focus {
   outline: thin dotted;
 }
 
-a:hover,
-a:active {
+a:hover, a:active {
   outline: 0;
 }
 
@@ -80,8 +62,7 @@ abbr[title] {
   border-bottom: 1px dotted;
 }
 
-b,
-strong {
+b, strong {
   font-weight: bold;
 }
 
@@ -98,10 +79,7 @@ mark {
   color: #000;
 }
 
-pre,
-code,
-kbd,
-samp {
+pre, code, kbd, samp {
   font-family: monospace,serif;
   _font-family: 'courier new',monospace;
   font-size: 1em;
@@ -117,8 +95,7 @@ q {
   quotes: none;
 }
 
-q:before,
-q:after {
+q:before, q:after {
   content: '';
   content: none;
 }
@@ -127,8 +104,7 @@ small {
   font-size: 75%;
 }
 
-sub,
-sup {
+sub, sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -143,8 +119,7 @@ sub {
   bottom: -0.25em;
 }
 
-ul,
-ol {
+ul, ol {
   margin: 1em 0;
   padding: 0 0 0 10px;
   list-style: none;
@@ -154,8 +129,7 @@ dd {
   margin: 0 0 0 40px;
 }
 
-nav ul,
-nav ol {
+nav ul, nav ol {
   list-style: none;
   list-style-image: none;
 }
@@ -188,32 +162,24 @@ legend {
   *margin-left: -7px;
 }
 
-button,
-input,
-select,
-textarea {
+button, input, select, textarea {
   font-size: 100%;
   margin: 0;
   vertical-align: baseline;
   *vertical-align: middle;
 }
 
-button,
-input {
+button, input {
   line-height: normal;
 }
 
-button,
-input[type="button"],
-input[type="reset"],
-input[type="submit"] {
+button, input[type="button"], input[type="reset"], input[type="submit"] {
   cursor: pointer;
   -webkit-appearance: button;
   *overflow: visible;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
+input[type="checkbox"], input[type="radio"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -231,8 +197,7 @@ input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-button::-moz-focus-inner,
-input::-moz-focus-inner {
+button::-moz-focus-inner, input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
@@ -259,14 +224,11 @@ table {
 /*-----------------------------------*\
     WORDPRESS DEFAULT STYLES
 \*-----------------------------------*/
-
 body {
   background-image: url("images/halftone.png");
 }
 
-img.centered,
-.aligncenter,
-div.aligncenter {
+img.centered, .aligncenter, div.aligncenter {
   display: block;
   margin: 0 auto;
 }
@@ -303,7 +265,6 @@ div.aligncenter {
 /*-----------------------------------*\
     LAYOUT
 \*-----------------------------------*/
-
 .container {
   max-width: 1000px;
   margin: 0 auto;
@@ -384,33 +345,21 @@ div.aligncenter {
     display: block;
   }
 }
-
 /* ------------------------------------------ *\
     TYPOGRAPHY
     Works off the assumption of a 1.5 line height @ 20px.
 \*------------------------------------------- */
-
 html {
   font: 100%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-p,
-.p,
-ul,
-ol,
-hr,
-table,
-form,
-pre,
-h1,
-.alpha,
-h2 {
+p, .p, ul, ol, hr, table, form, pre,
+h1, .alpha, h2 {
   margin-bottom: 30px;
   margin-bottom: 1.5rem;
 }
 
-h1,
-.alpha {
+h1, .alpha {
   font-size: 60px;
   font-size: 3rem;
   font-weight: 700;
@@ -418,16 +367,14 @@ h1,
   margin-top: 20px;
 }
 
-h2,
-.beta {
+h2, .beta {
   font-size: 30px;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 2;
 }
 
-h3,
-.gamma {
+h3, .gamma {
   font-size: 20px;
   font-size: 1rem;
   font-weight: 700;
@@ -444,17 +391,14 @@ hr {
     font: 90%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
   }
 
-  h1,
-  .alpha {
+  h1, .alpha {
     font-size: 30px;
     font-size: 1.5rem;
   }
 }
-
 /* ------------------------------------------ *\
     GLOBAL STYLINGS
 \*------------------------------------------- */
-
 a:link {
   color: #27afef;
   -webkit-transition: all 0.2s ease;
@@ -479,7 +423,6 @@ a:active {
  Force a single colour to all pseudo classes when needed.
  If you know a better way of doing this please let me know.
  */
-
 .force-darkgrey a:link,
 .force-darkgrey a:visited,
 .force-darkgrey a:hover,
@@ -529,11 +472,9 @@ img {
 /* ------------------------------------------ *\
     HEADER & NAVIGATION
 \*------------------------------------------- */
-
 header {
   margin-top: 10px;
 }
-
 header a {
   text-decoration: none;
 }
@@ -542,16 +483,21 @@ header a {
   border-bottom: 2px solid #fcbf32;
 }
 
+/*.current-menu-item > a,
+.current-menu-ancestor > a,
+.current_page_parent > a,
+.current_page_item > a,
+.current_page_ancestor > a {
+    border-bottom: 2px solid #fcbf32;
+}*/
 nav {
   float: right;
   margin-top: 35px;
 }
-
 nav a {
   padding: 10px 15px;
   color: #555;
 }
-
 nav li {
   display: inline-block;
 }
@@ -621,11 +567,9 @@ nav li {
     color: #fff;
   }
 }
-
 /* ------------------------------------------ *\
     CONTENT
 \*------------------------------------------- */
-
 .in-your-face {
   text-align: center;
   color: #333;
@@ -643,7 +587,7 @@ nav li {
 
 .sumText {
   background: #15181a;
-  background: -webkit-gradient(linear, top left, top right, from(#15181a), color-stop(52%, #292724), to(rgba(59, 53, 45, 0.98)));
+  background: -webkit-gradient(linear, left top, right top, from(#15181a), color-stop(52%, #292724), to(rgba(59, 53, 45, 0.98)));
   background: -webkit-linear-gradient(left, #15181a 0%, #292724 52%, rgba(59, 53, 45, 0.98) 100%);
   background: linear-gradient(to right, #15181a 0%, #292724 52%, rgba(59, 53, 45, 0.98) 100%);
   border-radius: 6px 0px 0px 6px;
@@ -651,7 +595,6 @@ nav li {
   margin: 0 0 15px 20%;
   float: right;
 }
-
 .sumText p {
   color: #fff;
   padding: 10px 5px;
@@ -668,11 +611,9 @@ nav li {
     margin: 0 0 10px 0;
   }
 }
-
 /* ------------------------------------------ *\
     HOMEPAGE
 \*------------------------------------------- */
-
 .i-use li {
   margin-left: 15px;
 }
@@ -691,11 +632,9 @@ nav li {
     display: inline-block;
   }
 }
-
 /* ------------------------------------------ *\
     BLOG
 \*------------------------------------------- */
-
 .blog-archive-item {
   margin-bottom: 40px;
   display: inline-block;
@@ -728,7 +667,6 @@ nav li {
 /* ------------------------------------------ *\
     PORTFOLIO
 \*------------------------------------------- */
-
 .portfolioItem {
   margin-bottom: 20px;
   padding: 8px;
@@ -739,7 +677,6 @@ nav li {
   -webkit-transition: height 2s;
   transition: height 2s;
 }
-
 .portfolioItem h3 {
   padding-top: 10px;
 }
@@ -754,13 +691,11 @@ nav li {
   min-height: 700px;
 }
 
-.skills-tools ul,
-.front-page-bio ul {
+.skills-tools ul, .front-page-bio ul {
   padding-left: 0;
 }
 
-.skills-tools li,
-.front-page-bio li {
+.skills-tools li, .front-page-bio li {
   display: inline-block;
   padding: 5px 15px;
   margin: 0 5px 5px 0;
@@ -775,7 +710,6 @@ nav li {
 .filterList {
   padding-left: 0;
 }
-
 .filterList li {
   display: inline-block;
   padding: 5px 10px;
@@ -812,11 +746,9 @@ nav li {
     margin: 0 auto;
   }
 }
-
 /* ------------------------------------------ *\
     PORTFOLIO SLIDER
 \*------------------------------------------- */
-
 .slider {
   margin: 10px auto;
   max-width: 700px;
@@ -826,11 +758,9 @@ nav li {
   position: relative;
   overflow: hidden;
 }
-
 .slider ul {
   margin: 0 auto;
 }
-
 .slider li {
   display: none;
   position: absolute;
@@ -841,7 +771,6 @@ nav li {
 /* ------------------------------------------ *\
     PORTFOLIO TRANSITIONS
 \*------------------------------------------- */
-
 .view-first img {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
@@ -893,8 +822,7 @@ nav li {
   cursor: default;
 }
 
-.view .mask,
-.view .content {
+.view .mask, .view .content {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -925,7 +853,6 @@ nav li {
 /* ------------------------------------------ *\
     CONTACT FORM
 \*------------------------------------------- */
-
 .wpcf7 form {
   text-align: left;
 }
@@ -940,9 +867,7 @@ nav li {
   width: 100%;
 }
 
-.wpcf7 form input,
-.wpcf7 form select,
-.wpcf7 form textarea {
+.wpcf7 form input, .wpcf7 form select, .wpcf7 form textarea {
   padding: 5px;
 }
 
@@ -974,18 +899,13 @@ nav li {
     width: 100%;
   }
 
-  .wpcf7 form input,
-  .wpcf7 form select,
-  .wpcf7 form textarea,
-  .wpcf7 form input[type="submit"] {
+  .wpcf7 form input, .wpcf7 form select, .wpcf7 form textarea, .wpcf7 form input[type="submit"] {
     width: 100%;
   }
 }
-
 /* ------------------------------------------ *\
     SIDEBAR
 \*------------------------------------------- */
-
 .widget {
   margin: 20px 0;
   padding-left: 20px;
@@ -1000,11 +920,9 @@ nav li {
     padding-left: 0;
   }
 }
-
 /* ------------------------------------------ *\
     ELEMENT STYLINGS
 \*------------------------------------------- */
-
 .more-link {
   border-radius: 10px;
   color: #fff;
@@ -1039,7 +957,6 @@ nav li {
 /* ------------------------------------------ *\
     FOOTER
 \*------------------------------------------- */
-
 footer {
   color: #fff;
   background-color: #2B2B2B;
@@ -1048,7 +965,6 @@ footer {
   overflow: hidden;
   padding: 10px 0 10px 0;
 }
-
 footer li {
   display: inline-block;
   margin: 0 10px;
@@ -1063,7 +979,6 @@ footer li {
 /* ------------------------------------------ *\
     MISC
 \*------------------------------------------- */
-
 .menu-menu-1-container a:link {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -1123,4 +1038,8 @@ footer li {
   -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
   background-color: #0e76a8;
+}
+
+.forceLink a {
+  padding: auto;
 }
