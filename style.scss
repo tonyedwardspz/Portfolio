@@ -187,6 +187,8 @@ a:active {
     color: #f39c12;
 }
 
+
+
 /* 
  Force a single colour to all pseudo classes when needed.
  If you know a better way of doing this please let me know.
@@ -251,17 +253,36 @@ header {
     }
 }
 
-.activeLink {
-    border-bottom: 2px solid #fcbf32;
-}
-
-/*.current-menu-item > a,
+.activeLink,
+.current-menu-item > a,
 .current-menu-ancestor > a,
 .current_page_parent > a,
 .current_page_item > a,
-.current_page_ancestor > a {
+.current_page_ancestor > a,
+body.post-type-archive-portfolio nav ul li#menu-item-17 > a,
+body.single-portfolio nav ul li#menu-item-17 > a {
     border-bottom: 2px solid #fcbf32;
-}*/
+}
+
+.menu-menu-1-container a:link{
+    transition: all 0.2s ease;
+}
+
+.menu-menu-1-container a:hover,
+body.post-type-archive-portfolio nav ul li#menu-item-22 > a:hover,
+body.single-portfolio nav ul li#menu-item-22 > a:hover{
+    border-bottom: 5px solid #27afef;
+    transition: all 0.2s ease;
+}
+
+.menu-menu-1-container a:active{
+    border-bottom: 5px solid #f39c12;    
+}
+
+body.single-portfolio nav ul li#menu-item-22 > a,
+body.post-type-archive-portfolio nav ul li#menu-item-22 > a{
+    border-bottom: 0;
+}
 
 nav {
     float: right;
@@ -766,19 +787,6 @@ footer{
 /* ------------------------------------------ *\
     MISC
 \*------------------------------------------- */
-
-.menu-menu-1-container a:link{
-    transition: all 0.2s ease;
-}
-
-.menu-menu-1-container a:hover{
-    border-bottom: 5px solid #27afef;
-    transition: all 0.2s ease;
-}
-
-.menu-menu-1-container a:active{
-    border-bottom: 5px solid #f39c12;    
-}
 
 .FAageSocialIcons ul{
     margin-left: 0;

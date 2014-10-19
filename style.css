@@ -180,8 +180,6 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
 }
 
 input[type="checkbox"], input[type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
 }
@@ -216,8 +214,6 @@ table {
   margin: 0;
   padding: 0;
   /*position: relative;*/
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -401,7 +397,6 @@ hr {
 \*------------------------------------------- */
 a:link {
   color: #27afef;
-  -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
 
@@ -411,7 +406,6 @@ a:visited {
 
 a:hover {
   color: #2ecc71;
-  -webkit-transition: color 0.2s linear;
   transition: color 0.2s linear;
 }
 
@@ -479,17 +473,37 @@ header a {
   text-decoration: none;
 }
 
-.activeLink {
-  border-bottom: 2px solid #fcbf32;
-}
-
-/*.current-menu-item > a,
+.activeLink,
+.current-menu-item > a,
 .current-menu-ancestor > a,
 .current_page_parent > a,
 .current_page_item > a,
-.current_page_ancestor > a {
-    border-bottom: 2px solid #fcbf32;
-}*/
+.current_page_ancestor > a,
+body.post-type-archive-portfolio nav ul li#menu-item-17 > a,
+body.single-portfolio nav ul li#menu-item-17 > a {
+  border-bottom: 2px solid #fcbf32;
+}
+
+.menu-menu-1-container a:link {
+  transition: all 0.2s ease;
+}
+
+.menu-menu-1-container a:hover,
+body.post-type-archive-portfolio nav ul li#menu-item-22 > a:hover,
+body.single-portfolio nav ul li#menu-item-22 > a:hover {
+  border-bottom: 5px solid #27afef;
+  transition: all 0.2s ease;
+}
+
+.menu-menu-1-container a:active {
+  border-bottom: 5px solid #f39c12;
+}
+
+body.single-portfolio nav ul li#menu-item-22 > a,
+body.post-type-archive-portfolio nav ul li#menu-item-22 > a {
+  border-bottom: 0;
+}
+
 nav {
   float: right;
   margin-top: 35px;
@@ -587,8 +601,6 @@ nav li {
 
 .sumText {
   background: #15181a;
-  background: -webkit-gradient(linear, left top, right top, from(#15181a), color-stop(52%, #292724), to(rgba(59, 53, 45, 0.98)));
-  background: -webkit-linear-gradient(left, #15181a 0%, #292724 52%, rgba(59, 53, 45, 0.98) 100%);
   background: linear-gradient(to right, #15181a 0%, #292724 52%, rgba(59, 53, 45, 0.98) 100%);
   border-radius: 6px 0px 0px 6px;
   width: 80%;
@@ -674,7 +686,6 @@ nav li {
   border: 1px solid #696a6b;
   height: 210px;
   overflow: hidden;
-  -webkit-transition: height 2s;
   transition: height 2s;
 }
 .portfolioItem h3 {
@@ -683,7 +694,6 @@ nav li {
 
 .portfolioWrapper .portfolioItem:hover {
   height: 350px;
-  -webkit-transition: all 1s;
   transition: all 1s;
 }
 
@@ -772,7 +782,6 @@ nav li {
     PORTFOLIO TRANSITIONS
 \*------------------------------------------- */
 .view-first img {
-  -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
@@ -780,23 +789,17 @@ nav li {
   filter: alpha(opacity=0);
   opacity: 0;
   background-color: rgba(219, 127, 8, 0.7);
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
 }
 
 .view-first h2 {
-  -webkit-transform: translateY(-100px);
-  -ms-transform: translateY(-100px);
   transform: translateY(-100px);
   filter: alpha(opacity=0);
   opacity: 0;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
 .view-first:hover img {
-  -webkit-transform: scale(1.1, 1.1);
-  -ms-transform: scale(1.1, 1.1);
   transform: scale(1.1, 1.1);
 }
 
@@ -808,8 +811,6 @@ nav li {
 .view-first:hover h2 {
   filter: alpha(opacity=100);
   opacity: 1;
-  -webkit-transform: translateY(0px);
-  -ms-transform: translateY(0px);
   transform: translateY(0px);
 }
 
@@ -817,7 +818,6 @@ nav li {
   overflow: hidden;
   position: relative;
   text-align: center;
-  -webkit-box-shadow: 1px 1px 2px #e6e6e6;
   box-shadow: 1px 1px 2px #e6e6e6;
   cursor: default;
 }
@@ -946,7 +946,6 @@ nav li {
   background-color: #27afef;
   padding: 10px 20px;
   overflow: visible;
-  -webkit-transition: background-color 0.2s linear;
   transition: background-color 0.2s linear;
 }
 
@@ -979,21 +978,6 @@ footer li {
 /* ------------------------------------------ *\
     MISC
 \*------------------------------------------- */
-.menu-menu-1-container a:link {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-.menu-menu-1-container a:hover {
-  border-bottom: 5px solid #27afef;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-.menu-menu-1-container a:active {
-  border-bottom: 5px solid #f39c12;
-}
-
 .FAageSocialIcons ul {
   margin-left: 0;
 }
@@ -1003,7 +987,6 @@ footer li {
   height: 40px;
   width: 40px;
   margin-right: 5px;
-  -webkit-transition: background-color 0.7s ease;
   transition: background-color 0.7s ease;
   background-color: #C1C0C0;
   border-radius: 3px;
@@ -1017,25 +1000,21 @@ footer li {
 }
 
 .twitter:hover {
-  -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
   background-color: #00aced;
 }
 
 .github:hover {
-  -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
   background-color: #000;
 }
 
 .googlePlus:hover {
-  -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
   background-color: #d34836;
 }
 
 .linkedIn:hover {
-  -webkit-transition: background-color 0.5s ease;
   transition: background-color 0.5s ease;
   background-color: #0e76a8;
 }

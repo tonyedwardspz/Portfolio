@@ -113,63 +113,63 @@ function getAttachedImages(){
 }
 
 
-	// Add a summary metabox to all posts to use in theme
-	function smry_custom_meta(){
-		// post types to apply extra metabox too. 
-		$postTypes = array('post', 'portfolio');
+// Add a summary metabox to all posts to use in theme
+function smry_custom_meta(){
+	// post types to apply extra metabox too. 
+	$postTypes = array('post', 'portfolio');
 
-		// loop the array of post types
-		foreach ($postTypes as $postType) {
-			add_meta_box(
-				'summary-meta-box', // id
-				__('Post Summary'), // title
-				'smry_show_meta_box', // callback
-				$postType, // post type
-				'normal' // position
-				);
-		}
+	// loop the array of post types
+	foreach ($postTypes as $postType) {
+		add_meta_box(
+			'summary-meta-box', // id
+			__('Post Summary'), // title
+			'smry_show_meta_box', // callback
+			$postType, // post type
+			'normal' // position
+			);
 	}
-	add_action('add_meta_boxes', 'smry_custom_meta');
+}
+add_action('add_meta_boxes', 'smry_custom_meta');
 
-	function smry_show_meta_box(){
-		// get the stored meta values	
-		global $post;
-		$meta = get_post_meta($post->ID, 'smry_text', true);
+function smry_show_meta_box(){
+	// get the stored meta values	
+	global $post;
+	$meta = get_post_meta($post->ID, 'smry_text', true);
 
-		//Use nonce for verification
-		// echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';
+	//Use nonce for verification
+	// echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';
 
-		//build the input area ?>
-		<p>
-			<label>Summary Text</label>
-			<textarea name="smry_text" id="smry_text" cols="60" rows="5"><?php echo $meta; ?></textarea>
-		</p>
-		<?php
+	//build the input area ?>
+	<p>
+		<label>Summary Text</label>
+		<textarea name="smry_text" id="smry_text" cols="60" rows="5"><?php echo $meta; ?></textarea>
+	</p>
+	<?php
+}
+
+function save_summary_meta($post_id){
+	//verify the nonce
+	// if (!wp_verify_nonce($_POST['custom_meta_box_nonce'], basename(__FILE__))){
+	// 	return $post_id;
+	// }
+
+	//check for saving
+	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE){
+		return $post_id;
 	}
 
-	function save_summary_meta($post_id){
-		//verify the nonce
-		// if (!wp_verify_nonce($_POST['custom_meta_box_nonce'], basename(__FILE__))){
-		// 	return $post_id;
-		// }
+	//retrieve the values
+	$old = get_post_meta($post_id, 'smry_text', true);
+	$new = $_POST["smry_text"];
 
-		//check for saving
-		if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE){
-			return $post_id;
-		}
-
-		//retrieve the values
-		$old = get_post_meta($post_id, 'smry_text', true);
-		$new = $_POST["smry_text"];
-
-		//save new values if changes are made
-		if ($new && $new != $old){
-			update_post_meta($post_id, 'smry_text', $new);
-		} elseif ('' == $new && $old){
-			delete_post_meta($post_id, 'smry_text', $old);
-		}
+	//save new values if changes are made
+	if ($new && $new != $old){
+		update_post_meta($post_id, 'smry_text', $new);
+	} elseif ('' == $new && $old){
+		delete_post_meta($post_id, 'smry_text', $old);
 	}
-	add_action('save_post', 'save_summary_meta');
+}
+add_action('save_post', 'save_summary_meta');
 
 
 // get the custom meta summary
@@ -191,6 +191,4 @@ function new_excerpt_more($more) {
 	return '… <a href="'. get_permalink($post->ID) . '">' . 'Read More &raquo;' . '</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
-
-
 ?>
