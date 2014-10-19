@@ -61,7 +61,7 @@
                 <div class="unit one-of-three portfolioItem">
 
                     <div class="view view-first">
-                        <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('te_project'); ?></a>
+                        <a href="<?php the_permalink(); ?>" class="portImage"><?php the_post_thumbnail('portfolio-item-thumb'); ?></a>
                         
                         <div class="mask">
                             <h2 class="force-white"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>

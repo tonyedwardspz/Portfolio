@@ -34,6 +34,17 @@ $j(document).ready(function(e){
         $j('#mixPortfolio').mixItUp();
     }
     imageSlider();
+
+    // remove the resizePortfolioSlider height to allow for css transitions
+    if ($j("body").hasClass("post-type-archive-portfolio")){
+        $j(".portfolioItem").hover(function(){
+            // reset the inline height
+            $j(this).height('');
+        },function(){
+            // call the resize method
+            resizePortfolioSlider();
+        });
+    }
 });
 
 
@@ -47,6 +58,7 @@ $j(window).resize(function() {
     
     changeMenuColor();
     resizeSliderWrap();
+    resizePortfolioSlider();
 
 });
 
@@ -54,6 +66,10 @@ $j(window).resize(function() {
 // incorrect li height size due to unloaded image.
 $j(window).bind("load", function() { 
     resizeSliderWrap();
+
+    //if ("$body").hasClass()
+    setTimeout(resizePortfolioSlider, 700)
+    //resizePortfolioSlider()
 });
 
 function imageSlider() { 
@@ -92,6 +108,23 @@ function imageSlider() {
     resizeSliderWrap();
 };
 
+// alter the size of the container with the individual portfolio items. This keeps
+// them in proportion on mobile devices
+function resizePortfolioSlider(){
+
+    // get the portfolio image height
+    var imgHeight = $j(".portImage img").height();
+
+    // add padding to keep everything reletive
+    imgHeight += 4;
+
+    // get the containing divs dimensions
+    var divHeight = $j(".portfolioItem").height();
+
+    // resize the div
+    $j(".portfolioItem").height(imgHeight);
+
+}
 
 // make sure the containing li for the slider images is the same size as the 
 // contained image. Called on page load and resize
