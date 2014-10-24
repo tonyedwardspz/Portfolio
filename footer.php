@@ -5,7 +5,12 @@
     <footer>
         <div class="container">
             
-            <span id="footer-text">Made with love and coffee by <a href="<?php echo home_url(); ?>" title="Plymouth Web Developer">Tony Edwards</a></span>
+            <span id="footer-text">Made with love and coffee by
+                <div itemscope itemtype="http://data-vocabulary.org/Person">
+                    <a href="<?php echo home_url(); ?>" title="Plymouth Web Developer">
+                        <span itemprop="name">Tony Edwards</span></a>
+                </div>
+            </span>
 
             <?php
             // get the social links entered via the theme options page
