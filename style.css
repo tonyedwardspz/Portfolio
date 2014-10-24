@@ -6,6 +6,7 @@ Version:        1.0
 Author:         Tony Edwards
 Aurhor URI:     http://www.purelywebdesign.co.uk
 */
+/*-------------VARIABLES-------------*/
 /*-----------------------------------*\
     NORMALIZE CSS
 \*-----------------------------------*/
@@ -650,6 +651,22 @@ nav li {
 .blog-archive-item {
   margin-bottom: 40px;
   display: inline-block;
+}
+.blog-archive-item ul {
+  list-style: circle inside none;
+  margin-left: 20px;
+}
+.blog-archive-item blockquote {
+  border-left: 10px solid #27afef;
+  border-right: 10px solid #27afef;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0 40px 0 40px;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.1), transparent 60%);
+}
+.blog-archive-item blockquote p {
+  margin-bottom: 0;
+  padding: 10px 0 10px 0;
 }
 
 .post-meta {

@@ -8,6 +8,12 @@ Aurhor URI:     http://www.purelywebdesign.co.uk
 */
 
 
+
+
+/*-------------VARIABLES-------------*/
+$mainBlue: #27afef;
+
+
 /*-----------------------------------*\
     NORMALIZE CSS
 \*-----------------------------------*/
@@ -440,6 +446,28 @@ nav {
 .blog-archive-item {
     margin-bottom: 40px;
     display: inline-block;
+
+    ul{
+        list-style: circle inside none;
+        margin-left: 20px;
+    }
+
+    ul li{
+
+    }
+
+    blockquote{
+        border-left: 10px solid $mainBlue;
+        border-right: 10px solid $mainBlue;
+        margin-left:0;
+        margin-right: 0;
+        padding: 0 40px 0 40px;
+        background: linear-gradient(to right, rgba(0,0,0,0.1), transparent 60%);
+        p{
+            margin-bottom: 0;
+            padding:10px 0 10px 0;
+        }
+    }
 }
 
 .post-meta {
