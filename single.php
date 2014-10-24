@@ -5,7 +5,7 @@
                    
                     <?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
         
-                    <div class="unit blog-archive-item blog-content-width">
+                    <div class="unit blog-archive-item two-of-three">
                         
                         <h1><span class="post-title"><?php the_title(); ?></span></h1>
                     
@@ -19,7 +19,7 @@
                         
                     </div>
                     
-                    <div class="unit side-width post-meta">
+                    <div class="unit one-of-three post-meta">
                         
                         <?php
                             if ( has_post_thumbnail() ) {

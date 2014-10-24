@@ -1,6 +1,6 @@
 /*
 Theme Name:     Tony Edwards Protfolio
-Theme URI:      http://www.purelywebdesign.co.uk
+Theme URI:      https://github.com/tonyedwardspz/Portfolio
 Description:    The wordpress theme for my personal portfolio website
 Version:        1.0
 Author:         Tony Edwards
@@ -97,8 +97,8 @@ img.centered, .aligncenter, div.aligncenter{
 .three-of-five { width: 57%; }
 .four-of-five { width: 77%; }
 
-.side-width { width: 24.36%; }
-.blog-content-width { width: 68.666666666%; }
+/*.side-width { width: 24.36%; }
+.blog-content-width { width: 68.666666666%; }*/
 
 @media screen and (max-width: 720px) {
 	.grid {
@@ -249,9 +249,7 @@ img {
 header {
     margin-top: 10px;
     
-    a {
-        text-decoration: none;
-    }
+    a { text-decoration: none;}
 }
 
 .activeLink,
@@ -265,9 +263,7 @@ body.single-portfolio nav ul li#menu-item-17 > a {
     border-bottom: 2px solid #fcbf32;
 }
 
-.menu-menu-1-container a:link{
-    transition: all 0.2s ease;
-}
+.menu-menu-1-container a:link{ transition: all 0.2s ease; }
 
 .menu-menu-1-container a:hover,
 body.post-type-archive-portfolio nav ul li#menu-item-22 > a:hover,
@@ -276,9 +272,7 @@ body.single-portfolio nav ul li#menu-item-22 > a:hover{
     transition: all 0.2s ease;
 }
 
-.menu-menu-1-container a:active{
-    border-bottom: 5px solid #f39c12;    
-}
+.menu-menu-1-container a:active{ border-bottom: 5px solid #f39c12; }
 
 body.single-portfolio nav ul li#menu-item-22 > a,
 body.post-type-archive-portfolio nav ul li#menu-item-22 > a{
@@ -294,9 +288,7 @@ nav {
         color: #555;
     }
 
-    li {
-        display: inline-block;
-    }
+    li { display: inline-block; }
 }
 
 #toggle-menu {
@@ -304,13 +296,9 @@ nav {
     z-index: 1;
 }
 
-.menu {
-    display: block;
-}
+.menu { display: block; }
 
-.small-screen-nav {
-    display: inherit;
-}
+.small-screen-nav { display: inherit; }
 
 @media screen and (max-width: 720px) {
 	
@@ -318,8 +306,7 @@ nav {
         display: inherit;
         margin-top: -50px;
 
-        ul {
-        width: 40px;
+        ul { width: 40px;
         
             li {
             float: right;
@@ -328,8 +315,7 @@ nav {
             }
         }
     }
-    .menu {
-        display: none;   
+    .menu { display: none;   
 
         li {  
             width: 50%;  
@@ -378,13 +364,9 @@ nav {
     margin-bottom: 30px;
 }
 
-.content-block {
-    margin-bottom: 1.5em;
-}
+.content-block { margin-bottom: 1.5em; }
 
-.summaryWrap{
-    width: 100%;
-}
+.summaryWrap{ width: 100%; }
 
 .sumText{
     background: rgba(21,24,26,1);
@@ -403,9 +385,7 @@ nav {
 
 
 @media screen and (max-width: 720px) {
-	.content {
-        margin-top: 60px;
-    }
+	.content { margin-top: 60px; }
     .sumText {
         width:100%;
         margin: 0 0 10px 0;
@@ -560,9 +540,7 @@ nav {
     }
 }
 
-#mixPortfolio .mix{
-    display: none;
-}
+#mixPortfolio .mix{ display: none; } 
 
 .view-project {
     display: none;
@@ -570,12 +548,10 @@ nav {
 }
 
 @media screen and (max-width: 720px) {
-	.view-project {
-        display: block;
-    }
-    .view img{
-        margin: 0 auto;
-    }
+	
+    .view-project { display: block; }
+    
+    .view img{ margin: 0 auto; }
 }
 
 /* ------------------------------------------ *\
@@ -607,15 +583,15 @@ nav {
 
 .view-first{
 
-    img {
-       transition: all 0.2s linear;
-    }
+    img { transition: all 0.2s linear; }
+
     .mask {
        filter: alpha(opacity=0);
        opacity: 0;
        background-color: rgba(219,127,8, 0.7);
        transition: all 0.4s ease-in-out;
     }
+
     h2 {
        transform: translateY(-100px);
        filter: alpha(opacity=0);
@@ -624,9 +600,7 @@ nav {
     }
 }
 
-.view-first:hover img {
-   transform: scale(1.1,1.1);
-}
+.view-first:hover img { transform: scale(1.1,1.1); }
 
 .view-first:hover .mask {
    filter: alpha(opacity=100);
@@ -660,9 +634,7 @@ nav {
        background: rgba(0, 0, 0, 0.8);
        margin: 30px 0 0 0;
     }
-    a:hover {
-       color: #2ecc71;
-    }
+    a:hover { color: #2ecc71; }
 }
 
 .view .mask,.view .content {
@@ -682,17 +654,14 @@ nav {
 
 .wpcf7{
 
-    form{
-        text-align: left;
+    form{ text-align: left;
 
         label{
             display: block;
             font-weight: bold;
             width:100%;
         }
-        input, select, textarea{
-            padding: 5px;
-        }
+        input, select, textarea{ padding: 5px; }
         textarea{
             width: 60%;
             height: 150px;
@@ -703,26 +672,19 @@ nav {
             border: 1px sold #999999;
             width:25%;
         }
-        input[type="submit"]:hover{
-            border: 2px solid #cfcfcf;
-        }
+        input[type="submit"]:hover{ border: 2px solid #cfcfcf; }
     }
-    div{
-        margin: 15px 0;
-    }
+    div{ margin: 15px 0; }
 }
 
 @media screen and (max-width: 720px) {
 
-    .wpcf7 form div{
-        width:100%;
-    }
-
-    .wpcf7 form label{
-        width:100%;
-    }
-
-    .wpcf7 form input, .wpcf7 form select, .wpcf7 form textarea, .wpcf7 form input[type="submit"]{
+    .wpcf7 form div,
+    .wpcf7 form label,
+    .wpcf7 form input, 
+    .wpcf7 form select, 
+    .wpcf7 form textarea, 
+    .wpcf7 form input[type="submit"]{
         width: 100%;
     }
 }
@@ -738,9 +700,7 @@ nav {
     padding-left: 20px;
 }
 
-.widget li {
-    list-style: none;
-}
+.widget li { list-style: none; }
 
 @media screen and (max-width: 720px) {
     .sidebar{
@@ -762,9 +722,7 @@ nav {
     margin-top: 25px;
 }
 
-.more-link:hover {   
-    background-color: #2ecc71;
-}
+.more-link:hover { background-color: #2ecc71; }
 
 .post-readmore {
     margin-top: 15px;
@@ -780,9 +738,7 @@ nav {
     transition: background-color 0.2s linear;
 }
 
-.button:hover {   
-    background-color: #2ecc71;
-}
+.button:hover { background-color: #2ecc71; }
 
 
 /* ------------------------------------------ *\
@@ -860,7 +816,5 @@ footer{
 
 .forceLink{
 
-    a{
-        padding: auto;
-    }
+    a{ padding: auto; }
 }
