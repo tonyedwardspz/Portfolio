@@ -7,7 +7,7 @@
             
             <span id="footer-text">Made with love and coffee by
                 <div itemscope itemtype="http://data-vocabulary.org/Person">
-                    <a href="<?php echo home_url(); ?>" title="Plymouth Web Developer">
+                    <a href="<?php echo home_url(); ?>" title="Plymouth Web Developer" itemprop="url">
                         <span itemprop="name">Tony Edwards</span></a>
                 </div>
             </span>
