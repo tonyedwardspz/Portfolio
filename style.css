@@ -535,12 +535,10 @@ nav li {
     display: inherit;
     margin-top: -50px;
   }
-
   #toggle-menu ul {
     width: 40px;
   }
-
-  #toggle-menu li {
+  #toggle-menu ul li {
     float: right;
     width: 50px;
     background-color: #fff;
@@ -549,23 +547,6 @@ nav li {
   .menu {
     display: none;
   }
-
-  nav {
-    margin-top: 10px;
-    height: auto;
-    width: 100%;
-  }
-
-  nav ul {
-    margin-bottom: 0;
-    display: list-item;
-    margin-top: 50px;
-    width: 100%;
-    height: auto;
-    background-color: #27afef;
-    z-index: 10;
-  }
-
   .menu li {
     width: 50%;
     float: left;
@@ -575,11 +556,25 @@ nav li {
     text-align: center;
     padding-top: 10px;
   }
-
   .menu a {
     width: 100%;
     padding: 0px;
     color: #fff;
+  }
+
+  nav {
+    margin-top: 10px;
+    height: auto;
+    width: 100%;
+  }
+  nav ul {
+    margin-bottom: 0;
+    display: list-item;
+    margin-top: 50px;
+    width: 100%;
+    height: auto;
+    background-color: #27afef;
+    z-index: 10;
   }
 }
 /* ------------------------------------------ *\
@@ -744,12 +739,10 @@ nav li {
   cursor: pointer;
   border-radius: 3px;
 }
-
 .filterList li:hover {
   background: #e7e2eb;
   border-bottom: none;
 }
-
 .filterList li.active {
   background: #d8c5e7;
   border-bottom: none;
@@ -801,14 +794,12 @@ nav li {
 .view-first img {
   transition: all 0.2s linear;
 }
-
 .view-first .mask {
   filter: alpha(opacity=0);
   opacity: 0;
   background-color: rgba(219, 127, 8, 0.7);
   transition: all 0.4s ease-in-out;
 }
-
 .view-first h2 {
   transform: translateY(-100px);
   filter: alpha(opacity=0);
@@ -838,6 +829,22 @@ nav li {
   box-shadow: 1px 1px 2px #e6e6e6;
   cursor: default;
 }
+.view img {
+  display: block;
+  position: relative;
+}
+.view h2 {
+  text-transform: uppercase;
+  color: #fff;
+  position: relative;
+  font-size: 17px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  margin: 30px 0 0 0;
+}
+.view a:hover {
+  color: #2ecc71;
+}
 
 .view .mask, .view .content {
   width: 100%;
@@ -848,63 +855,35 @@ nav li {
   left: 0;
 }
 
-.view img {
-  display: block;
-  position: relative;
-}
-
-.view h2 {
-  text-transform: uppercase;
-  color: #fff;
-  position: relative;
-  font-size: 17px;
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.8);
-  margin: 30px 0 0 0;
-}
-
-.view a:hover {
-  color: #2ecc71;
-}
-
 /* ------------------------------------------ *\
     CONTACT FORM
 \*------------------------------------------- */
 .wpcf7 form {
   text-align: left;
 }
-
-.wpcf7 form div {
-  margin: 15px 0;
-}
-
 .wpcf7 form label {
   display: block;
   font-weight: bold;
   width: 100%;
 }
-
 .wpcf7 form input, .wpcf7 form select, .wpcf7 form textarea {
   padding: 5px;
 }
-
 .wpcf7 form textarea {
   width: 60%;
-}
-
-.wpcf7 form textarea {
   height: 150px;
   display: block;
 }
-
 .wpcf7 form input[type="submit"] {
   border-radius: 10px;
   border: 1px sold #999999;
   width: 25%;
 }
-
 .wpcf7 form input[type="submit"]:hover {
   border: 2px solid #cfcfcf;
+}
+.wpcf7 div {
+  margin: 15px 0;
 }
 
 @media screen and (max-width: 720px) {
@@ -995,10 +974,15 @@ footer li {
 /* ------------------------------------------ *\
     MISC
 \*------------------------------------------- */
+.FAageSocialIcons a {
+  color: #fff;
+  font-size: 20px;
+  padding: 10px;
+  line-height: 40px;
+}
 .FAageSocialIcons ul {
   margin-left: 0;
 }
-
 .FAageSocialIcons ul li {
   display: inline-block;
   height: 40px;
@@ -1007,13 +991,6 @@ footer li {
   transition: background-color 0.7s ease;
   background-color: #C1C0C0;
   border-radius: 3px;
-}
-
-.FAageSocialIcons a {
-  color: #fff;
-  font-size: 20px;
-  padding: 10px;
-  line-height: 40px;
 }
 
 .twitter:hover {
