@@ -180,8 +180,6 @@ function get_smry_text($post){
 
 	if ($smry != ""){
 		echo $smry;
-	}else {
-		echo 'There is no summary';
 	}
 }
 

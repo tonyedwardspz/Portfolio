@@ -20,22 +20,16 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
     WORDPRESS DEFAULT STYLES
 \*-----------------------------------*/
 
-body{
-    background-image: url('images/halftone.png');
-}  
+body{ background-image: url('images/halftone.png'); }  
 
 img.centered, .aligncenter, div.aligncenter{
     display:block;
     margin: 0 auto;
 }
 
-.alignleft{
-    float: left;
-}
+.alignleft{ float: left; }
 
-.alignright{
-    float: right;
-}
+.alignright{ float: right; }
 
 .wp-caption {
     border: 1px solid #ddd;
@@ -119,9 +113,7 @@ img.centered, .aligncenter, div.aligncenter{
     Works off the assumption of a 1.5 line height @ 20px.
 \*------------------------------------------- */
 
-html {
-	font: 100%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
-}
+html { font: 100%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif; }
 
 p, .p, ul, ol, hr, table, form, pre,
 h1, .alpha, h2 {
@@ -156,10 +148,9 @@ hr {
 	margin-top: -1px;
 }
 
-@media screen and (max-width: 720px) {
-	html {
-        font: 90%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif;
-    }
+@media screen and ( max-width: 720px) {
+	
+    html { font: 90%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif; }
     
     h1, .alpha {
         font-size: 30px;
@@ -177,18 +168,14 @@ a:link {
     transition: all 0.2s ease;
 }
 
-a:visited {
-    color: #9b59b6;
-}
+a:visited { color: #9b59b6; }
 
 a:hover {
     color: #2ecc71;
     transition: color 0.2s linear;
 }
 
-a:active {
-    color: #f39c12;
-}
+a:active { color: #f39c12; }
 
 /* 
  Force a single colour to all pseudo classes when needed.
@@ -232,13 +219,9 @@ img {
     margin-top: -8px;
 }
 
-.hover-margin {
-    margin:2px;
-}
+.hover-margin { margin:2px; }
 
-.containerBackground{
-    background-color: #fff;
-}
+.containerBackground{ background-color: #fff; }
 
 
 /* ------------------------------------------ *\
@@ -246,8 +229,7 @@ img {
 \*------------------------------------------- */
 
 
-header {
-    margin-top: 10px;
+header { margin-top: 10px;
     
     a { text-decoration: none;}
 }
@@ -326,6 +308,7 @@ nav {
             text-align: center;
             padding-top: 10px
         }
+
          a {   
             width: 100%;
             padding: 0px;
@@ -385,7 +368,9 @@ nav {
 
 
 @media screen and (max-width: 720px) {
-	.content { margin-top: 60px; }
+	
+    .content { margin-top: 60px; }
+
     .sumText {
         width:100%;
         margin: 0 0 10px 0;
@@ -398,18 +383,15 @@ nav {
 \*------------------------------------------- */
 
 
-.i-use li{
-    margin-left:15px;
-}
+.i-use li{ margin-left:15px; }
 
-.homeButton{
-    margin-bottom: 20px;
-}
+.homeButton{ margin-bottom: 20px; }
 
-@media screen and (max-width: 720px) {
-   .i-use li:first-child{
-        margin-left: 15px;
-    } 
+.
+
+@media screen and ( max-width: 720px) {
+    
+    .i-use li:first-child{ margin-left: 15px; } 
     
     .i-use li{
         margin-left: 30px;
@@ -433,10 +415,6 @@ nav {
         margin-left: 20px;
     }
 
-    ul li{
-
-    }
-
     blockquote{
         border-left: 10px solid $mainBlue;
         border-right: 10px solid $mainBlue;
@@ -444,6 +422,7 @@ nav {
         margin-right: 0;
         padding: 0 40px 0 40px;
         background: linear-gradient(to right, rgba(0,0,0,0.1), transparent 60%);
+        
         p{
             margin-bottom: 0;
             padding:10px 0 10px 0;
@@ -456,13 +435,9 @@ nav {
     margin-top: 20px;
 }
 
-.previous-post {
-    float: left;
-}
+.previous-post { float: left; }
 
-.next-post {
-    float: right;
-}
+.next-post { float: right; }
 
 .blog-image {
     padding: 15px;
@@ -490,9 +465,7 @@ nav {
     overflow: hidden;
     transition:height 2s;
 
-    h3{
-        padding-top: 10px;
-    }
+    h3{ padding-top: 10px; }
 }
 
 .portfolioWrapper .portfolioItem:hover{
@@ -500,13 +473,9 @@ nav {
     transition:all 1s;
 }
 
-.portfolioWrapper{
-    min-height: 700px;
-}
+.portfolioWrapper{ min-height: 700px; }
 
-.skills-tools ul, .front-page-bio ul{
-    padding-left: 0;
-}
+.skills-tools ul, .front-page-bio ul{ padding-left: 0; }
 
 .skills-tools li, .front-page-bio li{
     display: inline-block;
@@ -516,12 +485,9 @@ nav {
     border-radius: 3px;
 }
 
-.portfolioSide{
-    margin-top: 20px;
-}
+.portfolioSide{ margin-top: 20px; }
 
-.filterList{
-    padding-left: 0;
+.filterList{ padding-left: 0;
 
     li{
         display: inline-block;
@@ -550,7 +516,7 @@ nav {
 @media screen and (max-width: 720px) {
 	
     .view-project { display: block; }
-    
+
     .view img{ margin: 0 auto; }
 }
 

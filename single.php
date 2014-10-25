@@ -9,11 +9,13 @@
                         
                         <h1><span class="post-title"><?php the_title(); ?></span></h1>
                     
+                        <?php if (get_smry_text($post)) { ?>
                         <div class="summaryWrap">
                             <div class="sumText">
                                 <p><?php get_smry_text($post); ?></p>
                             </div>
                         </div>
+                        <?php } ?>
                             
                         <?php the_content('Read More'); ?>
                         
