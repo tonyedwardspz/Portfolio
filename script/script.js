@@ -45,6 +45,8 @@ $j(document).ready(function(e){
             resizePortfolioSlider();
         });
     }
+
+    //$j('#fitTitle').fitText();
 });
 
 

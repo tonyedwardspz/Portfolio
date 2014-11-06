@@ -500,6 +500,10 @@ nav {
     padding: 10px 5px;
     margin: 0; }
 
+.postImage {
+  border: 2px solid #27afef;
+  padding: 5px; }
+
 @media screen and (max-width: 720px) {
   .content {
     margin-top: 60px; }
@@ -544,6 +548,8 @@ nav {
     .blog-archive-item blockquote p {
       margin-bottom: 0;
       padding: 10px 0 10px 0; }
+    .blog-archive-item blockquote cite {
+      color: #99918E; }
 
 .post-meta {
   display: inline-block;

@@ -7,15 +7,15 @@
         
                     <div class="unit blog-archive-item two-of-three">
                         
-                        <h1><span class="post-title"><?php the_title(); ?></span></h1>
+                        <h1 id="fitTitle"><span class="post-title"><?php the_title(); ?></span></h1>
                     
-                        <?php if (get_smry_text($post)) { ?>
+                        <?php if ($smry = get_post_meta($post->ID, 'smry_text', true)) { ?>
                         <div class="summaryWrap">
                             <div class="sumText">
-                                <p><?php get_smry_text($post); ?></p>
-                            </div>
-                        </div>
-                        <?php } ?>
+                                <p><? echo $smry; ?></p>
+                             </div>
+                         </div>
+                         <?php } ?>
                             
                         <?php the_content('Read More'); ?>
                         

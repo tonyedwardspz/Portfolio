@@ -6,8 +6,8 @@
                 
                     <h1>Hey, I'm Tony</h1>
                     
-                    <p>I'm a front end web developer with a passion for all things web.</p>
-                    <p>I'm currently studying Web Application Development at Plymouth University.</p>
+                    <p>I'm a student Web Developer trying to absorbing everything I can about the industry.</p>
+                    <p>I'm currently studying for a degree in Web Application Development at Plymouth University.</p>
                     <?php include 'social-icons.php'; ?>
                 
                 </div>
@@ -16,34 +16,29 @@
                     <h2>A little bit about me</h2>
                 </div>
 
-                <div class="unit one-of-three">
+                <div class="unit two-of-three">
                 
-                    <p>I created my first website way back in 2002, teaching myself the basics of web development the old 
-                        fashioned way (stealing others code)</p>
-                    
-                    <p>Since then I've worked on a variety of projects for myself and clients, alongside my day job.</p>
-                    
-                </div>
+                    <p>I created my first website way back in 2002, teaching myself the basics the old fashioned way (view source).
+                     I caught the bug straight away, working on projects for myself and clients, alongside my day job.</p>
+                
+                    <p>Until recently I was a manager for a national retail chain for seven years.
+                    This was great fun and I learned alot about business, but I didn't fancy doing it for another 40 years.</p>
 
-                <div class="unit one-of-three">
-                
-                    <p>Until recently I worked in management for a national retail chain for over seven years.
-                    This was great fun and I learned alot about business, but it wasn't my passion.</p>
-                    <p>Realising that web development had changed in a big way, I decided to head to University to perfect my craft.</p>
+                    <p>Realising that web development had changed in a big way, I decided to head to University to learn the craft.</p>
                     
                     
                 </div>
 
                 <div class="unit one-of-three front-page-bio">
                 
-                    <p>Today I create fast and clean web sites using up to date tools and techniques. Day to day I use:</p>
+                    <p>I'm learning to create web sites and software using up to date tools and techniques. If I had to choose, I'd use:</p>
                     
                     <ul>
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>SASS</li>
                         <li>PHP</li>
-                        <li>javascript</li>
+                        <li>JavaScript</li>
                         <li>jQuery</li>
                         <li>Wordpress</li>
                         <li>MySQL</li>
