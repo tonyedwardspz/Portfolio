@@ -530,6 +530,39 @@ nav {
 /* ------------------------------------------ *\
     BLOG
 \*------------------------------------------- */
+.blog-archive [href$=".pdf"]:after {
+  font-family: FontAwesome;
+  content: "\f1c1";
+  text-decoration: none;
+  display: inline-block;
+  padding-left: 2px; }
+
+.blog-archive [href^="http://twitter"]:after,
+.blog-archive [href^="https://twitter"]:after {
+  font-family: FontAwesome;
+  content: "\f099";
+  text-decoration: none;
+  display: inline-block;
+  padding-left: 2px; }
+
+.blog-archive [href^="http://www.youtube"]:after,
+.blog-archive [href^="https://www.youtube"]:after,
+.blog-archive [href^="http://youtube"]:after,
+.blog-archive [href^="https://youtube"]:after {
+  font-family: FontAwesome;
+  content: "\f16a";
+  text-decoration: none;
+  display: inline-block;
+  padding-left: 2px; }
+
+.single-portfolio [href^="http://github"]:after,
+.single-portfolio [href^="https://github"]:after {
+  font-family: FontAwesome;
+  content: "\f09b";
+  text-decoration: none;
+  display: inline-block;
+  padding-left: 2px; }
+
 .blog-archive-item {
   margin-bottom: 40px;
   display: inline-block; }
