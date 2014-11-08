@@ -33,9 +33,6 @@ html {
 body {
   margin: 0; }
 
-body, button, input, select, textarea {
-  font-family: sans-serif; }
-
 a {
   color: #00e; }
 
@@ -279,30 +276,34 @@ img.centered, .aligncenter, div.aligncenter {
     Works off the assumption of a 1.5 line height @ 20px.
 \*------------------------------------------- */
 html {
-  font: 100%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif; }
+  font-size: 100%/1.5;
+  font-family: 'Open Sans', sans-serif; }
 
 p, .p, ul, ol, hr, table, form, pre,
 h1, .alpha, h2 {
-  margin-bottom: 30px;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 30px; }
+
+h1, h2, h3, .alpha, .beta {
+  font-family: 'Roboto Slab', Helvetica, Arial, serif; }
 
 h1, .alpha {
-  font-size: 60px;
-  font-size: 3rem;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 500;
   line-height: 1;
   margin-top: 20px; }
 
 h2, .beta {
   font-size: 30px;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 2; }
 
-h3, .gamma {
+h3 {
   font-size: 20px;
-  font-size: 1rem;
-  font-weight: 700; }
+  font-weight: 300; }
+
+.gamma {
+  font-size: 20px;
+  font-weight: 500; }
 
 hr {
   border: none;
@@ -311,7 +312,8 @@ hr {
 
 @media screen and (max-width: 720px) {
   html {
-    font: 90%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif; }
+    font-size: 90%/1.5;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif; }
 
   h1, .alpha {
     font-size: 30px;

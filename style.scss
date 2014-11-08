@@ -14,7 +14,7 @@ $mainBlue: #27afef;
 /*-----------------------------------*\
     NORMALIZE CSS
 \*-----------------------------------*/
-article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none}[hidden]{display:none}html{font-size:100%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}body,button,input,select,textarea{font-family:sans-serif}a{color:#00e}a:visited{color:#551a8b}a:focus{outline:thin dotted}a:hover,a:active{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}pre,code,kbd,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}ul,ol{margin:1em 0;padding:0 0 0 10px;list-style:none}dd{margin:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display:block}audio,canvas,video{display:inline-block;*display:inline;*zoom:1}audio:not([controls]){display:none}[hidden]{display:none}html{font-size:100%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}body{margin:0}a{color:#00e}a:visited{color:#551a8b}a:focus{outline:thin dotted}a:hover,a:active{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}blockquote{margin:1em 40px}dfn{font-style:italic}mark{background:#ff0;color:#000}pre,code,kbd,samp{font-family:monospace,serif;_font-family:'courier new',monospace;font-size:1em}pre{white-space:pre;white-space:pre-wrap;word-wrap:break-word}q{quotes:none}q:before,q:after{content:'';content:none}small{font-size:75%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}ul,ol{margin:1em 0;padding:0 0 0 10px;list-style:none}dd{margin:0 0 0 40px}nav ul,nav ol{list-style:none;list-style-image:none}img{border:0;-ms-interpolation-mode:bicubic}svg:not(:root){overflow:hidden}figure{margin:0}form{margin:0}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;*margin-left:-7px}button,input,select,textarea{font-size:100%;margin:0;vertical-align:baseline;*vertical-align:middle}button,input{line-height:normal}button,input[type="button"],input[type="reset"],input[type="submit"]{cursor:pointer;-webkit-appearance:button;*overflow:visible}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}textarea{overflow:auto;vertical-align:top}table{border-collapse:collapse;border-spacing:0}
 * {margin: 0;padding: 0;/*position: relative;*/box-sizing: border-box;}
 /*-----------------------------------*\
     WORDPRESS DEFAULT STYLES
@@ -113,33 +113,41 @@ img.centered, .aligncenter, div.aligncenter{
     Works off the assumption of a 1.5 line height @ 20px.
 \*------------------------------------------- */
 
-html { font: 100%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif; }
+html { 
+    font-size: 100%/1.5;
+    font-family: 'Open Sans', sans-serif; 
+}
 
 p, .p, ul, ol, hr, table, form, pre,
 h1, .alpha, h2 {
 	margin-bottom: 30px;
-	margin-bottom: 1.5rem;
+}
+
+h1, h2, h3, .alpha, .beta{
+    font-family: 'Roboto Slab', Helvetica, Arial, serif;
 }
 
 h1, .alpha {
-	font-size: 60px;
-	font-size: 3rem;
-	font-weight: 700;
+	font-size: 40px;
+	font-weight: 500;
 	line-height: 1;
     margin-top: 20px;
 }
 
 h2, .beta {
 	font-size: 30px;
-	font-size: 1.5rem;
-	font-weight: 400;
+	font-weight: 300;
 	line-height: 2;
 }
 
-h3, .gamma {
+h3 {
 	font-size: 20px;
-	font-size: 1rem;
-	font-weight: 700;
+	font-weight: 300;
+}
+
+.gamma {
+    font-size: 20px;
+    font-weight: 500;
 }
 
 hr {
@@ -150,7 +158,9 @@ hr {
 
 @media screen and ( max-width: 720px) {
 	
-    html { font: 90%/1.5 Helvetica Neue, Helvetica, Arial, sans-serif; }
+    html { 
+        font-size: 90%/1.5;
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif; }
     
     h1, .alpha {
         font-size: 30px;
