@@ -29,5 +29,5 @@ $dribbble = get_option('portfolio_dribbble');
             <i class="social_icon fa fa-linkedin"></i></a>
     </li>
     <?php endif; ?>
-<ul>
+</ul>
 </div>

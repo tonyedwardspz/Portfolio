@@ -11,9 +11,10 @@ define( 'STYLE', TEMPPATH. "/style");
 define( 'SCRIPT', TEMPPATH. "/script");
 
 
-// add support for customise post thumbnails
+// add support for custom post thumbnails
 add_theme_support( 'post-thumbnails' ); 
-add_image_size( 'blog-post-thumb', 340, 300, true ); //300 pixels x unlimited height
+add_image_size( 'blog-post-thumb', 340, 0, true ); //340 pixels x unlimited height
+add_image_size( 'blog-archive-thumb', 340, 300, true ); //340 pixels x unlimited height
 add_image_size('portfolio-item-thumb', 275, 210, ture);
 
 // get the theme's custom options

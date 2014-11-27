@@ -22,7 +22,7 @@
                         
                         <?php
                             if ( has_post_thumbnail() ) {
-                                the_post_thumbnail('blog-post-thumb');
+                                the_post_thumbnail('blog-archive-thumb');
                             }
                         ?>
                         <span class="post-info">By <?php the_author(); ?></span>

@@ -37,7 +37,7 @@
                 <span><a href="<?php echo home_url(); ?>"><img src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>" /></a></span>
                 
                 <ul id="toggle-menu">
-                        <li><a href="#" id="pull"><img src="<?php echo IMAGES ?>/nav-icon.png" /></a></li>
+                        <li><a href="#" id="pull"><img src="<?php echo IMAGES ?>/nav-icon.png" alt="burger menu"/></a></li>
                     </ul>
                 <?php wp_nav_menu( array('menu' => 'Main', 'container' => 'nav' )); ?>
 
