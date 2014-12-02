@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     
     <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" />
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
@@ -34,7 +33,7 @@
             <header class="unit full-width">  
                 
                 <?php $logo= get_option('portfolio_logo', IMAGES.'/tony_edwards.png'); ?>
-                <span><a href="<?php echo home_url(); ?>"><img src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>" /></a></span>
+                <span><a href="<?php echo home_url(); ?>"><img src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>" id="logoImage" /></a></span>
                 
                 <ul id="toggle-menu">
                         <li><a href="#" id="pull"><img src="<?php echo IMAGES ?>/nav-icon.png" alt="burger menu"/></a></li>

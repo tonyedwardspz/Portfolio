@@ -74,6 +74,18 @@ function mh_load_my_script() {
 } 
 add_action( 'wp_enqueue_scripts', 'mh_load_my_script' );
 
+// enqueue styles, loading them in the header
+function load_my_styes(){
+
+	$fontAwesomeCDN = "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
+
+	// Font Awesome
+    wp_register_style( 'font-awesome', $fontAwesomeCDN,  array(), '4.1.0', 'all' );
+    wp_enqueue_style( 'font-awesome' );
+
+}
+add_action( 'wp_enqueue_scripts', 'load_my_styes');
+
 
 // modify the more link to introduce styling
 // (WPSE 63748)
