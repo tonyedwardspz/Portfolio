@@ -120,6 +120,11 @@ function resizePortfolioSlider(){
     // add padding to keep everything reletive
     imgHeight += 4;
 
+    // if it is a stupid height, make it the less stupud
+    if (imgHeight < 180){
+        imgHeight = 181;
+    }
+
     // get the containing divs dimensions
     var divHeight = $j(".portfolioItem").height();
 
