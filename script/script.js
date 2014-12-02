@@ -111,7 +111,7 @@ function imageSlider() {
 };
 
 // alter the size of the container with the individual portfolio items. This keeps
-// them in proportion on mobile devices
+// them in proportion on mobile devices (hopefully)
 function resizePortfolioSlider(){
 
     // get the portfolio image height

@@ -298,6 +298,14 @@ nav {
         display: inherit;
         margin-top: -50px;
 
+        li {
+            float: right;
+        }
+
+        li:after{
+            clear: both;
+        }
+
         ul { width: 40px;
         
             li {

@@ -439,6 +439,10 @@ nav {
   #toggle-menu {
     display: inherit;
     margin-top: -50px; }
+    #toggle-menu li {
+      float: right; }
+    #toggle-menu li:after {
+      clear: both; }
     #toggle-menu ul {
       width: 40px; }
       #toggle-menu ul li {
