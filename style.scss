@@ -802,7 +802,21 @@ footer{
     }
     #footer-text{
         float:left;
+
+        div{
+            display: inline-block;
+        }
     }
+}
+
+@media screen and (max-width: 720px) {
+
+    footer{
+        
+        #footer-text div{
+                display: block;
+        }
+    } 
 }
 
 @media screen and (max-width: 550px) {
@@ -821,6 +835,14 @@ footer{
 
             ul:first-child{
                 padding-left: 0; 
+            }
+        }
+
+        #footer-text{
+            float:left;
+
+            div{
+                display: inline-block;
             }
         }
     }
