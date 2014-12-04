@@ -260,8 +260,6 @@ img.centered, .aligncenter, div.aligncenter {
 .four-of-five {
   width: 77%; }
 
-/*.side-width { width: 24.36%; }
-.blog-content-width { width: 68.666666666%; }*/
 @media screen and (max-width: 720px) {
   .grid {
     margin-left: 0;
@@ -271,6 +269,9 @@ img.centered, .aligncenter, div.aligncenter {
     width: auto;
     margin-left: 0;
     display: block; } }
+@media screen and (max-width: 400px) {
+  .container {
+    padding: 0 10px 10px 10px; } }
 /* ------------------------------------------ *\
     TYPOGRAPHY
     Works off the assumption of a 1.5 line height @ 20px.
@@ -317,7 +318,10 @@ hr {
 
   h1, .alpha {
     font-size: 30px;
-    font-size: 1.5rem; } }
+    font-size: 1.5rem; }
+
+  body {
+    margin-top: -10px; } }
 /* ------------------------------------------ *\
     GLOBAL STYLINGS
 \*------------------------------------------- */
@@ -337,10 +341,6 @@ a:hover {
 a:active {
   color: #f39c12; }
 
-/* 
- Force a single colour to all pseudo classes when needed.
- If you know a better way of doing this please let me know.
- */
 .force-darkgrey a:link,
 .force-darkgrey a:visited,
 .force-darkgrey a:hover,
@@ -468,15 +468,17 @@ nav {
   nav {
     margin-top: 10px;
     height: auto;
-    width: 100%; }
+    width: 103%; }
     nav ul {
       margin-bottom: 0;
       display: list-item;
-      margin-top: 50px;
       width: 100%;
       height: auto;
       background-color: #27afef;
       z-index: 10; } }
+@media screen and (max-width: 340px) {
+  #logoImage {
+    width: 200px; } }
 /* ------------------------------------------ *\
     CONTENT
 \*------------------------------------------- */

@@ -47,6 +47,7 @@ $j(document).ready(function(e){
     }
 
     //$j('#fitTitle').fitText();
+   
 });
 
 
@@ -69,9 +70,7 @@ $j(window).resize(function() {
 $j(window).bind("load", function() { 
     resizeSliderWrap();
 
-    //if ("$body").hasClass()
     setTimeout(resizePortfolioSlider, 700)
-    //resizePortfolioSlider()
 });
 
 function imageSlider() { 
@@ -132,6 +131,7 @@ function resizePortfolioSlider(){
     $j(".portfolioItem").height(imgHeight);
 
 }
+
 
 // make sure the containing li for the slider images is the same size as the 
 // contained image. Called on page load and resize
