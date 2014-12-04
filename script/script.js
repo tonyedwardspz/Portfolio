@@ -132,7 +132,6 @@ function resizePortfolioSlider(){
 
 }
 
-
 // make sure the containing li for the slider images is the same size as the 
 // contained image. Called on page load and resize
 function resizeSliderWrap(){

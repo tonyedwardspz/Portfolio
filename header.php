@@ -33,11 +33,14 @@
             <header class="unit full-width">  
                 
                 <?php $logo= get_option('portfolio_logo', IMAGES.'/tony_edwards.png'); ?>
-                <span><a href="<?php echo home_url(); ?>"><img src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>" id="logoImage" /></a></span>
+                <span>
+                    <a href="<?php echo home_url(); ?>"><img src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>" id="logoImage" /></a>
+                </span>
                 
                 <ul id="toggle-menu">
-                        <li><a href="#" id="pull"><img src="<?php echo IMAGES ?>/nav-icon.png" alt="burger menu"/></a></li>
-                    </ul>
+                    <li class="pullDown"><a href="#" id="pull"><i class="fa fa-bars fa-3x "></i></a></li>
+                </ul>
+
                 <?php wp_nav_menu( array('menu' => 'Main', 'container' => 'nav' )); ?>
 
             </header>

@@ -188,13 +188,15 @@ a:link {
 
 a:visited { color: #9b59b6; }
 
-a:hover {
+a:hover,{
     color: #2ecc71;
     transition: color 0.2s linear;
 }
 
 a:active { color: #f39c12; }
 
+/*.pullDown a:link,*/
+a:visited#pull,
 .force-darkgrey a:link, 
 .force-darkgrey a:visited, 
 .force-darkgrey a:hover, 
@@ -300,7 +302,7 @@ nav {
 	
     #toggle-menu {
         display: inherit;
-        margin-top: -50px;
+        margin-top: -60px;
 
         li {
             float: right;
