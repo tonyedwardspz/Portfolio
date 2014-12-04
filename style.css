@@ -847,12 +847,22 @@ footer {
   footer li {
     display: inline-block;
     margin: 0 10px; }
+  footer .FAageSocialIcons {
+    float: right; }
+    footer .FAageSocialIcons ul {
+      margin: 0; }
+  footer #footer-text {
+    float: left; }
 
-.social-links {
-  display: inline-block;
-  float: right;
-  margin: 0; }
-
+@media screen and (max-width: 550px) {
+  footer li {
+    margin-left: 0; }
+  footer .FAageSocialIcons {
+    float: left; }
+    footer .FAageSocialIcons ul {
+      margin: 10px 0; }
+    footer .FAageSocialIcons ul:first-child {
+      padding-left: 0; } }
 /* ------------------------------------------ *\
     MISC
 \*------------------------------------------- */

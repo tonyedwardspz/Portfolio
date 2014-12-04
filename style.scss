@@ -790,12 +790,38 @@ footer{
         display: inline-block;
         margin: 0 10px;
     }
+
+    .FAageSocialIcons{
+        float:right;
+
+        ul{
+            margin:0;
+        }
+    }
+    #footer-text{
+        float:left;
+    }
 }
 
-.social-links{
-    display: inline-block;
-    float:right;
-    margin:0;
+@media screen and (max-width: 550px) {
+    footer {
+
+        li{
+            margin-left: 0;
+        }
+
+        .FAageSocialIcons{
+            float:left;
+
+            ul{
+                margin:10px 0;
+            }
+
+            ul:first-child{
+                padding-left: 0; 
+            }
+        }
+    }
 }
 
 
