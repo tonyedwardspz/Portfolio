@@ -20,8 +20,6 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section{display
     WORDPRESS DEFAULT STYLES
 \*-----------------------------------*/
 
-/*body { background-image: url('images/halftone.png'); }  */
-
 body{ background-image: url("
     data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAI0lEQVQIW2NkYGAwBuKzQAwGjFBaEkg/RxYAscGCMBUwHQwAd4IDBdrsmYMAAAAASUVORK5CYII=
     ")}
@@ -146,7 +144,6 @@ h1, .alpha {
 h2, .beta {
 	font-size: 30px;
 	font-weight: 300;
-	line-height: 2;
 }
 
 h3 {
@@ -173,7 +170,10 @@ hr {
     
     h1, .alpha {
         font-size: 30px;
-        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 20px;
     }
 
     body{

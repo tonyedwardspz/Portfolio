@@ -57,7 +57,7 @@ function mh_load_my_script() {
 		//register all scripts
 		// wp_register_script($handle, $src, $deps, $ver, $in_footer);
 	    wp_register_script('jquery', $googleCDN, false, null, true);
-	    wp_register_script('myScript', get_template_directory_uri().'/script/script.js', array('jquery'), null, true);
+	    wp_register_script('myScript', get_template_directory_uri().'/script/min/script.min.js', array('jquery'), null, true);
 	    wp_register_script('mixitup', get_template_directory_uri().'/script/jquery.mixitup.min.js', array('jquery'), null, true);
 	    //wp_register_script('fittext', get_template_directory_uri().'/script/jquery.fittext.js', array('jquery'), null, true);
 

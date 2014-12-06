@@ -19,8 +19,6 @@
     <!--[if lt IE 7]>
         <link rel="stylesheet" type="text/css" href="<?php echo STYLE.'/ie.css'; ?>" />
     <![endif]-->
-    
-    
 
     <?php wp_head(); ?>
 </head>
