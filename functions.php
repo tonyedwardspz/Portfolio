@@ -204,4 +204,8 @@ function new_excerpt_more($more) {
 	return '… <a href="'. get_permalink($post->ID) . '">' . 'Read More &raquo;' . '</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
+
+// disable contact form 7 from loading assets on every page
+add_filter('wpcf7_load_js', '__return_false');
+add_filter('wpcf7_load_css', '__return_false');
 ?>
