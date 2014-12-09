@@ -206,6 +206,17 @@ function new_excerpt_more($more) {
 add_filter('excerpt_more', 'new_excerpt_more');
 
 // disable contact form 7 from loading assets on every page
-add_filter('wpcf7_load_js', '__return_false');
-add_filter('wpcf7_load_css', '__return_false');
+add_action( 'wp_print_scripts', 'deregister_cf7_javascript', 12 );
+function deregister_cf7_javascript() {
+    if ( !is_page(12) ) {
+        wp_deregister_script( 'contact-form-7' );
+    }
+}
+add_action( 'wp_print_styles', 'deregister_cf7_styles', 12 );
+function deregister_cf7_styles() {
+    if ( !is_page(12) ) {
+        wp_deregister_style( 'contact-form-7' );
+    }
+}
+
 ?>
