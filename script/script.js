@@ -195,3 +195,7 @@ function changeMenuColor() {
         $j('.menu').css('display', 'block');
     }
 }
+
+// concat the contact form 7 js
+// this will be moved to a conditionally loaded file at some point.
+//@prepros-append wp7contact.js
