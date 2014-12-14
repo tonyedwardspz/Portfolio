@@ -17,6 +17,11 @@ add_image_size( 'blog-post-thumb', 340, 0, true ); //340 pixels x unlimited heig
 add_image_size( 'blog-archive-thumb', 340, 300, true ); //340 pixels x unlimited height
 add_image_size('portfolio-item-thumb', 275, 210, ture);
 
+// picture fill images
+add_image_size('large', 1000, 9999);
+add_image_size('medium', 720, 9999);
+add_image_size('small', 400, 9999);
+
 // get the theme's custom options
 require_once('theme-options.php');
 
@@ -59,7 +64,6 @@ function mh_load_my_script() {
 	    wp_register_script('jquery', $googleCDN, false, null, true);
 	    wp_register_script('myScript', get_template_directory_uri().'/script/min/script.min.js', array('jquery'), null, true);
 	    wp_register_script('mixitup', get_template_directory_uri().'/script/jquery.mixitup.min.js', array('jquery'), null, true);
-	    //wp_register_script('fittext', get_template_directory_uri().'/script/jquery.fittext.js', array('jquery'), null, true);
 
 	    // enqueue scripts for every page
 	    wp_enqueue_script('jquery');
@@ -218,5 +222,69 @@ function deregister_cf7_styles() {
         wp_deregister_style( 'contact-form-7' );
     }
 }
+
+// picture fill stuff
+//
+// get image alt
+function get_img_alt($image){
+	$img_alt = trim(strip_tags( get_post_meta($image, 
+		'_wp_attachment_image_alt', true)));
+	return $img_alt;
+}
+
+// build the source set for the picture element
+function add_picture_sources($image){
+
+	//get the images
+	$img_medium = wp_get_attachment_image_src( $image, 'medium' );
+	$img_large = wp_get_attachment_image_src( $image, 'large' );
+
+	$srcset = '<source srcset= "' . $img_large[0] . '" media="(min-width: 720px)">';
+	$srcset .= '<source srcset= "' . $img_medium[0] . '" media="(min-width: 400px)">';
+
+	return srcset;
+}
+
+// build the source set for the image
+function add_src_element($image){
+
+	$sizes = array('small', 'medium', 'large');
+	$arr = array();
+	$get_sizes = wp_get_attachment_metadata($image);
+
+	foreach ($sizes as $size) {
+		$image_src = wp_get_attachment_image_src($image, $size );
+
+		if(array_key_exists($size, $get_sizes['sizes'])){
+			$image_size = $get_sizes['sizes'][$size]['width'];
+			$arr[] = $image_src[0] . ' ' . $image_size . 'w';
+		}
+	}
+	return implode(', ', $arr);
+}
+
+// build the shortcode for the img srcset
+function responsive_insert_image($atts){
+
+	extract( shortcode_atts( array (
+		'id' => 1
+	), $atts));
+
+	$srcsets = add_src_element($id);
+	$default = wp_get_attachment_image_src($id, 'large');
+
+	print_r($default);
+
+	return '<img srcset="'. $srcsets .'" 
+		src="' . $default[0] . '"
+		alt="'. get_img_alt($id) .'">';
+}
+add_shortcode( 'resp_image', 'responsive_insert_image' );
+
+// edit the post editor to use the shortcode
+function responsive_editor_filter($html, $id, $caption, $title, $align, $url){
+	return "[resp_image id='$id']";
+}
+add_filter( 'image_send_to_editor', 'responsive_editor_filter', 10, 9);
 
 ?>
