@@ -273,8 +273,6 @@ function responsive_insert_image($atts){
 	$srcsets = add_src_element($id);
 	$default = wp_get_attachment_image_src($id, 'large');
 
-	print_r($default);
-
 	return '<img srcset="'. $srcsets .'" 
 		src="' . $default[0] . '"
 		alt="'. get_img_alt($id) .'">';
