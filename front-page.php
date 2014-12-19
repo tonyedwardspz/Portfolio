@@ -6,8 +6,8 @@
                 
                     <h1>Hey, I'm Tony</h1>
                     
-                    <p>I'm a student Web Developer trying to absorbing everything I can about the industry.</p>
-                    <p>I'm currently studying for a degree in Web Application Development at Plymouth University.</p>
+                    <p>Student web app developer, standards lover, wannabe surfer.</p>
+                    <p>I'm currently studying for a degree in Web Application Development with Plymouth University.</p>
                     <?php include 'social-icons.php'; ?>
                 
                 </div>
@@ -21,11 +21,14 @@
                     <p>I created my first website way back in 2002, teaching myself the basics the old fashioned way (view source).
                      I caught the bug straight away, working on projects for myself and clients, alongside my day job.</p>
                 
-                    <p>Until recently I was a manager for a national retail chain for seven years.
-                    This was great fun and I learned alot about business, but I didn't fancy doing it for another 40 years.</p>
+                    <p>Before university I was a manager for a national retail chain..
+                    It was great fun and I learned alot about business, but I didn't fancy doing it for another 40 years.</p>
 
                     <p>Realising that web development had changed in a big way, I decided to head to University to learn the craft.</p>
                     
+                    <a href="http://purelywebdesign.co.uk/about-me">
+                        <button class="gamma force-white">More About me</button>
+                    </a>
                     
                 </div>
 
@@ -68,7 +71,9 @@
                 <?php endwhile; wp_reset_query(); ?>
 
                 <div class="unit full-width homeButton">
-                    <span class="button gamma force-white"><a href="http://purelywebdesign.co.uk/?post_type=portfolio">My Portfolio</a></span>
+                    <a href="http://purelywebdesign.co.uk/?post_type=portfolio">
+                        <button class="gamma force-white">My Portfolio</button>
+                    </a>
                 </div>
 
                 <div class="seperator unit full-width">
