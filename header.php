@@ -36,7 +36,7 @@
                 </span>
                 
                 <ul id="toggle-menu">
-                    <li class="pullDown"><a href="#" id="pull"><i class="fa fa-bars fa-3x "></i></a></li>
+                    <li class="pullDown"><a href="#" id="pull"><i class="fa fa-bars fa-3x"></i></a></li>
                 </ul>
 
                 <?php wp_nav_menu( array('menu' => 'Main', 'container' => 'nav' )); ?>

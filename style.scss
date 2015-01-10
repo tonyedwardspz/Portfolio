@@ -12,7 +12,7 @@ $mainBlue: #27afef;
 
 
 /*-----------------------------------*\
-    NORMALIZE CSS
+    NORMALIZE STUFF
 \*-----------------------------------*/
 * {margin: 0;padding: 0; box-sizing: border-box;}
 /*-----------------------------------*\
@@ -121,7 +121,7 @@ img.centered, .aligncenter, div.aligncenter{
 
 html { 
     font-size: 100%/1.5;
-    font-family: 'Open Sans', sans-serif; 
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif; 
 }
 
 p, .p, ul, ol, hr, table, form, pre,
@@ -151,7 +151,7 @@ h3 {
 }
 
 .gamma {
-    font-size: 20px;
+    font-size: 17px;
     font-weight: 500;
 }
 
@@ -163,9 +163,7 @@ hr {
 
 @media screen and ( max-width: 720px) {
 	
-    html { 
-        font-size: 90%/1.5;
-        font-family: 'Open Sans', Helvetica, Arial, sans-serif; }
+    html { font-size: 90%/1.5; }
     
     h1, .alpha {
         font-size: 30px;
@@ -310,6 +308,7 @@ nav {
 
         li {
             float: right;
+            list-style-type: none;
         }
 
         li:after{
@@ -345,7 +344,7 @@ nav {
     }
 
     nav {
-        margin-top: 10px;
+        margin-top: 25px;
         height: auto;
         width: 103%;
     
@@ -400,6 +399,14 @@ nav {
     }
 }
 
+.content ul{
+    list-style-position: inside;
+}
+
+.slider ul{
+    list-style: none;
+}
+
 .postImage{
     border: 2px solid $mainBlue;
     padding: 5px;
@@ -413,6 +420,10 @@ nav {
     .sumText {
         width:100%;
         margin: 0 0 10px 0;
+    }
+
+    .front-page-bio{
+        margin-top: 30px;
     }
 }
 
@@ -450,8 +461,6 @@ nav {
     padding-left: 2px;
 }
 
-
-
 .blog-archive [href$=".pdf"]:after{
     @include awesomeLinkIcon("\f1c1");
 }
@@ -468,11 +477,10 @@ nav {
     @include awesomeLinkIcon("\f16a");
 }
 
-.single-portfolio [href^="http://github"]:after,
-.single-portfolio [href^="https://github"]:after{
+.single-portfolio .content [href^="http://github"]:after,
+.single-portfolio .content [href^="https://github"]:after{
     @include awesomeLinkIcon("\f09b");
 }
-
 
 .blog-archive-item {
     margin-bottom: 40px;
@@ -768,6 +776,7 @@ nav {
 }
 
 .button, button{
+    -webkit-appearance: none;
     border-radius: 10px;
     color: #fff;
     background-color: #27afef;
@@ -775,7 +784,7 @@ nav {
     overflow: visible;
     transition: background-color 0.2s linear;
     border:0;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     cursor: pointer;
 }
 

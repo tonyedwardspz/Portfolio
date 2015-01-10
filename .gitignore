@@ -36,3 +36,4 @@ Icon
 .Trashes
 
 script/picturefill.js
+*.cfg
