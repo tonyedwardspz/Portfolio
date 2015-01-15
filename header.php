@@ -2,7 +2,10 @@
 <html lang="en">
 <head>
 
-	<title><?php if(!is_front_page()): wp_title(); print " | "; endif; ?><?php bloginfo('name'); ?></title>
+    <?php if(!is_front_page()){ ?>
+	<title><?php wp_title(); print " | "; bloginfo('name'); ?></title>
+    <meta name="description" content="Tony is a Student Web Application Developer and pixel pusher based in Plymouth, South West England">
+    <?php } ?>
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
