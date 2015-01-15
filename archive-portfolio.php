@@ -6,7 +6,6 @@
 
                 <p>Here you will find some of my Website design work, including projects for clients and University.</p>
 
-                <!--<span class="breadcrumbs"><a href="#" data-value="ALL" class="porfolioCategory">All</a> // <a href="#" data-value="HTML" class="porfolioCategory">HTML</a> // CSS // PHP // Javascript // Wordpress</span>-->
                 <ul class="filterList">
                     <li class="filter" data-filter="all">All</li>
                     <li class="filter" data-filter=".Website">Websites</li>
@@ -14,7 +13,7 @@
                     <li class="filter" data-filter=".Games">Games</li>
                     <li class="filter" data-filter=".University">University Projects</li>
                     <li class="filter" data-filter=".Other">Other</li>
-                <ul>
+                </ul>
 
             </div>
             <div id="mixPortfolio" class="portfolioWrapper">

@@ -36,7 +36,7 @@
                         <p><?php _e('No posts were found. Sorry!'); ?></p>
                     <?php endif; ?>
                     
-                    
+                    <?php get_sidebar(); ?>
                     
                     <span class="unit previous-post"><?php previous_posts_link('Previous'); ?></span>
                     <span class="unit next-post"><?php next_posts_link('Next'); ?></span>

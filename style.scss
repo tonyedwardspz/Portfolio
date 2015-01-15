@@ -23,7 +23,6 @@ body{ background-image: url("
     data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAI0lEQVQIW2NkYGAwBuKzQAwGjFBaEkg/RxYAscGCMBUwHQwAd4IDBdrsmYMAAAAASUVORK5CYII=
     ")}
 
-
 img.centered, .aligncenter, div.aligncenter{
     display:block;
     margin: 0 auto;
@@ -915,4 +914,8 @@ footer{
 .forceLink{
 
     a{ padding: auto; }
+}
+
+.advert{
+    margin: 10px auto;
 }

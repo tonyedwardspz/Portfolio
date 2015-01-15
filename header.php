@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 
 	<title><?php if(!is_front_page()): wp_title(); print " | "; endif; ?><?php bloginfo('name'); ?></title>
@@ -32,7 +32,7 @@
                 
                 <?php $logo= get_option('portfolio_logo', IMAGES.'/tony_edwards.png'); ?>
                 <span>
-                    <a href="<?php echo home_url(); ?>"><img src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>" id="logoImage" /></a>
+                    <a href="<?php echo home_url(); ?>" title=""><img src="<?php echo $logo; ?>" alt="<?php bloginfo('name'); ?>" id="logoImage" /></a>
                 </span>
                 
                 <ul id="toggle-menu">

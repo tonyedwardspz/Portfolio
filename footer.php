@@ -5,12 +5,12 @@
     <footer>
         <div class="container">
             
-            <span id="footer-text">Made with love and coffee by
+            <div id="footer-text">Made with love and coffee by
                 <div itemscope itemtype="http://data-vocabulary.org/Person">
                     <a href="<?php echo home_url(); ?>" title="Plymouth Web Developer" itemprop="url">
                         <span itemprop="name">Tony Edwards</span></a>
                 </div>
-            </span>
+            </div>
 
             <?php include 'social-icons.php'; ?>
             
