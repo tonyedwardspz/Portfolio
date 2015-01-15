@@ -24,10 +24,10 @@
 
                 <p>Realising that web development had changed in a big way, I decided to head to University to learn the craft.</p>
                 
-                <a href="http://purelywebdesign.co.uk/about-me">
-                    <button class="gamma force-white">More About me</button>
-                </a>
-                
+                <span class="button gamma force-white">
+                    <a href="http://purelywebdesign.co.uk/about-me">About me</a>
+                </span>
+
             </div>
 
             <div class="unit one-of-three front-page-bio">
@@ -51,7 +51,7 @@
             </div>
 
             <div class="unit full-width">
-                <h2>Recent Projects</h2>
+                <h2>Recent projects</h2>
             </div>
             
             <?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => 3 ) ); ?>
@@ -72,16 +72,15 @@
             <?php endwhile; wp_reset_query(); ?>
 
             <div class="unit full-width homeButton">
-                <a href="http://purelywebdesign.co.uk/?post_type=portfolio">
-                    <button class="gamma force-white">My Portfolio</button>
-                </a>
+                
+                <span class="button gamma force-white">
+                    <a href="http://purelywebdesign.co.uk/?post_type=portfolio">About me</a>
+                </span>
+
             </div>
 
             <div class="seperator unit full-width">
                 <div class="seperatorRight"></div>
             </div>
-
-
-
 
 <?php get_footer(); ?>
