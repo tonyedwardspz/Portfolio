@@ -74,7 +74,7 @@
             <div class="unit full-width homeButton">
                 
                 <span class="button gamma force-white">
-                    <a href="http://purelywebdesign.co.uk/?post_type=portfolio">About me</a>
+                    <a href="http://purelywebdesign.co.uk/?post_type=portfolio">View Portfolio</a>
                 </span>
 
             </div>

@@ -46,7 +46,7 @@ $j(document).ready(function(e){
         });
     }
 
-    //$j('#fitTitle').fitText();
+    applyRainbowHiliteWidth();
    
 });
 
@@ -62,6 +62,7 @@ $j(window).resize(function() {
     changeMenuColor();
     resizeSliderWrap();
     resizePortfolioSlider();
+    applyRainbowHiliteWidth();
 
 });
 
@@ -194,6 +195,20 @@ function changeMenuColor() {
         $j('.menu').addClass('force-darkgrey');
         $j('.menu').css('display', 'block');
     }
+}
+
+// Apply a max width to every pre element on page.
+// This foreces code snippets to be responsive
+function applyRainbowHiliteWidth() {
+
+    if (document.querySelector('pre')){
+        var containerWidth = $j('.container').width();
+
+        $j('pre').each(function(){
+            $j(this).css('max-width', containerWidth);
+        });
+    }
+
 }
 
 // concat picturefill
