@@ -79,8 +79,4 @@
 
             </div>
 
-            <div class="seperator unit full-width">
-                <div class="seperatorRight"></div>
-            </div>
-
 <?php get_footer(); ?>
