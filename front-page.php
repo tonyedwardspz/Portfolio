@@ -4,8 +4,8 @@
             
                 <h1>Hey, I'm Tony</h1>
                 
-                <p>Student web app developer, cat lover, wannabe surfer.</p>
-                <p>I'm currently studying for a degree in Web Application Development with Plymouth University.</p>
+                <p>Software developer, Pasty Muncher, Hip-Hop Snob.</p>
+                <p>I'm currently on placement with <a href="http://plymouthsoftware.com" title="Plymouth Software">Plymouth Software</a> as part of my degree.</p>
                 <?php include 'social-icons.php'; ?>
             
             </div>
@@ -18,11 +18,11 @@
             
                 <p>I created my first website way back in 2002, teaching myself the basics the old fashioned way (view source).
                  I caught the bug straight away, working on projects for myself and clients, alongside my day job.</p>
-            
-                <p>Before university I was a manager for a national retail chain..
-                It was great fun and I learned alot about business, but I didn't fancy doing it for another 40 years.</p>
 
-                <p>Realising that web development had changed in a big way, I decided to head to University to learn the craft.</p>
+                <p>Following a 7 year stint in retail management, I decided to return to web development. Realising 
+                that web development had changed in a big way, I decided to head to University to learn the craft.</p>
+
+                <p>Today I create both web and native application as part of a close knit team at Plymouth Software.</p>
                 
                 <span class="button gamma force-white">
                     <a href="http://purelywebdesign.co.uk/about-me">About me</a>
@@ -32,16 +32,16 @@
 
             <div class="unit one-of-three front-page-bio">
             
-                <p>I'm learning to create web sites and software using up to date tools and techniques. For my personal projects I use:</p>
+                <p>I create web sites and software using up to date tools and techniques. I have been know to dabble in:</p>
                 
                 <ul>
                     <li>HTML</li>
                     <li>CSS</li>
                     <li>PHP</li>
                     <li>JavaScript</li>
-                    <li>Node.js</li>
+                    <li>Ruby on Rails</li>
                     <li>Wordpress</li>
-                    <li>MySQL</li>
+                    <li>Swift</li>
                 </ul>
                 
             </div>
