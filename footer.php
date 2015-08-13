@@ -19,6 +19,28 @@
 
     <?php wp_footer(); ?>
 
+        <script type="application/ld+json">
+        { "@context" : "http://schema.org",
+          "@type" : "Person",
+          "name" : "Tony Edwards",
+          "url" : "http://www.purelywebdesign.co.uk",
+          "jobTitle" : "Software Developer",
+          "worksFor" : "Plymouth Software",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Plymouth",
+            "addressRegion": "Devon"
+          },
+          "colleague": [
+            "http://blog.chrisblunt.com/"
+          ],
+          "sameAs" : [ 
+            "http://uk.linkedin.com/in/tonyedwardspz",
+            "https://plus.google.com/109731755368109204853",
+            "https://github.com/tonyedwardspz",
+            "https://twitter.com/tonyedwardspz"] 
+        }
+        </script>
     
     <?php 
     //insert the analytics code if set via the admin interface
