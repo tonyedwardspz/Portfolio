@@ -17,7 +17,15 @@
         </div>
     </footer>
 
-    <?php wp_footer(); ?>
+    <?php 
+    wp_footer(); 
+
+    //insert the analytics code if set via the admin interface
+    $analyticsCode = get_option('portfolio_analytics');
+    if ($analyticsCode) {
+        print $analyticsCode;
+    }
+    ?>
 
         <script type="application/ld+json">
         { "@context" : "http://schema.org",
@@ -41,14 +49,6 @@
             "https://twitter.com/tonyedwardspz"] 
         }
         </script>
-    
-    <?php 
-    //insert the analytics code if set via the admin interface
-    $analyticsCode = get_option('portfolio_analytics');
-    if ($analyticsCode) {
-        print $analyticsCode;
-    }
-    ?>
     
 </body>
 </html>
