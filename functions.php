@@ -285,4 +285,16 @@ function responsive_editor_filter($html, $id, $caption, $title, $align, $url){
 }
 add_filter( 'image_send_to_editor', 'responsive_editor_filter', 10, 9);
 
+// prevent brute force amplification attacks againt XMLRPC
+add_filter('xmlrpc_enabled','__return_false');
+
+// To disable only some methods
+// function mmx_remove_xmlrpc_methods( $methods ) {
+//     unset( $methods['system.multicall'] );
+//     unset( $methods['system.listMethods'] );
+//     unset( $methods['system.getCapabilities'] );
+//     return $methods;
+// }
+// add_filter( 'xmlrpc_methods', 'mmx_remove_xmlrpc_methods');
+
 ?>
