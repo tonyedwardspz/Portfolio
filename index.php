@@ -6,7 +6,11 @@
 
                     <?php 
                     // limit the loop to non custom post types (i.e only blog posts)
-                    query_posts("post_type=post"); 
+                    query_posts( array(
+                          'posts_per_page' => 7,
+                          'post_type' => 'post',
+                          'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1 ),
+                     ));
                     
                     if (have_posts() ) : while (have_posts() ) : the_post(); ?>
         
@@ -36,9 +40,10 @@
                     <?php endif; ?>
                     
                     
-                    
                     <span class="unit previous-post"><?php previous_posts_link('Previous'); ?></span>
                     <span class="unit next-post"><?php next_posts_link('Next'); ?></span>
+
+                    <?php wp_reset_query(); ?>
                 
                 </div>
 
