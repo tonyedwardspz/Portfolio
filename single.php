@@ -4,9 +4,18 @@
                    
                     <?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
         
-                    <div class="unit blog-archive-item two-of-three">
+                    <div class="unit blog-archive-item full-width blog-post">
                         
-                        <h1 id="fitTitle"><span class="post-title"><?php the_title(); ?></span></h1>
+                        <h1><?php the_title(); ?></h1>
+
+                        <?php
+                            if ( has_post_thumbnail() ) {
+                                the_post_thumbnail('blog-post-thumb');
+                            }
+                        ?>
+                        
+                        <span class="post-info"><a href="<?php the_permalink(); ?>"><?php the_time('l F d, Y'); ?></a></span>
+                        <span class="post-info"><?php the_tags(); ?></span>
                     
                         <?php if ($smry = get_post_meta($post->ID, 'smry_text', true)) { ?>
                         <div class="summaryWrap">
@@ -16,36 +25,12 @@
                          </div>
                          <?php } ?>
                             
-                        <?php the_content('Read More'); ?>
+                        
                         
                     </div>
                     
-                    <div class="unit one-of-three post-meta">
-                        
-                        <?php
-                            if ( has_post_thumbnail() ) {
-                                the_post_thumbnail('blog-post-thumb');
-                            }
-                        ?>
-                        
-                        <span class="post-info"><a href="<?php the_permalink(); ?>"><?php the_time('l F d, Y'); ?></a></span>
-                        <span class="post-info"><?php the_tags(); ?></span>
-
-                        <div class="advert">
-
-                            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                            <!-- PWD - Responsive -->
-                            <ins class="adsbygoogle"
-                                 style="display:block"
-                                 data-ad-client="ca-pub-7067632003386523"
-                                 data-ad-slot="9873544474"
-                                 data-ad-format="auto"></ins>
-                            <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                            </script>
-
-                        </div>
-                    
+                    <div class="unit full-width">
+                        <?php the_content('Read More'); ?>
                     </div>
 
 
