@@ -16,14 +16,6 @@
                         
                         <span class="post-info"><a href="<?php the_permalink(); ?>"><?php the_time('l F d, Y'); ?></a></span>
                         <span class="post-info"><?php the_tags(); ?></span>
-                    
-                        <?php if ($smry = get_post_meta($post->ID, 'smry_text', true)) { ?>
-                        <div class="summaryWrap">
-                            <div class="sumText">
-                                <p><? echo $smry; ?></p>
-                             </div>
-                         </div>
-                         <?php } ?>
                         
                     </div>
                     
