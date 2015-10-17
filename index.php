@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
-
-                <div class="blog-archive">
+                <div class="blog-archive BLOGROLL">
                     
 
                     <?php 
@@ -46,7 +45,5 @@
                     <?php wp_reset_query(); ?>
                 
                 </div>
-
-                
 
 <?php get_footer(); ?>

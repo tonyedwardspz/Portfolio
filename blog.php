@@ -6,8 +6,7 @@
 
 <?php get_header(); ?>
 
-
-                <div class="blog-archive">   
+                <div class="blog-archive BLOGTEMPLATE">   
                     
                     <?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
         
@@ -41,8 +40,6 @@
                     <span class="unit previous-post"><?php previous_posts_link('Previous'); ?></span>
                     <span class="unit next-post"><?php next_posts_link('Next'); ?></span>
                 
-                </div>
-
-                
+                </div>                
 
 <?php get_footer(); ?>
