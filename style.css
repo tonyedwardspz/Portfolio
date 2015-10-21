@@ -20,3 +20,25 @@
 .micro-about::after {
 	clear: both;
 }
+
+.pagination {
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+.pagination::after {
+	clear:both;
+	margin-bottom: 20px;
+}
+
+.pagination .previous-post {
+	float: left;
+}
+
+.pagination .next-post {
+	float: right;
+}
+
+.content {
+	overflow: auto;
+}

@@ -922,3 +922,48 @@ footer{
 pre .rainbow span{
     max-width: 100%;
 }
+
+
+/* Set up dev stack! */
+.blog-post h1 {
+    margin-bottom: 5px;
+}
+
+.micro-about img { 
+    float: left;
+    border-radius: 45px;
+    margin-right: 20px;
+}
+
+.micro-about {
+    background-color: #eee;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.micro-about::after {
+    clear: both;
+}
+
+.pagination {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.pagination::after {
+    clear:both;
+    margin-bottom: 20px;
+}
+
+.pagination .previous-post {
+    float: left;
+}
+
+.pagination .next-post {
+    float: right;
+}
+
+.content {
+    overflow: auto;
+}
+
