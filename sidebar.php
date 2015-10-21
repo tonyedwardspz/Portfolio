@@ -3,9 +3,9 @@
         
         <div class="widget">
             <?php 
-                    if (function_exists("popular_popularity_list")) {
-                       popular_popularity_list();
-                    } ?>
+                if (function_exists("popular_popularity_list")) {
+                   popular_popularity_list();
+                } ?>
             
         </div>
         <?php endif; ?>

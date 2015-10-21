@@ -61,19 +61,18 @@ function mh_load_my_script() {
 		
 		//register all scripts
 		// wp_register_script($handle, $src, $deps, $ver, $in_footer);
-	    wp_register_script('jquery', $googleCDN, false, null, true);
-	    wp_register_script('myScript', get_template_directory_uri().'/script/min/script.min.js', array('jquery'), null, true);
-	    wp_register_script('mixitup', get_template_directory_uri().'/script/jquery.mixitup.min.js', array('jquery'), null, true);
+    wp_register_script('jquery', $googleCDN, false, null, true);
+    wp_register_script('myScript', get_template_directory_uri().'/script/min/script.min.js', array('jquery'), null, true);
+    wp_register_script('mixitup', get_template_directory_uri().'/script/jquery.mixitup.min.js', array('jquery'), null, true);
 
-	    // enqueue scripts for every page
-	    wp_enqueue_script('jquery');
-	    wp_enqueue_script('myScript');
-	    //wp_enqueue_script('fittext');
+    // enqueue scripts for every page
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('myScript');
 
-	    // handle page specific scripts
-	    if (is_post_type_archive( 'portfolio' )){
-		    wp_enqueue_script('mixitup');
-	    } 
+    // handle page specific scripts
+    if (is_post_type_archive( 'portfolio' )){
+	    wp_enqueue_script('mixitup');
+    } 
 	}
 } 
 add_action( 'wp_enqueue_scripts', 'mh_load_my_script' );
@@ -84,8 +83,8 @@ function load_my_styes(){
 	$fontAwesomeCDN = "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
 
 	// Font Awesome
-    wp_register_style( 'font-awesome', $fontAwesomeCDN,  array(), '4.1.0', 'all' );
-    wp_enqueue_style( 'font-awesome' );
+  wp_register_style( 'font-awesome', $fontAwesomeCDN,  array(), '4.1.0', 'all' );
+  wp_enqueue_style( 'font-awesome' );
 
 }
 add_action( 'wp_enqueue_scripts', 'load_my_styes');

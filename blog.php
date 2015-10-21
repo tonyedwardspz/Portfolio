@@ -13,6 +13,7 @@
                     <div class="unit blog-archive-item two-of-three">
                         
                         <h1><span class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span></h1>
+                        <span class="post-info">By <?php the_author(); ?></span>
                         
                         <?php the_content('Read More'); ?>
                         
@@ -36,9 +37,6 @@
                     <?php endif; ?>
                     
                     <?php get_sidebar(); ?>
-                    
-                    <span class="unit previous-post"><?php previous_posts_link('Previous'); ?></span>
-                    <span class="unit next-post"><?php next_posts_link('Next'); ?></span>
                 
                 </div>                
 
