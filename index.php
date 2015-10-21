@@ -1,7 +1,6 @@
 <?php get_header(); ?>
 
                 <div class="blog-archive BLOGROLL">
-                    
 
                     <?php 
                     // limit the loop to non custom post types (i.e only blog posts)
@@ -28,7 +27,7 @@
                                 the_post_thumbnail('blog-archive-thumb');
                             }
                         ?>
-                        <span class="post-info">By <?php the_author(); ?></span>
+                        
                         <span class="post-info"><a href="<?php the_permalink(); ?>"><?php the_time('l F d, Y'); ?></a></span>
                         <span class="post-info"><?php the_tags(); ?></span>
                     
@@ -38,9 +37,18 @@
                         <p><?php _e('No posts were found. Sorry!'); ?></p>
                     <?php endif; ?>
                     
-                    
-                    <span class="unit previous-post"><?php previous_posts_link('Previous'); ?></span>
-                    <span class="unit next-post"><?php next_posts_link('Next'); ?></span>
+                    <div class="pagination">
+                         <?php
+                            $prev = get_previous_posts_link();
+                            if ( !empty($prev) ) { ?>
+                                <span class="unit previous-post button force-white"><?php previous_posts_link('Previous'); ?></span>
+                        <?php } ?>
+                        <?php
+                            $next = get_next_posts_link();
+                            if ( !empty($next) ) { ?>
+                                <span class="unit next-post button force-white"><?php next_posts_link('Next'); ?></span>
+                        <?php } ?>
+                    </div>
 
                     <?php wp_reset_query(); ?>
                 
