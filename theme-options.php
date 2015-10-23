@@ -24,7 +24,6 @@ function portfolio_register_settings(){
 	register_setting('portfolio-settings-group', 'portfolio_twitter');
 	register_setting('portfolio-settings-group', 'portfolio_linkedin');
 	register_setting('portfolio-settings-group', 'portfolio_github');
-	register_setting('portfolio-settings-group', 'portfolio_dribbble');
 	register_setting('portfolio-settings-group', 'portfolio_logo');
 	register_setting('portfolio-settings-group', 'portfolio_analytics');
 }
@@ -35,7 +34,7 @@ function portfolio_settings_page(){ ?>
 	<h2>Portfolio Theme Settings</h2>
 
 	<form id="landingOptions" method="post" action="options.php">
-	<?php settings_fields( 'portfolio-settings-group' ); ?>		
+	<?php settings_fields( 'portfolio-settings-group' ); ?>
 	<table class="form-table">
 		<tr valign="top">
 		<th scope="row">Logo:</th>
@@ -74,14 +73,6 @@ function portfolio_settings_page(){ ?>
 		<th scope="row">Github Link:</th>
 		<td>
 			<input type="text" name="portfolio_github" value="<?php print get_option('portfolio_github'); ?>" />
-			<br/>
-		</td>
-		</tr>
-
-		<tr valign="top">
-		<th scope="row">Dribble Link:</th>
-		<td>
-			<input type="text" name="portfolio_dribbble" value="<?php print get_option('portfolio_dribbble'); ?>" />
 			<br/>
 		</td>
 		</tr>
