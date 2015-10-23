@@ -5,7 +5,7 @@
 	margin-bottom: 5px;
 }
 
-.micro-about img { 
+.micro-about img {
 	float: left;
 	border-radius: 45px;
 	margin-right: 20px;
@@ -41,4 +41,23 @@
 
 .content {
 	overflow: auto;
+}
+
+.blog-item-wrap {
+	display: block;
+}
+
+.blog-item-wrap h2{
+	margin-bottom: 10px;
+}
+
+.blog-item-wrap h2 a {
+	text-decoration: none;
+}
+
+.blog-item-wrap .post-info {
+	margin-bottom: 30px;
+	font-weight: 200;
+	font-style: italic;
+	color: #ccc;
 }
