@@ -21,6 +21,10 @@
 
           <?php the_excerpt(); ?>
 
+          <span class="button force-white">
+            <a class="button force-white" href="<?php the_permalink(); ?>">Read More &raquo;</a>
+          </span>
+
       </div>
 
       <div class="unit one-of-three post-meta">

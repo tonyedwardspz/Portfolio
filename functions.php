@@ -132,14 +132,13 @@ function wrap_readmore($more_link) {
 add_filter('the_content_more_link', 'wrap_readmore', 10, 1);
 
 // show the portfolio post type on the front page. MOVE TO PLUGIN????
-add_filter( 'pre_get_posts', 'my_get_posts' );
-
 function my_get_posts( $query ) {
 	if ( ( is_home() && $query->is_main_query() ) || is_feed() )
 		$query->set( 'post_type', array( 'post', 'portfolio' ) );
 
 	return $query;
 }
+add_filter( 'pre_get_posts', 'my_get_posts' );
 
 // Get all attached images for a post, wrapping them in <li>'s
 // Used with the slider on single portfolio pages
@@ -215,7 +214,8 @@ function get_smry_text($post){
 // change the default more link
 function new_excerpt_more($more) {
 	global $post;
-	return '… <a href="'. get_permalink($post->ID) . '">' . 'Read More &raquo;' . '</a>';
+
+	return '.....';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
 
