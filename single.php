@@ -31,8 +31,8 @@
 
                       <?php echo get_avatar( get_the_author_meta( 'ID' ), $size, $default, $alt, $args ); ?>
 
-                        <p>Tony Edwards is a pasty powered software developer with Plymouth Software, blogger and Web Applications Development
-                           Student at Plymouth University. When not developing, I can usually be found somewhere beautiful along the Cornish Coast. 
+                        <p>Tony Edwards is a pasty powered developer with <a href="http://plymouthsoftware.com" title="Plymouth Software Development">Plymouth Software</a>, blogger and Web Apps
+                           Student at Plymouth University. When not developing, I can usually be found somewhere spectacular along the Cornish Coast.
                            You can catch up with me on <a href="http://twitter.com/tonyedwardspz" title="Tony on Twitter" target="_blank">Twitter</a>.</p>
 
                     </div>
