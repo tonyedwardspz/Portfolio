@@ -5,7 +5,6 @@ $googleplus = get_option('portfolio_googleplus');
 $twitter = get_option('portfolio_twitter');
 $linkedin = get_option('portfolio_linkedin');
 $github = get_option('portfolio_github');
-$dribbble = get_option('portfolio_dribbble');
 ?>
 <ul>
     <?php if($twitter): ?>
