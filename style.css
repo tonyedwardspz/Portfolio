@@ -55,9 +55,23 @@
 	text-decoration: none;
 }
 
-.blog-item-wrap .post-info {
+.blog-archive .post-info {
 	margin-bottom: 30px;
 	font-weight: 200;
 	font-style: italic;
 	color: #ccc;
+}
+
+.blog-content img {
+	float: right;
+}
+
+.sd-title {
+	display: none;
+}
+
+@media screen and (max-width: 720px) {
+	.blog-content img {
+		float: none;
+	}
 }
