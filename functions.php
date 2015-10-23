@@ -131,7 +131,6 @@ function wrap_readmore($more_link) {
 }
 add_filter('the_content_more_link', 'wrap_readmore', 10, 1);
 
-
 // show the portfolio post type on the front page. MOVE TO PLUGIN????
 add_filter( 'pre_get_posts', 'my_get_posts' );
 
@@ -142,7 +141,6 @@ function my_get_posts( $query ) {
 	return $query;
 }
 
-
 // Get all attached images for a post, wrapping them in <li>'s
 // Used with the slider on single portfolio pages
 function getAttachedImages(){
@@ -152,7 +150,6 @@ function getAttachedImages(){
 		echo "<li>".wp_get_attachment_image( $attachment_id, 'large' )."</li>";
 	}
 }
-
 
 // Add a summary metabox to all posts to use in theme
 function smry_custom_meta(){
@@ -177,9 +174,6 @@ function smry_show_meta_box(){
 	global $post;
 	$meta = get_post_meta($post->ID, 'smry_text', true);
 
-	//Use nonce for verification
-	// echo '<input type="hidden" name="custom_meta_box_nonce" value="'.wp_create_nonce(basename(__FILE__)).'" />';
-
 	//build the input area ?>
 	<p>
 		<label>Summary Text</label>
@@ -189,11 +183,6 @@ function smry_show_meta_box(){
 }
 
 function save_summary_meta($post_id){
-	//verify the nonce
-	// if (!wp_verify_nonce($_POST['custom_meta_box_nonce'], basename(__FILE__))){
-	// 	return $post_id;
-	// }
-
 	//check for saving
 	if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE){
 		return $post_id;
@@ -211,7 +200,6 @@ function save_summary_meta($post_id){
 	}
 }
 add_action('save_post', 'save_summary_meta');
-
 
 // get the custom meta summary
 function get_smry_text($post){
@@ -232,18 +220,19 @@ function new_excerpt_more($more) {
 add_filter('excerpt_more', 'new_excerpt_more');
 
 // disable contact form 7 from loading assets on every page
-add_action( 'wp_print_scripts', 'deregister_cf7_javascript', 12 );
 function deregister_cf7_javascript() {
     if ( !is_page(12) ) {
         wp_deregister_script( 'contact-form-7' );
     }
 }
-add_action( 'wp_print_styles', 'deregister_cf7_styles', 12 );
+add_action( 'wp_print_scripts', 'deregister_cf7_javascript', 12 );
+
 function deregister_cf7_styles() {
     if ( !is_page(12) ) {
         wp_deregister_style( 'contact-form-7' );
     }
 }
+add_action( 'wp_print_styles', 'deregister_cf7_styles', 12 );
 
 // picture fill stuff
 //
@@ -309,14 +298,5 @@ add_filter( 'image_send_to_editor', 'responsive_editor_filter', 10, 9);
 
 // prevent brute force amplification attacks againt XMLRPC
 add_filter('xmlrpc_enabled','__return_false');
-
-// To disable only some methods
-// function mmx_remove_xmlrpc_methods( $methods ) {
-//     unset( $methods['system.multicall'] );
-//     unset( $methods['system.listMethods'] );
-//     unset( $methods['system.getCapabilities'] );
-//     return $methods;
-// }
-// add_filter( 'xmlrpc_methods', 'mmx_remove_xmlrpc_methods');
 
 ?>
