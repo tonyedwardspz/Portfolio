@@ -12,7 +12,7 @@ define( 'SCRIPT', TEMPPATH. "/script");
 
 
 // add support for custom post thumbnails
-add_theme_support( 'post-thumbnails' ); 
+add_theme_support( 'post-thumbnails' );
 add_image_size( 'blog-post-thumb', 340, 0, true ); //340 pixels x unlimited height
 add_image_size( 'blog-archive-thumb', 340, 300, true ); //340 pixels x unlimited height
 add_image_size('portfolio-item-thumb', 275, 210, ture);
@@ -48,6 +48,29 @@ if ( function_exists( 'register_sidebar' ) ) {
 	) );
 }
 
+// Load CDN jquery is there is a connection
+function getJqueryURL() {
+	$googleCDN = "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js";
+	$test_url = @fopen($googleCDN,'r');
+
+	if ($test_url !== false){
+		return $googleCDN;
+	} else {
+		return SCRIPT. '/jquery-1.11.3.min.js';;
+	}
+}
+
+// Load CDN Font Awesome if there is a connection
+function getFontAwesomeURL() {
+	$fontAwesomeCDN = "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
+	$test_url = @fopen($fontAwesomeCDN,'r');
+
+	if ($test_url !== false) {
+		return $fontAwesomeCDN;
+	} else {
+		return STYLE. '/font-awesome.min.css';
+	}
+}
 
 //enqueue scripts, loading them in the footer
 function mh_load_my_script() {
@@ -56,12 +79,12 @@ function mh_load_my_script() {
 		//de register the built in jquery
 		wp_deregister_script('jquery');
 
-		// build the jQuery CDN link 
-		$googleCDN = "http" . ($_SERVER['SERVER_PORT'] == 443 ? "s" : "") . "://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js";
-		
+		// Get the jquery file url dependent on connection_status
+		$jqueryURL = getJqueryURL();
+
 		//register all scripts
 		// wp_register_script($handle, $src, $deps, $ver, $in_footer);
-    wp_register_script('jquery', $googleCDN, false, null, true);
+    wp_register_script('jquery', $jqueryURL, false, '1.11.3', true);
     wp_register_script('myScript', get_template_directory_uri().'/script/min/script.min.js', array('jquery'), null, true);
     wp_register_script('mixitup', get_template_directory_uri().'/script/jquery.mixitup.min.js', array('jquery'), null, true);
 
@@ -72,18 +95,18 @@ function mh_load_my_script() {
     // handle page specific scripts
     if (is_post_type_archive( 'portfolio' )){
 	    wp_enqueue_script('mixitup');
-    } 
+    }
 	}
-} 
+}
 add_action( 'wp_enqueue_scripts', 'mh_load_my_script' );
 
 // enqueue styles, loading them in the header
 function load_my_styes(){
 
-	$fontAwesomeCDN = "//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css";
+	$fontAwesomeURL = getFontAwesomeURL();
 
 	// Font Awesome
-  wp_register_style( 'font-awesome', $fontAwesomeCDN,  array(), '4.1.0', 'all' );
+  wp_register_style( 'font-awesome', $fontAwesomeURL,  array(), '4.1.0', 'all' );
   wp_enqueue_style( 'font-awesome' );
 
 }
@@ -133,7 +156,7 @@ function getAttachedImages(){
 
 // Add a summary metabox to all posts to use in theme
 function smry_custom_meta(){
-	// post types to apply extra metabox too. 
+	// post types to apply extra metabox too.
 	$postTypes = array('post', 'portfolio');
 
 	// loop the array of post types
@@ -150,7 +173,7 @@ function smry_custom_meta(){
 add_action('add_meta_boxes', 'smry_custom_meta');
 
 function smry_show_meta_box(){
-	// get the stored meta values	
+	// get the stored meta values
 	global $post;
 	$meta = get_post_meta($post->ID, 'smry_text', true);
 
@@ -226,7 +249,7 @@ function deregister_cf7_styles() {
 //
 // get image alt
 function get_img_alt($image){
-	$img_alt = trim(strip_tags( get_post_meta($image, 
+	$img_alt = trim(strip_tags( get_post_meta($image,
 		'_wp_attachment_image_alt', true)));
 	return $img_alt;
 }
@@ -272,7 +295,7 @@ function responsive_insert_image($atts){
 	$srcsets = add_src_element($id);
 	$default = wp_get_attachment_image_src($id, 'large');
 
-	return '<img srcset="'. $srcsets .'" 
+	return '<img srcset="'. $srcsets .'"
 		src="' . $default[0] . '"
 		alt="'. get_img_alt($id) .'">';
 }
