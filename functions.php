@@ -56,7 +56,7 @@ function getJqueryURL() {
 	if ($test_url !== false){
 		return $googleCDN;
 	} else {
-		return SCRIPT. '/jquery-1.11.3.min.js';;
+		return SCRIPT. '/jquery-1.11.3.min.js';
 	}
 }
 
