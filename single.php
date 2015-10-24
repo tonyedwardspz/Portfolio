@@ -9,18 +9,27 @@
         <h1><?php the_title(); ?></h1>
         <span class="post-info"><?php the_time('l F d, Y'); ?></span>
 
-        <!-- <span class="post-info"><?php the_tags(); ?></span> -->
-
     </div>
 
     <div class="unit full-width blog-content">
-        <?php
-            if ( has_post_thumbnail() ) {
-                the_post_thumbnail('blog-post-thumb');
-            }
+      <?php
+          if ( has_post_thumbnail() ) {
+              the_post_thumbnail('blog-post-thumb');
+          }
 
-            the_content();
+          the_content();
+      ?>
+      <span class="post-info">Tags:
+
+        <?php
+          $posttags = wp_get_post_terms( get_the_ID() , 'post_tag' , 'fields=names' );
+          if( $posttags ) {
+            foreach ($posttags as $tag) {
+              echo '<span class="post-tag">'. $tag .'</span>';
+            }
+          }
         ?>
+      </span>
     </div>
 
     <?php endwhile ; else: ?>
