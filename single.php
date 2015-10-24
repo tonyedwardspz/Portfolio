@@ -19,7 +19,7 @@
 
           the_content();
       ?>
-      <span class="post-info">Tags:
+      <span class="post-info post-tags">Tags:
 
         <?php
           $posttags = wp_get_post_terms( get_the_ID() , 'post_tag' , 'fields=names' );
@@ -27,6 +27,14 @@
             foreach ($posttags as $tag) {
               echo '<span class="post-tag">'. $tag .'</span>';
             }
+          }
+        ?>
+      </span>
+      <span class="post-share">
+        <h4>Share this</h4>
+        <?php
+          if ( shortcode_exists( 'cresta-social-share' ) ) {
+            echo do_shortcode('[cresta-social-share]');
           }
         ?>
       </span>
@@ -40,9 +48,9 @@
 
       <?php echo get_avatar( get_the_author_meta( 'ID' ), $size, $default, $alt, $args ); ?>
 
-        <p>Tony Edwards is a pasty powered developer with <a href="http://plymouthsoftware.com" title="Plymouth Software Development">Plymouth Software</a>, blogger and Web Apps
-           Student at Plymouth University. When not developing, I can usually be found somewhere spectacular along the Cornish Coast.
-           You can catch up with me on <a href="http://twitter.com/tonyedwardspz" title="Tony on Twitter" target="_blank">Twitter</a>.</p>
+      <p>Tony Edwards is a pasty powered developer with <a href="http://plymouthsoftware.com" title="Plymouth Software Development">Plymouth Software</a>, blogger and Web Apps
+         Student at Plymouth University. When not developing, I can usually be found somewhere spectacular along the Cornish Coast.
+         You can catch up with me on <a href="http://twitter.com/tonyedwardspz" title="Tony on Twitter" target="_blank">Twitter</a>.</p>
 
     </div>
 

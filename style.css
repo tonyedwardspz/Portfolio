@@ -74,6 +74,10 @@
      margin-bottom: 20px;
 }
 
+.post-tags {
+	margin-top: 35px;
+}
+
 @media screen and (max-width: 720px) {
 	.blog-content img {
 		float: none;
