@@ -19,7 +19,7 @@
               <?php
               // limit the loop to non custom post types (i.e only blog posts)
               query_posts( array(
-                    'posts_per_page' => 3,
+                    'posts_per_page' => 2,
                     'post_type' => 'post',
                     'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1 ),
                ));
@@ -34,7 +34,7 @@
                       if ( has_post_thumbnail() ) the_post_thumbnail('blog-archive-thumb');
                   ?>
 
-                  <?php echo wp_trim_words( get_the_content(), 20, '...' ); ?>
+                  <?php echo wp_trim_words( get_the_content(), 26, '...' ); ?>
 
                   <span class="button force-white">
                     <a href="<?php the_permalink(); ?>">Read More &raquo;</a>

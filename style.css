@@ -157,5 +157,11 @@ a#pull:before {
 .home-blog-wrapper {
 	display: block;
 	overflow: auto;
-	margin-bottom: 10px;
+	margin-bottom: 30px;
+}
+
+@media screen and (min-width: 721px){
+	.front-page-bio {
+		margin-top: -69px;
+	}
 }
