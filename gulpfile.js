@@ -7,6 +7,7 @@ var autoprefixer = require('gulp-autoprefixer');
 var sourceMaps = require('gulp-sourcemaps');
 var plumber = require('gulp-plumber');
 var notify = require('gulp-notify');
+var livereload = require('gulp-livereload');
 
 var plumberErrorHandler = { errorHandler: notify.onError({
     title: 'Gulp',
@@ -25,10 +26,12 @@ gulp.task('process-sass', function(){
         }))
     .pipe(minifyCss({compatibility: 'ie8'}))
     .pipe(sourceMaps.write('./'))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./'))
+    .pipe(livereload());
 });
 
-gulp.task('sass:watch',['clean'], function () {
+gulp.task('watch',['clean'], function () {
+  livereload.listen();
   gulp.watch('./*.scss', ['process-sass']);
 });
 
@@ -40,6 +43,6 @@ gulp.task('clean', function(){
 gulp.task('process', function (callback) {
   runSequence(
     'process-sass',
-    'sass:watch',
+    'watch',
     callback);
 });
