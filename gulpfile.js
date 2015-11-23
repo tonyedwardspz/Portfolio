@@ -4,15 +4,18 @@ var minifyCss = require('gulp-minify-css');
 var runSequence = require('run-sequence');
 var clean = require('gulp-clean');
 var autoprefixer = require('gulp-autoprefixer');
+var sourceMaps = require('gulp-sourcemaps');
 
 gulp.task('process-sass', function(){
   gulp.src('./*.scss')
+    .pipe(sourceMaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
             browsers: ['last 3 versions'],
             cascade: false
         }))
     .pipe(minifyCss({compatibility: 'ie8'}))
+    .pipe(sourceMaps.write('./'))
     .pipe(gulp.dest('./'));
 });
 
