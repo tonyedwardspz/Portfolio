@@ -127,3 +127,9 @@ a#pull:before {
 	content: "\f0c9";
 	font-size:3em
 }
+
+@media screen and (max-width: 720px){
+	nav {
+    position: absolute;
+	}
+}
