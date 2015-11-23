@@ -37,3 +37,5 @@ Icon
 
 script/picturefill.js
 *.cfg
+node_modules
+bower_components
