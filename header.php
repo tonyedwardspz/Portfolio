@@ -14,7 +14,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 
     <!--[if lt IE 9]>
-        <script src="<?php echo SCRIPT; ?>/html5shiv.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
 
     <!--[if lt IE 7]>
