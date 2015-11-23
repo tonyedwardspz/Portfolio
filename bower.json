@@ -1,0 +1,25 @@
+{
+  "name": "Portfolio",
+  "homepage": "http://purelywebdesign.co.uk",
+  "authors": [
+    "Tony Edwards"
+  ],
+  "description": "My personal portfolio",
+  "main": "index.php",
+  "moduleType": [],
+  "keywords": [
+    "Portfolio",
+    "tonyedwardspz",
+    "Tony",
+    "Edwards"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
