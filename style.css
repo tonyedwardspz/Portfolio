@@ -133,6 +133,10 @@ a#pull:before {
     position: absolute;
 		background-color: #27afef;
 	}
+
+	.post-tag {
+    margin-bottom: 9px;
+	}
 }
 
 .home-blog img {
