@@ -21,5 +21,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "picturefill": "~3.0.1",
+    "mixitup": "~2.1.11"
+  }
 }
