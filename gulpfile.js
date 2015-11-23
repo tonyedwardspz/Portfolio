@@ -41,7 +41,8 @@ gulp.task('process-javascript', function(){
     .pipe(uglify())
     .pipe(rename('script.min.js'))
     .pipe(sourceMaps.write('./'))
-    .pipe(gulp.dest('./script/min/'));
+    .pipe(gulp.dest('./script/min/'))
+    .pipe(livereload());
 });
 
 gulp.task('watch', function () {
