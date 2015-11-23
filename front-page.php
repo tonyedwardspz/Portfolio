@@ -27,7 +27,7 @@
               if (have_posts() ) : while (have_posts() ) : the_post(); ?>
               <div class="home-blog-wrapper">
 
-                  <h3><span class="post-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></span></h3>
+                  <h3 class="post-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
                   <span class="post-info"><?php the_time('l F d, Y'); ?></span>
 
                   <?php
