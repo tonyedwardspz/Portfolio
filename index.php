@@ -30,9 +30,7 @@
       <div class="unit one-of-three post-meta">
 
           <?php
-              if ( has_post_thumbnail() ) {
-                  the_post_thumbnail('blog-archive-thumb');
-              }
+              if ( has_post_thumbnail() ) the_post_thumbnail('blog-archive-thumb');
           ?>
 
           <span class="post-info"><?php the_tags(); ?></span>

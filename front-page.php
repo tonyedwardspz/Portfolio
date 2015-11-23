@@ -31,9 +31,7 @@
                   <span class="post-info"><?php the_time('l F d, Y'); ?></span>
 
                   <?php
-                      if ( has_post_thumbnail() ) {
-                          the_post_thumbnail('blog-post-thumb');
-                      }
+                      if ( has_post_thumbnail() ) the_post_thumbnail('blog-archive-thumb');
                   ?>
 
                   <?php echo wp_trim_words( get_the_content(), 20, '...' ); ?>
