@@ -7,6 +7,7 @@ var clean = require('gulp-clean');
 gulp.task('process-sass', function(){
   gulp.src('./*.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(minifyCss({compatibility: 'ie8'}))
     .pipe(gulp.dest('./'));
 });
 
