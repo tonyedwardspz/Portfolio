@@ -49,17 +49,19 @@
         "http://uk.linkedin.com/in/tonyedwardspz",
         "https://plus.google.com/109731755368109204853",
         "https://github.com/tonyedwardspz",
-        "https://twitter.com/tonyedwardspz"],
+        "https://twitter.com/tonyedwardspz"
+      ],
       "affiliation": {
         "@type" : "Organization",
-        "name" : "Plymouth University"
+        "name" : "Plymouth University",
         "url" : "https://www.plymouth.ac.uk",
         "contactPoint" : [
           { "@type" : "ContactPoint",
             "telephone" : "+441752600600",
-            "contactType" : "Reception"
-          } ]
-        }
+            "contactType" : "customer service"
+          }
+        ]
+      }
     }
     </script>
 
