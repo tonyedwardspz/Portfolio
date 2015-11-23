@@ -106,7 +106,7 @@ img.centered, .aligncenter, div.aligncenter{
 }
 
 @media screen and (max-width: 400px) {
-    
+
     .container{
         padding: 0 10px 10px 10px;
     }
@@ -118,9 +118,9 @@ img.centered, .aligncenter, div.aligncenter{
     Works off the assumption of a 1.5 line height @ 20px.
 \*------------------------------------------- */
 
-html { 
+html {
     font-size: 100%/1.5;
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif; 
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 p, .p, ul, ol, hr, table, form, pre,
@@ -161,9 +161,9 @@ hr {
 }
 
 @media screen and ( max-width: 720px) {
-	
+
     html { font-size: 90%/1.5; }
-    
+
     h1, .alpha {
         font-size: 30px;
     }
@@ -198,17 +198,17 @@ a:active { color: #f39c12; }
 
 /*.pullDown a:link,*/
 a:visited#pull,
-.force-darkgrey a:link, 
-.force-darkgrey a:visited, 
-.force-darkgrey a:hover, 
+.force-darkgrey a:link,
+.force-darkgrey a:visited,
+.force-darkgrey a:hover,
 .force-darkgrey a:active {
     color: #555;
     text-decoration: none;
 }
 
-.force-white a:link, 
-.force-white a:visited, 
-.force-white a:hover, 
+.force-white a:link,
+.force-white a:visited,
+.force-white a:hover,
 .force-white a:active {
     color: #fff;
     text-decoration: none;
@@ -247,7 +247,7 @@ img {
 
 
 header { margin-top: 10px;
-    
+
     a { text-decoration: none;}
 }
 
@@ -281,7 +281,7 @@ body.post-type-archive-portfolio nav ul li#menu-item-21 > a{
 nav {
     float: right;
     margin-top: 35px;
-    
+
     a{
         padding: 10px 15px;
         color: #555;
@@ -300,7 +300,7 @@ nav {
 .small-screen-nav { display: inherit; }
 
 @media screen and (max-width: 720px) {
-	
+
     #toggle-menu {
         display: inherit;
         margin-top: -60px;
@@ -315,7 +315,7 @@ nav {
         }
 
         ul { width: 40px;
-        
+
             li {
             float: right;
             width: 50px;
@@ -323,11 +323,11 @@ nav {
             }
         }
     }
-    .menu { display: none;   
+    .menu { display: none;
 
-        li {  
-            width: 50%;  
-            float: left;  
+        li {
+            width: 50%;
+            float: left;
             position: relative;
             min-height: 40px;
             background-color: #27afef;
@@ -335,10 +335,10 @@ nav {
             padding-top: 10px
         }
 
-         a {   
+         a {
             width: 100%;
             padding: 0px;
-            color: #fff; 
+            color: #fff;
         }
     }
 
@@ -346,11 +346,11 @@ nav {
         margin-top: 25px;
         height: auto;
         width: 103%;
-    
+
         ul {
             margin-bottom: 0;
             display: list-item;
-            width: 100%;   
+            width: 100%;
             height: auto;
             background-color: #27afef;
             z-index: 10;
@@ -412,7 +412,7 @@ nav {
 
 
 @media screen and (max-width: 720px) {
-	
+
     .content { margin-top: 60px; }
 
     .sumText {
@@ -436,9 +436,9 @@ nav {
 .homeButton{ margin-bottom: 20px; }
 
 @media screen and ( max-width: 720px) {
-    
-    .i-use li:first-child{ margin-left: 15px; } 
-    
+
+    .i-use li:first-child{ margin-left: 15px; }
+
     .i-use li{
         margin-left: 30px;
         display: inline-block;
@@ -499,7 +499,7 @@ nav {
 
         p{
             margin-bottom: 0;
-            padding:10px 0 10px 0; 
+            padding:10px 0 10px 0;
         }
 
         cite{
@@ -584,7 +584,7 @@ nav {
     }
 }
 
-#mixPortfolio .mix{ display: none; } 
+#mixPortfolio .mix{ display: none; }
 
 .view-project {
     display: none;
@@ -592,7 +592,7 @@ nav {
 }
 
 @media screen and (max-width: 720px) {
-	
+
     .view-project { display: block; }
 
     .view img{ margin: 0 auto; }
@@ -615,9 +615,9 @@ nav {
 
     li {
         display: none;
-        position: absolute; 
-        top: 0; 
-        left: 0; 
+        position: absolute;
+        top: 0;
+        left: 0;
     }
 }
 
@@ -656,7 +656,7 @@ nav {
    opacity: 1;
    transform: translateY(0px);
 }
-				
+
 .view {
    overflow: hidden;
    position: relative;
@@ -725,9 +725,9 @@ nav {
 
     .wpcf7 form div,
     .wpcf7 form label,
-    .wpcf7 form input, 
-    .wpcf7 form select, 
-    .wpcf7 form textarea, 
+    .wpcf7 form input,
+    .wpcf7 form select,
+    .wpcf7 form textarea,
     .wpcf7 form input[type="submit"]{
         width: 100%;
     }
@@ -740,7 +740,7 @@ nav {
 
 
 .widget{
-    margin: 20px 0;                             
+    margin: 20px 0;
     padding-left: 20px;
 }
 
@@ -826,11 +826,11 @@ footer{
 @media screen and (max-width: 720px) {
 
     footer{
-        
+
         #footer-text div{
                 display: block;
         }
-    } 
+    }
 }
 
 @media screen and (max-width: 550px) {
@@ -848,7 +848,7 @@ footer{
             }
 
             ul:first-child{
-                padding-left: 0; 
+                padding-left: 0;
             }
         }
 
@@ -868,7 +868,7 @@ footer{
 \*------------------------------------------- */
 
 .FAageSocialIcons{
-     
+
      a{
         color:#fff;
         font-size: 20px;
@@ -923,47 +923,173 @@ pre .rainbow span{
     max-width: 100%;
 }
 
-
-/* Set up dev stack! */
 .blog-post h1 {
-    margin-bottom: 5px;
+	margin-bottom: 5px;
 }
 
-.micro-about img { 
-    float: left;
-    border-radius: 45px;
-    margin-right: 20px;
+.micro-about img {
+	float: left;
+	border-radius: 45px;
+	margin-right: 20px;
 }
 
 .micro-about {
-    background-color: #eee;
-    border: 1px solid #ddd;
-    padding: 10px;
+	background-color: #eee;
+	border: 1px solid #ddd;
+	padding: 10px;
 }
 
 .micro-about::after {
-    clear: both;
+	clear: both;
 }
 
 .pagination {
-    max-width: 400px;
-    margin: 0 auto;
+	max-width: 400px;
+	margin: 0 auto;
 }
 
 .pagination::after {
-    clear:both;
-    margin-bottom: 20px;
+	clear:both;
+	margin-bottom: 20px;
 }
 
 .pagination .previous-post {
-    float: left;
+	float: left;
 }
 
 .pagination .next-post {
-    float: right;
+	float: right;
 }
 
 .content {
-    overflow: auto;
+	overflow: auto;
 }
 
+.blog-item-wrap {
+	display: block;
+}
+
+.blog-item-wrap h2{
+	margin-bottom: 10px;
+}
+
+.blog-item-wrap h2 a {
+	text-decoration: none;
+}
+
+.blog-archive .post-info {
+	margin-bottom: 30px;
+	font-weight: 200;
+	font-style: italic;
+	color: #ccc;
+}
+
+.blog-content img {
+	float: right;
+}
+
+.sd-title {
+	display: none;
+}
+
+.blog-archive-item {
+     margin-bottom: 20px;
+}
+
+.post-tags {
+	margin-top: 35px;
+}
+
+@media screen and (max-width: 720px) {
+	.blog-content img {
+		float: none;
+	}
+}
+
+.post-tag {
+    font-family: Helvetica, Arial, sans-serif;
+    background: #588fe5;
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    padding: 7px 14px;
+    border-radius: 4px;
+    margin: 0 0 0 15px;
+    text-decoration: none;
+		cursor: auto;
+}
+
+.post-tag:hover:after {
+    border-color: transparent transparent transparent #739fe4;
+}
+
+li a.social-icon,
+a#pull {
+	text-decoration: none;
+	font-family: FontAwesome;
+}
+
+a.social-github:before {
+	content: "\f09b";
+}
+
+a.social-twitter:before {
+	content: "\f099";
+}
+
+a.social-google:before {
+	content: "\f0d5";
+}
+
+a.social-linkedin:before {
+	content: "\f0e1";
+}
+
+a#pull:before {
+	content: "\f0c9";
+	font-size:3em
+}
+
+@media screen and (max-width: 720px){
+	nav {
+    position: absolute;
+		background-color: #27afef;
+	}
+
+	.post-tag {
+    margin-bottom: 9px;
+	}
+}
+
+.home-blog {
+  img {
+  	max-width: 140px;
+  	float: right;
+  	margin-left: 15px;
+  }
+
+  .post-info {
+  	clear:both;
+  	margin-bottom: 20px;
+  	font-weight: 200;
+  	font-style: italic;
+  	color: #ccc;
+  }
+
+  .button {
+  	margin: 10px 0;
+  	display: table;
+  }
+}
+
+.home-blog-wrapper {
+	display: block;
+	overflow: auto;
+	margin-bottom: 30px;
+}
+
+@media screen and (min-width: 721px){
+	.front-page-bio {
+		margin-top: -69px;
+	}
+}
