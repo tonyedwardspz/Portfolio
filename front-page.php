@@ -11,38 +11,59 @@
             </div>
 
             <div class="unit full-width">
-                <h2>A little bit about me</h2>
+                <h2>Recent Posts</h2>
             </div>
 
-            <div class="unit two-of-three">
+            <div class="unit two-of-three home-blog">
 
-                <p>I created my first website way back in 2002, teaching myself the basics the old fashioned way (view source).
-                 I caught the bug straight away, working on projects for myself and clients, alongside my day job.</p>
+              <?php
+              // limit the loop to non custom post types (i.e only blog posts)
+              query_posts( array(
+                    'posts_per_page' => 3,
+                    'post_type' => 'post',
+                    'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1 ),
+               ));
 
-                <p>Following a 7 year stint in retail management, I decided to return to web development. Realising
-                that web development had changed in a big way, I decided to head to University to learn the craft.</p>
+              if (have_posts() ) : while (have_posts() ) : the_post(); ?>
+              <div class="home-blog-wrapper">
 
-                <p>Today I create both web and native application as part of a close knit team at Plymouth Software.</p>
+                  <h3><span class="post-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></span></h3>
+                  <span class="post-info"><?php the_time('l F d, Y'); ?></span>
 
-                <span class="button gamma force-white">
-                    <a href="http://purelywebdesign.co.uk/about-me" title="About me">About me</a>
-                </span>
+                  <?php
+                      if ( has_post_thumbnail() ) {
+                          the_post_thumbnail('blog-post-thumb');
+                      }
+                  ?>
+
+                  <?php echo wp_trim_words( get_the_content(), 20, '...' ); ?>
+
+                  <span class="button force-white">
+                    <a href="<?php the_permalink(); ?>">Read More &raquo;</a>
+                  </span>
+              </div>
+
+              <?php endwhile ; else: ?>
+                  <p><?php _e('No posts were found. Sorry!'); ?></p>
+              <?php endif; ?>
 
             </div>
 
             <div class="unit one-of-three front-page-bio">
 
-                <p>I create web sites and software using up to date tools and techniques. I have been know to dabble in:</p>
+              <h2>A little bit about me</h2>
 
-                <ul>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>PHP</li>
-                    <li>JavaScript</li>
-                    <li>Ruby on Rails</li>
-                    <li>Wordpress</li>
-                    <li>Swift</li>
-                </ul>
+              <p>I created my first website way back in 2002, teaching myself the basics the old fashioned way (view source).
+               I caught the bug straight away, working on projects for myself and clients, alongside my day job.</p>
+
+              <p>Following a 7 year stint in retail management, I decided to return to web development. Realising
+              that web development had changed in a big way, I decided to head to University to learn the craft.</p>
+
+              <p>Today I create both web and native application as part of a close knit team at Plymouth Software.</p>
+
+              <span class="button gamma force-white">
+                  <a href="http://purelywebdesign.co.uk/about-me" title="About me">About me</a>
+              </span>
 
             </div>
 
