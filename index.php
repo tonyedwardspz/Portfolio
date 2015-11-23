@@ -22,7 +22,7 @@
           <?php the_excerpt(); ?>
 
           <span class="button force-white">
-            <a class="button force-white" href="<?php the_permalink(); ?>">Read More &raquo;</a>
+            <a href="<?php the_permalink(); ?>">Read More &raquo;</a>
           </span>
 
       </div>
@@ -34,7 +34,6 @@
                   the_post_thumbnail('blog-archive-thumb');
               }
           ?>
-
 
           <span class="post-info"><?php the_tags(); ?></span>
 
