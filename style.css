@@ -100,3 +100,30 @@
 .post-tag:hover:after {
     border-color: transparent transparent transparent #739fe4;
 }
+
+li a.social-icon,
+a#pull {
+	text-decoration: none;
+	font-family: FontAwesome;
+}
+
+a.social-github:before {
+	content: "\f09b";
+}
+
+a.social-twitter:before {
+	content: "\f099";
+}
+
+a.social-google:before {
+	content: "\f0d5";
+}
+
+a.social-linkedin:before {
+	content: "\f0e1";
+}
+
+a#pull:before {
+	content: "\f0c9";
+	font-size:3em
+}
