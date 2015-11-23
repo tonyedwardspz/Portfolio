@@ -11,7 +11,7 @@
 
     </div>
 
-    <div class="unit full-width blog-content">
+    <div class="unit full-width blog-content blog-archive-item">
       <?php
           if ( has_post_thumbnail() ) {
               the_post_thumbnail('blog-post-thumb');
