@@ -40,7 +40,7 @@
 
                 <ul id="toggle-menu">
                     <li class="pullDown">
-                        <a href="#" id="pull"></a>
+                        <a href="#" id="pull" title="Menu"></a>
                     </li>
                 </ul>
 

@@ -12,7 +12,7 @@
 
     <div class="unit blog-archive-item two-of-three">
 
-        <h1><span class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></span></h1>
+        <h1><span class="post-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></span></h1>
         <span class="post-info">By <?php the_author(); ?></span>
 
         <?php the_content('Read More'); ?>
@@ -27,7 +27,7 @@
             }
         ?>
 
-        <span class="post-info"><a href="<?php the_permalink(); ?>"><?php the_time('l F d, Y'); ?></a></span>
+        <span class="post-info"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_time('l F d, Y'); ?></a></span>
         <span class="post-info"><?php wp_get_post_tags(); ?></span>
 
     </div>
