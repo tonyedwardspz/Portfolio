@@ -5,9 +5,18 @@ var runSequence = require('run-sequence');
 var clean = require('gulp-clean');
 var autoprefixer = require('gulp-autoprefixer');
 var sourceMaps = require('gulp-sourcemaps');
+var plumber = require('gulp-plumber');
+var notify = require('gulp-notify');
+
+var plumberErrorHandler = { errorHandler: notify.onError({
+    title: 'Gulp',
+    message: 'Error: <%= error.message %>'
+  })
+};
 
 gulp.task('process-sass', function(){
   gulp.src('./*.scss')
+    .pipe(plumber(plumberErrorHandler))
     .pipe(sourceMaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
