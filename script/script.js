@@ -208,7 +208,3 @@ function applyRainbowHiliteWidth() {
         });
     }
 }
-
-function doNothing() {
-  // do nothing
-}
