@@ -22,9 +22,23 @@
     <![endif]-->
 
     <?php wp_head(); ?>
+		<?php
+		$single = (is_single() ? TRUE : FALSE);
+		if ($single){
+			$prevPost = get_previous_post();
+			if (!empty( $prevPost )){ ?>
+				<link rel="prev" href="<?php echo get_permalink($prevPost->ID); ?>"/>
+			<?php }
+			$nextPost = get_next_post();
+			if (!empty( $nextPost )) { ?>
+				<link rel="next" href="<?php echo get_permalink($nextPost->ID); ?>"/>
+			<?php }
+    }
+		?>
 </head>
 
 <body <?php body_class( $class ); ?>>
+
 
     <div class="container containerBackground">
         <div class="grid">
