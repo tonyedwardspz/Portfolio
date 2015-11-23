@@ -86,16 +86,10 @@ function mh_load_my_script() {
 		// wp_register_script($handle, $src, $deps, $ver, $in_footer);
     wp_register_script('jquery', $jqueryURL, false, '1.11.3', true);
     wp_register_script('myScript', get_template_directory_uri().'/script/min/script.min.js', array('jquery'), null, true);
-    wp_register_script('mixitup', get_template_directory_uri().'/script/jquery.mixitup.min.js', array('jquery'), null, true);
 
     // enqueue scripts for every page
     wp_enqueue_script('jquery');
     wp_enqueue_script('myScript');
-
-    // handle page specific scripts
-    if (is_post_type_archive( 'portfolio' )){
-	    wp_enqueue_script('mixitup');
-    }
 	}
 }
 add_action( 'wp_enqueue_scripts', 'mh_load_my_script' );

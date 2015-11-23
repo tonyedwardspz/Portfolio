@@ -11,7 +11,9 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require("gulp-rename");
 
-var scriptFiles = ['./script/script.js', './bower_components/picturefill/dist/picturefill.min.js'];
+var scriptFiles = ['./script/script.js',
+                   './bower_components/picturefill/dist/picturefill.min.js',
+                   './bower_components/mixitup/build/jquery.mixitup.min.js'];
 
 var plumberErrorHandler = { errorHandler: notify.onError({
     title: 'Gulp',
