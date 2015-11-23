@@ -207,5 +207,8 @@ function applyRainbowHiliteWidth() {
             $j(this).css('max-width', containerWidth);
         });
     }
+}
 
+function doNothing() {
+  // do nothing
 }
