@@ -3,10 +3,15 @@ var sass = require('gulp-sass');
 var minifyCss = require('gulp-minify-css');
 var runSequence = require('run-sequence');
 var clean = require('gulp-clean');
+var autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('process-sass', function(){
   gulp.src('./*.scss')
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+            browsers: ['last 3 versions'],
+            cascade: false
+        }))
     .pipe(minifyCss({compatibility: 'ie8'}))
     .pipe(gulp.dest('./'));
 });
