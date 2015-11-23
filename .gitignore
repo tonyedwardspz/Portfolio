@@ -35,7 +35,6 @@ Icon
 .Spotlight-V100
 .Trashes
 
-script/picturefill.js
 *.cfg
 node_modules
 bower_components
