@@ -373,7 +373,7 @@ CONTENT
   text-align: center;
   color: #333;
   overflow: visible;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .content-block { margin-bottom: 1.5em; }
@@ -1051,6 +1051,8 @@ a#pull:before {
 }
 
 .home-blog {
+  margin-bottom: 30px;
+
   img {
     max-width: 140px;
     float: right;
