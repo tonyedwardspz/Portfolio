@@ -103,14 +103,10 @@ add_action( 'wp_enqueue_scripts', 'load_scripts' );
 // enqueue styles, loading them in the header
 function load_my_styes(){
 
-	$fontAwesomeURL = getFontAwesomeURL();
-
-	// Font Awesome
-  wp_register_style( 'font-awesome', $fontAwesomeURL,  array(), '4.1.0', 'all' );
-  wp_enqueue_style( 'font-awesome' );
+	
 
 }
-add_action( 'wp_enqueue_scripts', 'load_my_styes');
+// add_action( 'wp_enqueue_scripts', 'load_my_styes');
 
 
 // modify the more link to introduce styling
