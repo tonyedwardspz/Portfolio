@@ -253,7 +253,9 @@ CONTENT
   margin-bottom: 40px;
 }
 
-.content-block { margin-bottom: 1.5em; }
+.content-block {
+  margin-bottom: 1.5em;
+}
 
 .content ul{
   list-style-position: inside;
@@ -292,24 +294,26 @@ BLOG
   padding-left: 2px;
 }
 
-.blog-archive [href$=".pdf"]:after{
+.blog-content [href$=".pdf"]:after{
   @include awesomeLinkIcon("\f1c1");
 }
 
-.blog-archive [href^="http://twitter"]:after,
-.blog-archive [href^="https://twitter"]:after{
+.blog-content [href^="http://twitter"]:after,
+.blog-content [href^="https://twitter"]:after{
   @include awesomeLinkIcon("\f099");
 }
 
-.blog-archive [href^="http://www.youtube"]:after,
-.blog-archive [href^="https://www.youtube"]:after,
-.blog-archive [href^="http://youtube"]:after,
-.blog-archive [href^="https://youtube"]:after{
+.blog-content [href^="http://www.youtube"]:after,
+.blog-content [href^="https://www.youtube"]:after,
+.blog-content [href^="http://youtube"]:after,
+.blog-content [href^="https://youtube"]:after{
   @include awesomeLinkIcon("\f16a");
 }
 
 .single-portfolio .content [href^="http://github"]:after,
-.single-portfolio .content [href^="https://github"]:after{
+.single-portfolio .content [href^="https://github"]:after,
+.blog-content [href^="http://github"]:after,
+.blog-content [href^="https://github"]:after{
   @include awesomeLinkIcon("\f09b");
 }
 
@@ -491,7 +495,7 @@ MISC
 }
 
 .content {
-  overflow: auto;
+  overflow: inherit;
 }
 
 .blog-item-wrap {
@@ -515,10 +519,6 @@ MISC
 
 .sd-title {
   display: none;
-}
-
-.post-tags {
-  margin-top: 35px;
 }
 
 @media screen and (max-width: 720px) {
@@ -603,4 +603,4 @@ a#pull:before {
   }
 }
 
-@import "style/rainbow";
+@import "style/rainbow.scss";

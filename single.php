@@ -19,6 +19,9 @@
 
           the_content();
       ?>
+    </div>
+
+    <div class="unit full-width">
       <span class="post-info post-tags">Tags:
 
         <?php
@@ -44,7 +47,7 @@
         <p><?php _e('No posts were found. Sorry!'); ?></p>
     <?php endif; ?>
 
-    <div class="micro-about unit">
+    <div class="micro-about unit full-width">
 
       <?php echo get_avatar( get_the_author_meta( 'ID' ), $size, $default, $alt, $args ); ?>
 
