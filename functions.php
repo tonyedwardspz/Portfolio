@@ -95,7 +95,7 @@ function load_scripts() {
 		wp_deregister_style('wp-rainbow-css');
 		wp_deregister_style('wp-rainbow-linenumber-fix');
 		wp_deregister_script('rainbow-core');
-		wp_dequeue_script('rainbow-linenumbers');
+		wp_deregister_script('rainbow-linenumbers');
 	}
 }
 add_action( 'wp_enqueue_scripts', 'load_scripts' );
@@ -103,7 +103,7 @@ add_action( 'wp_enqueue_scripts', 'load_scripts' );
 // enqueue styles, loading them in the header
 function load_my_styes(){
 
-	
+
 
 }
 // add_action( 'wp_enqueue_scripts', 'load_my_styes');
