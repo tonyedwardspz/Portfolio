@@ -1,0 +1,40 @@
+/* ------------------------------------------ *\
+CONTACT FORM
+\*------------------------------------------- */
+
+.wpcf7{
+
+  form{ text-align: left;
+
+    label{
+      display: block;
+      font-weight: bold;
+      width:100%;
+    }
+    input, select, textarea{ padding: 5px; }
+    textarea{
+      width: 60%;
+      height: 150px;
+      display: block;
+    }
+    input[type="submit"]{
+      border-radius: 10px;
+      border: 1px sold #999999;
+      width:25%;
+    }
+    input[type="submit"]:hover{ border: 2px solid #cfcfcf; }
+  }
+  div{ margin: 15px 0; }
+}
+
+@media screen and (max-width: 720px) {
+
+  .wpcf7 form div,
+  .wpcf7 form label,
+  .wpcf7 form input,
+  .wpcf7 form select,
+  .wpcf7 form textarea,
+  .wpcf7 form input[type="submit"]{
+    width: 100%;
+  }
+}

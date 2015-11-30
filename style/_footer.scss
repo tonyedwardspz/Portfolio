@@ -1,0 +1,71 @@
+/* ------------------------------------------ *\
+FOOTER
+\*------------------------------------------- */
+
+footer{
+  color:#fff;
+  background-color:#2B2B2B;
+  width:100%;
+  min-height: 50px;
+  overflow: hidden;
+  padding: 10px 0 10px 0;
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .FAageSocialIcons{
+    float:right;
+
+    ul{
+      margin:0;
+    }
+  }
+  #footer-text{
+    float:left;
+
+    div{
+      display: inline-block;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) {
+
+  footer{
+
+    #footer-text div{
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  footer {
+
+    li{
+      margin-left: 0;
+    }
+
+    .FAageSocialIcons{
+      float:left;
+
+      ul{
+        margin:10px 0;
+      }
+
+      ul:first-child{
+        padding-left: 0;
+      }
+    }
+
+    #footer-text{
+      float:left;
+
+      div{
+        display: inline-block;
+      }
+    }
+  }
+}
