@@ -93,7 +93,7 @@ function load_scripts() {
 
 		// Remove the rainbow highlight stuff
 		wp_deregister_style('wp-rainbow-css');
-		wp_dequeue_style('wp-rainbow-linenumber-fix');
+		wp_deregister_style('wp-rainbow-linenumber-fix');
 		wp_deregister_script('rainbow-core');
 		wp_dequeue_script('rainbow-linenumbers');
 	}
