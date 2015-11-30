@@ -100,13 +100,31 @@ function load_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'load_scripts' );
 
+// Make some js async
+function asyncScripts( $tag, $handle ) {
+    if( is_admin() ) {
+        return $tag;
+    }
+		if (strpos($tag,'jetpack') !== false) {
+			return str_replace( ' src', ' defer src', $tag );
+		}
+		if (!strpos($tag,'jquery') !== false) {
+	    return str_replace( ' src', ' async src', $tag );
+		} else {
+			return $tag;
+		}
+}
+add_filter( 'script_loader_tag', 'asyncScripts', 10, 2);
+
 // enqueue styles, loading them in the header
 function load_my_styes(){
 
-
+		$fontAwesomeURL = getFontAwesomeURL();
+	  wp_register_style( 'font-awesome', $fontAwesomeURL,  array(), '4.1.0', 'all' );
+	  wp_enqueue_style( 'font-awesome' );
 
 }
-// add_action( 'wp_enqueue_scripts', 'load_my_styes');
+add_action( 'wp_enqueue_scripts', 'load_my_styes');
 
 
 // modify the more link to introduce styling
