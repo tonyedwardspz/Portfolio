@@ -1,4 +1,4 @@
-var breakpoint = 704;
+var breakpoint = 720;
 var $j = jQuery.noConflict();
 
 $j(document).ready(function(e){
@@ -184,12 +184,11 @@ function toggleMenu(){
 // change the default psuedo classes for the main navigation on smaller screens
 function changeMenuColor() {
 
-    if ($j(window).width() < breakpoint) {
+    if ($j(window).width() <= 720) {
         $j('.menu').removeClass('force-darkgrey');
         $j('.menu').addClass('force-white');
 
-    }
-    if ($j(window).width() >= breakpoint) {
+    } else {
         $j('.menu').removeClass('force-white');
         $j('.menu').addClass('force-darkgrey');
         $j('.menu').css('display', 'block');
