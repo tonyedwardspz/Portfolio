@@ -221,7 +221,7 @@ nav {
   nav {
     margin-top: 25px;
     height: auto;
-    width: 103%;
+    width: 95%;
 
     ul {
       margin-bottom: 0;
@@ -238,6 +238,10 @@ nav {
 @media screen and (max-width: 340px) {
   #logoImage{
     width:200px !important;
+  }
+
+  .menu li {
+    width: 100%;
   }
 }
 
