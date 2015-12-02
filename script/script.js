@@ -183,15 +183,19 @@ function toggleMenu(){
 
 // change the default psuedo classes for the main navigation on smaller screens
 function changeMenuColor() {
+  var menuWidth = $j('header').width();
+  var menu = $j('.menu');
 
     if ($j(window).width() <= 720) {
-        $j('.menu').removeClass('force-darkgrey');
-        $j('.menu').addClass('force-white');
+        menu.removeClass('force-darkgrey');
+        menu.addClass('force-white');
+        $j('nav').width(menuWidth);
 
     } else {
-        $j('.menu').removeClass('force-white');
-        $j('.menu').addClass('force-darkgrey');
-        $j('.menu').css('display', 'block');
+        menu.removeClass('force-white');
+        menu.addClass('force-darkgrey');
+        menu.css('display', 'block');
+        $j('nav').css('width','');
     }
 }
 

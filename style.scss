@@ -9,7 +9,7 @@ Aurhor URI:     http://www.purelywebdesign.co.uk
 
 /*-------------VARIABLES-------------*/
 $mainBlue: #27afef;
-
+$mainOrange: #fcbf32;
 
 /*-----------------------------------*\
 NORMALIZE STUFF
@@ -63,7 +63,7 @@ GLOBAL STYLINGS
 a { text-decoration: none;}
 
 a:link {
-  color: #27afef;
+  color: $mainBlue;
   transition: all 0.2s ease;
 }
 
@@ -135,7 +135,7 @@ header {
 .current_page_ancestor > a,
 body.post-type-archive-portfolio nav ul li#menu-item-124 > a,
 body.single-portfolio nav ul li#menu-item-124 > a {
-  border-bottom: 2px solid #fcbf32;
+  border-bottom: 2px solid $mainOrange;
 }
 
 .menu-menu-1-container a:link{ transition: all 0.2s ease; }
@@ -143,7 +143,7 @@ body.single-portfolio nav ul li#menu-item-124 > a {
 .menu-menu-1-container a:hover,
 body.post-type-archive-portfolio nav ul li#menu-item- > a:hover,
 body.single-portfolio nav ul li#menu-item-21 > a:hover{
-  border-bottom: 5px solid #27afef;
+  border-bottom: 5px solid $mainBlue;
   transition: all 0.2s ease;
 }
 
@@ -206,7 +206,7 @@ nav {
       float: left;
       position: relative;
       min-height: 40px;
-      background-color: #27afef;
+      background-color: $mainBlue;
       text-align: center;
       padding-top: 10px
     }
@@ -221,14 +221,13 @@ nav {
   nav {
     margin-top: 25px;
     height: auto;
-    width: 95%;
 
     ul {
       margin-bottom: 0;
       display: list-item;
       width: 100%;
       height: auto;
-      background-color: #27afef;
+      background-color: $mainBlue;
       z-index: 10;
     }
   }
@@ -276,7 +275,9 @@ CONTENT
 
 
 @media screen and (max-width: 720px) {
-  .content { margin-top: 60px; }
+  .content {
+    margin-top: 90px;
+  }
 }
 
 
@@ -379,7 +380,7 @@ ELEMENT STYLINGS
 .more-link{
   border-radius: 10px;
   color: #fff;
-  background-color: #27afef;
+  background-color: $mainBlue;
   padding: 10px 20px;
   margin-top: 25px;
 }
@@ -395,7 +396,7 @@ ELEMENT STYLINGS
   -webkit-appearance: none;
   border-radius: 10px;
   color: #fff;
-  background-color: #27afef;
+  background-color: $mainBlue;
   padding: 10px 20px;
   overflow: visible;
   transition: background-color 0.2s linear;
@@ -576,7 +577,7 @@ a#pull:before {
 @media screen and (max-width: 720px){
   nav {
     position: absolute;
-    background-color: #27afef;
+    background-color: $mainBlue;
   }
 
   .post-tag {
