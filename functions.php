@@ -119,9 +119,10 @@ add_filter( 'script_loader_tag', 'asyncScripts', 10, 2);
 // enqueue styles, loading them in the header
 function load_my_styes(){
 
-		$fontAwesomeURL = getFontAwesomeURL();
-	  wp_register_style( 'font-awesome', $fontAwesomeURL,  array(), '4.1.0', 'all' );
-	  wp_enqueue_style( 'font-awesome' );
+		// $fontAwesomeURL = getFontAwesomeURL();
+	 //  wp_register_style( 'font-awesome', $fontAwesomeURL,  array(), '4.1.0', 'all' );
+	 //  wp_enqueue_style( 'font-awesome' );
+	wp_enqueue_style( 'style', get_stylesheet_uri() );
 
 }
 add_action( 'wp_enqueue_scripts', 'load_my_styes');
