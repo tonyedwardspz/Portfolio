@@ -15,6 +15,7 @@ $mainOrange: #fcbf32;
 NORMALIZE STUFF
 \*-----------------------------------*/
 * {margin: 0;padding: 0; box-sizing: border-box;}
+
 /*-----------------------------------*\
 WORDPRESS DEFAULT STYLES
 \*-----------------------------------*/
@@ -52,9 +53,6 @@ img.centered, .aligncenter, div.aligncenter{
     margin: 0;
   }
 }
-
-@import "style/grid.scss";
-@import "style/typography.scss";
 
 /* ------------------------------------------ *\
 GLOBAL STYLINGS
@@ -280,14 +278,6 @@ CONTENT
   }
 }
 
-
-/* ------------------------------------------ *\
-HOMEPAGE
-\*------------------------------------------- */
-
-.homeButton{ margin-bottom: 20px; }
-
-
 /* ------------------------------------------ *\
 BLOG
 \*------------------------------------------- */
@@ -336,7 +326,8 @@ BLOG
     border-right: 10px solid $mainBlue;
     margin-left:0;
     margin-right: 0;
-    padding: 0 40px 0 40px;
+    margin-bottom: 30px;
+    padding: 0 40px;
     background: linear-gradient(to right, rgba(0,0,0,0.1), transparent 60%);
 
     p{
@@ -367,7 +358,15 @@ BLOG
 
 .post-info {
   display: block;
-  margin-bottom: 5px;
+  clear:both;
+  margin-bottom: 0.5em;
+  font-weight: 200;
+  font-style: italic;
+  color: #ccc;
+}
+
+.blog-snippet {
+  margin-bottom: 2em;
 }
 
 @import "style/portfolio.scss";
@@ -392,20 +391,26 @@ ELEMENT STYLINGS
   overflow: visible;
 }
 
-.button, button{
-  -webkit-appearance: none;
-  border-radius: 10px;
+.button-blue{
   color: #fff;
   background-color: $mainBlue;
-  padding: 10px 20px;
-  overflow: visible;
-  transition: background-color 0.2s linear;
-  border:0;
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  cursor: pointer;
+  border-color: darken( $mainBlue, 10% );
 }
 
-.button:hover, button:hover { background-color: #2ecc71; }
+.button-blue:visited{
+  color: #fff;
+  background-color: $mainBlue;
+}
+
+.button-blue:hover {
+  color: #fff;
+  background-color: $mainBlue;
+  border-color: lighten( $mainBlue, 20% );
+}
+
+.button-wrap {
+  margin: 1em 0;
+}
 
 
 @import "style/footer.scss";
@@ -511,13 +516,6 @@ MISC
   }
 }
 
-.blog-archive .post-info {
-  margin-bottom: 30px;
-  font-weight: 200;
-  font-style: italic;
-  color: #ccc;
-}
-
 .blog-content img {
   float: right;
 }
@@ -592,19 +590,6 @@ a#pull:before {
     max-width: 140px;
     float: right;
     margin-left: 15px;
-  }
-
-  .post-info {
-    clear:both;
-    margin-bottom: 20px;
-    font-weight: 200;
-    font-style: italic;
-    color: #ccc;
-  }
-
-  .button {
-    margin: 10px 0;
-    display: table;
   }
 }
 
