@@ -39,9 +39,9 @@
 
 
     <div class="container containerBackground">
-        <div class="grid">
+        <div class="row">
 
-            <header class="unit full-width">
+            <header class="column">
 
                 <?php $logo= get_option('portfolio_logo', IMAGES.'/tony_edwards.png'); ?>
                 <span>
@@ -60,4 +60,6 @@
 
             </header>
 
-            <div class="content">
+        </div>
+
+        <div class="content">
