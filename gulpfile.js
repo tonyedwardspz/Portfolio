@@ -10,6 +10,7 @@ var livereload = require('gulp-livereload');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require("gulp-rename");
+var header = require('gulp-header');
 
 var scriptFiles = ['./script/rainbow.js',
                    './bower_components/picturefill/dist/picturefill.min.js',
@@ -21,6 +22,15 @@ var plumberErrorHandler = { errorHandler: notify.onError({
     message: 'Error: <%= error.message %>'
   })
 };
+
+var banner =  '/*\n' +
+              'Theme Name:     Tony Edwards Protfolio\n' +
+              'Theme URI:      https://github.com/tonyedwardspz/Portfolio\n' +
+              'Description:    The wordpress theme for my personal portfolio website\n' +
+              'Version:        1.0\n' +
+              'Author:         Tony Edwards\n' +
+              'Aurhor URI:     http://www.purelywebdesign.co.uk\n' +
+              '*/\n';
 
 
 gulp.task('sass', function () {
@@ -34,8 +44,9 @@ gulp.task('sass', function () {
 
 gulp.task('css', ['sass'], function(){
   return gulp.src(['./bower_components/normalize.css/normalize.css',
-                  './bower_components/milligram/dist/milligram.css',
-                  './style.css'])
+                   './bower_components/milligram/dist/milligram.css',
+                   './style/font-awesome.css',
+                   './style.css'])
     .pipe(plumber(plumberErrorHandler))
     .pipe(sourceMaps.init())
     .pipe(concat('style.css'))
@@ -44,6 +55,7 @@ gulp.task('css', ['sass'], function(){
             cascade: false
         }))
     .pipe(minifyCss({compatibility: 'ie8'}))
+    .pipe(header(banner))
     .pipe(plumber.stop())
     .pipe(sourceMaps.write('./'))
     .pipe(gulp.dest('./'))
