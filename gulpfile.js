@@ -22,22 +22,35 @@ var plumberErrorHandler = { errorHandler: notify.onError({
   })
 };
 
-gulp.task('process-sass', function(){
-  gulp.src('./*.scss')
+
+gulp.task('sass', function () {
+  return gulp.src('./*.scss')
+    .pipe(plumber(plumberErrorHandler))
+    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(plumber.stop())
+    .pipe(gulp.dest('./'));
+});
+
+
+gulp.task('css', ['sass'], function(){
+  return gulp.src(['./bower_components/normalize.css/normalize.css',
+                  './bower_components/milligram/dist/milligram.css',
+                  './style.css'])
     .pipe(plumber(plumberErrorHandler))
     .pipe(sourceMaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(concat('style.css'))
     .pipe(autoprefixer({
             browsers: ['last 3 versions'],
             cascade: false
         }))
     .pipe(minifyCss({compatibility: 'ie8'}))
+    .pipe(plumber.stop())
     .pipe(sourceMaps.write('./'))
     .pipe(gulp.dest('./'))
     .pipe(livereload());
 });
 
-gulp.task('process-javascript', function(){
+gulp.task('javascript', function(){
   return gulp.src(scriptFiles)
     .pipe(sourceMaps.init())
     .pipe(concat('scripts.js'))
@@ -48,10 +61,11 @@ gulp.task('process-javascript', function(){
     .pipe(livereload());
 });
 
+
 gulp.task('watch', function () {
   livereload.listen();
-  gulp.watch('./*.scss', ['process-sass']);
-  gulp.watch('./script/script.js', ['process-javascript']);
+  gulp.watch('./*.scss', ['css']);
+  gulp.watch('./script/script.js', ['javascript']);
 });
 
 gulp.task('clean', function(){
@@ -59,9 +73,9 @@ gulp.task('clean', function(){
         .pipe(clean());
 });
 
-gulp.task('process', function (callback) {
+gulp.task('default', function (callback) {
   runSequence(
-    ['process-sass', 'process-javascript'],
+    ['css', 'javascript'],
     'watch',
     callback);
 });
