@@ -8,7 +8,7 @@
 get_header(); 
 ?>
 
-<div class="blog-archive BLOGROLL">
+<div class="blog-archive INDEX">
 
     <?php
     // limit the loop to non custom post types (i.e only blog posts)

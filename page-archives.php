@@ -5,7 +5,7 @@
 ?>
 <?php get_header(); ?>
 
-                <div class="blog-archive">
+                <div class="blog-archive PAGEARCHIVES">
 
                     <div class="unit blog-archive-item two-of-three">
 
