@@ -145,6 +145,13 @@ function getAttachedImages(){
 	}
 }
 
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+    return 'class="button button-blue"';
+}
+
 // Add a summary metabox to all posts to use in theme
 function smry_custom_meta(){
 	// post types to apply extra metabox too.
