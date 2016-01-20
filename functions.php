@@ -126,25 +126,6 @@ function load_my_styes(){
 }
 add_action( 'wp_enqueue_scripts', 'load_my_styes');
 
-
-// modify the more link to introduce styling
-// (WPSE 63748)
-function wpse63748_add_morelink_class( $link, $text )
-{
-    return str_replace(
-        'more-link',
-        'more-link button gamma',
-        $link
-    );
-}
-add_action( 'the_content_more_link', 'wpse63748_add_morelink_class', 10, 2 );
-
-
-function wrap_readmore($more_link) {
-    return '<div class="post-readmore force-white">'.$more_link.'</div>';
-}
-add_filter('the_content_more_link', 'wrap_readmore', 10, 1);
-
 // show the portfolio post type on the front page. MOVE TO PLUGIN????
 function my_get_posts( $query ) {
 	if ( ( is_home() && $query->is_main_query() ) || is_feed() )
