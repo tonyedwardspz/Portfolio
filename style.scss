@@ -58,6 +58,10 @@ img.centered, .aligncenter, div.aligncenter{
 GLOBAL STYLINGS
 \*------------------------------------------- */
 
+.container {
+  overflow: auto;
+}
+
 a { text-decoration: none;}
 
 a:link {
