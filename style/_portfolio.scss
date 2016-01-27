@@ -7,6 +7,61 @@ PORTFOLIO
   padding:8px;
   border-radius: 6px;
   border: 1px solid #696a6b;
+  margin-right: 10px;
+  width: 32%;
+  display: inline-block;
+}
+
+.portfolioItem:nth-of-type(3n+3) {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .portfolioItem {
+    width: 31.5%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .portfolioItem {
+    width: 48%;
+  }
+
+  .portfolioItem:nth-of-type(3n+3) {
+    margin-right: 10px;
+  }
+
+  .portfolioItem:nth-of-type(2n+2) {
+    // background-color: black;
+    margin-right: 0;
+  }
+  .portfolioItem:nth-of-type(2n+1) {
+    background-color: black;
+    margin-right: 10px !important;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .portfolioItem {
+    width: 47.5%;
+    margin-right: 0;
+  }
+
+  .portfolioItem:nth-of-type(3n+3) {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .portfolioItem {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .portfolioItem:nth-of-type(3n+3),
+  .portfolioItem:nth-of-type(2n+2) {
+    margin-right: 0;
+  }
 }
 
 #mixPortfolio {
