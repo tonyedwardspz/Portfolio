@@ -19,6 +19,7 @@
     <![endif]-->
 
     <?php wp_head(); ?>
+    
 	<?php
 	$single = (is_single() ? TRUE : FALSE);
 	if ($single){

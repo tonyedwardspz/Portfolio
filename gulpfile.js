@@ -51,7 +51,7 @@ gulp.task('css', ['sass'], function(){
     .pipe(sourceMaps.init())
     .pipe(concat('style.css'))
     .pipe(autoprefixer({
-            browsers: ['last 3 versions'],
+            browsers: ['last 5 versions'],
             cascade: false
         }))
     .pipe(minifyCss({compatibility: 'ie8'}))
@@ -76,7 +76,7 @@ gulp.task('javascript', function(){
 
 gulp.task('watch', function () {
   livereload.listen();
-  gulp.watch('./*.scss', ['css']);
+  gulp.watch(['./*.scss', './style/*.*'], ['css']);
   gulp.watch('./script/script.js', ['javascript']);
 });
 

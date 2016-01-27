@@ -1,6 +1,6 @@
 <?php get_header(); ?>
-                
-            <div class="unit full-width content-block ARCHIVEPORTFOLIO">
+        <div class="row">
+            <div class="column content-block ARCHIVEPORTFOLIO">
 
                 <h1>My work</h1>
 
@@ -16,35 +16,36 @@
                 </ul>
 
             </div>
-            <div id="mixPortfolio" class="portfolioWrapper">
-
-            <?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => 12 ) ); ?>
-                <?php //while ( $loop->have_posts() ) : $loop->the_post(); ?>
+        </div>
+        <div id="mixPortfolio" class="portfolioWrapper">
+        
+            <?php 
+            $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => 12 ) ); 
+            $count = 0;
+            ?>
 
             <?php if (have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
 
-            <div class="unit one-of-three portfolioItem mix <?php echo custom_taxonomies_terms_links();?>">
-
-                <div class="view view-first">
+            <?php if ($count == 0 || $count % 3 == 0 ) { ?>
+                <div class="row">
+            <?php } ?>
+            <div class="column column-33 portfolioItem mix <?php echo custom_taxonomies_terms_links();?>">
                 <a href="<?php the_permalink(); ?>" class="portImage"><?php the_post_thumbnail('portfolio-item-thumb'); ?></a>
-                    
-                    <div class="mask">
-                        <a href="<?php the_permalink(); ?>" class="forceLink">
-                        <h2 class="force-white">View Project</h2>
-                        <p></p></a>
-                    </div>
+                <div class="portfolio-overlay">
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </div>
-
-                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-
-                <p><?php get_smry_text($post); ?></p>
-
             </div>
+
+            <?php 
+            $count++;
+            if ($count == 0 || $count % 3 == 0 ) { ?>
+                </div>
+            <?php } ?>
 
             <?php endwhile; wp_reset_query();?>
 
             <?php endif; ?>
-
         </div>
+
 
 <?php get_footer(); ?>

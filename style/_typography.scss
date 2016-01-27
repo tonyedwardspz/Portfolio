@@ -3,61 +3,11 @@ TYPOGRAPHY
 Works off the assumption of a 1.5 line height @ 20px.
 \*------------------------------------------- */
 
-// html {
-//   font-size: 100%/1.5;
-//   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-// }
+body {
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco","Oxygen", "Ubuntu", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+	text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-// p, .p, ul, ol, hr, table, form, pre,
-// h1, .alpha, h2 {
-//   margin-bottom: 30px;
-// }
 
-// h1, h2, h3, .alpha, .beta{
-//   font-family: 'Roboto Slab', Helvetica, Arial, serif;
-// }
-
-// h1, .alpha {
-//   font-size: 40px;
-//   font-weight: 500;
-//   line-height: 1;
-//   margin-top: 20px;
-// }
-
-// h2, .beta {
-//   font-size: 30px;
-//   font-weight: 300;
-// }
-
-// h3 {
-//   font-size: 20px;
-//   font-weight: 300;
-// }
-
-// .gamma {
-//   font-size: 17px;
-//   font-weight: 500;
-// }
-
-// hr {
-//   border: none;
-//   border-bottom: 1px solid rgba(0,0,0,.1);
-//   margin-top: -1px;
-// }
-
-// @media screen and ( max-width: 720px) {
-
-//   html { font-size: 90%/1.5; }
-
-//   h1, .alpha {
-//     font-size: 30px;
-//   }
-
-//   h2 {
-//     font-size: 20px;
-//   }
-
-//   body{
-//     margin-top: -10px;
-//   }
-// }
