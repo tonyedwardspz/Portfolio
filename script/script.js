@@ -28,26 +28,24 @@ $j(document).ready(function(e){
     });
 
     // call the mixItUp method on the portfolio page
-    // (the script is enqueued to load only on this page)
     if ($j('ul.filterList').length > 0){
-        // resizePortfolioWrapper();
-        $j('#mixPortfolio').mixItUp();
+        $j('#mixPortfolio').mixItUp({
+            callbacks: {
+                onMixStart: function(state, futureState){
+                    state.$show.each(function(){
+                        $j(this).removeClass('shown');
+                    });
+
+                    futureState.$show.each(function(){
+                        $j(this).addClass('shown');
+                    });
+                } 
+            }
+        });
     }
     imageSlider();
 
-    // remove the resizePortfolioSlider height to allow for css transitions
-    if ($j("body").hasClass("post-type-archive-portfolio")){
-        $j(".portfolioItem").hover(function(){
-            // reset the inline height
-            // $j(this).height('');
-        },function(){
-            // call the resize method
-            // resizePortfolioSlider();
-        });
-    }
-
     applyRainbowHiliteWidth();
-
 });
 
 
@@ -60,18 +58,8 @@ $j(window).resize(function() {
     }
 
     changeMenuColor();
-    // resizeSliderWrap();
-    // resizePortfolioSlider();
     applyRainbowHiliteWidth();
 
-});
-
-// call the resize after assets are loaded to prevent an
-// incorrect li height size due to unloaded image.
-$j(window).bind("load", function() {
-    // resizeSliderWrap();
-
-    // setTimeout(resizePortfolioSlider, 700);
 });
 
 function imageSlider() {
