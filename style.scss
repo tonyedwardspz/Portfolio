@@ -28,6 +28,10 @@ img.centered, .aligncenter, div.aligncenter{
   margin: 0 auto;
 }
 
+.content {
+  overflow: visible;
+}
+
 .alignleft{ float: left; }
 
 .alignright{ float: right; }

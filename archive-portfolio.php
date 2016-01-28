@@ -17,6 +17,7 @@
 
             </div>
         </div>
+
         <div id="mixPortfolio" class="portfolioWrapper">
         
             <?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => 12 ) ); ?>
@@ -31,6 +32,5 @@
 
             <?php endwhile; wp_reset_query();  endif; ?>
         </div>
-
 
 <?php get_footer(); ?>
