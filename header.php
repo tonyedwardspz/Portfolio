@@ -60,5 +60,3 @@
             </header>
 
         </div>
-
-        <div class="content">

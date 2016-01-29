@@ -1,9 +1,7 @@
-    </div> <!-- content -->
     </div> <!-- container -->
 
     <footer>
       <div class="container">
-        <!-- <div class="row"> -->
 
           <div id="footer-text">Made with love and coffee by
               <div itemscope itemtype="http://data-vocabulary.org/Person">
@@ -13,7 +11,6 @@
           </div>
 
           <?php include 'social-icons.php'; ?>
-        <!-- </div> -->
       </div>
 
     </footer>
