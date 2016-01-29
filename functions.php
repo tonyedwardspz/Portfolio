@@ -15,7 +15,7 @@ define( 'SCRIPT', TEMPPATH. "/script");
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'blog-post-thumb', 340, 0, true ); //340 pixels x unlimited height
 add_image_size( 'blog-archive-thumb', 340, 300, true ); //340 pixels x unlimited height
-add_image_size('portfolio-item-thumb', 380, 0, true);
+add_image_size('portfolio-item-thumb', 375, 286, true);
 
 // picture fill images
 add_image_size('large', 1000, 9999);
