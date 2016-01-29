@@ -49,7 +49,7 @@
 
     <div class="micro-about unit full-width">
 
-      <?php echo get_avatar( get_the_author_meta( 'ID' ), $size, $default, $alt, $args ); ?>
+      <?php echo get_avatar( get_the_author_meta( 'ID' ) ); ?>
 
       <p>Tony Edwards is a pasty powered developer with <a href="http://plymouthsoftware.com" title="Plymouth Software Development">Plymouth Software</a>, blogger and Web Apps
          Student at Plymouth University. When not developing, I can usually be found somewhere spectacular along the Cornish Coast.
