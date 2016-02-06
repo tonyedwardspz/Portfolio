@@ -90,12 +90,6 @@ function load_scripts() {
     // enqueue scripts for every page
     wp_enqueue_script('jquery');
     wp_enqueue_script('myScript');
-
-		// Remove the rainbow highlight stuff
-		wp_deregister_style('wp-rainbow-css');
-		wp_deregister_style('wp-rainbow-linenumber-fix');
-		wp_deregister_script('rainbow-core');
-		wp_deregister_script('rainbow-linenumbers');
 	}
 }
 add_action( 'wp_enqueue_scripts', 'load_scripts' );
