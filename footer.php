@@ -13,7 +13,7 @@
           <?php include 'social-icons.php'; ?>
       </div>
 
-    </footer>
+    </footer>    
 
     <?php
     wp_footer();

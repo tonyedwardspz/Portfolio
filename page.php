@@ -5,11 +5,11 @@
 get_header(); 
 ?>
 
-    <div class="blog-archive PAGE">
+    <div class="blog-archive PAGE row">
 
         <?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
 
-        <div class="unit blog-archive-item full-width">
+        <div class="column blog-archive-item">
 
             <h1><span class="post-title"><?php the_title(); ?></span></h1>
 

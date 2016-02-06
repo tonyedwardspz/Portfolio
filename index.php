@@ -32,7 +32,7 @@ get_header();
               <span class="post-info"><?php the_time('l F d, Y'); ?></span>
               <?php the_excerpt(); ?>
               <div class="button-wrap">
-                  <a href="<?php the_permalink(); ?>" class="button button-blue" title="<?php the_title(); ?>">Read More &raquo;</a>
+                  <a href="<?php the_permalink(); ?>" class="button button-outline" title="<?php the_title(); ?>">Read More &raquo;</a>
               </div>
           </div>
           <div class="column">
@@ -46,21 +46,24 @@ get_header();
         <p><?php _e('No posts were found. Sorry!'); ?></p>
     <?php endif; ?>
 
-    <div class="pagination">
-         <?php
-            $prev = get_previous_posts_link();
-            if ( !empty($prev) ) { ?>
-              <div class="button-wrap previous-post">
-                  <?php previous_posts_link('Previous'); ?>
-              </div>
-        <?php } ?>
-        <?php
-            $next = get_next_posts_link();
-            if ( !empty($next) ) { ?>
-              <div class="button-wrap next-post">
-                  <?php next_posts_link('Next'); ?>
-              </div>
-        <?php } ?>
+    <div class="row">
+
+      <div class="column pagination">
+           <?php
+              $prev = get_previous_posts_link();
+              if ( !empty($prev) ) { ?>
+                <div class="button-wrap previous-post">
+                    <?php previous_posts_link('Previous'); ?>
+                </div>
+          <?php } ?>
+          <?php
+              $next = get_next_posts_link();
+              if ( !empty($next) ) { ?>
+                <div class="button-wrap next-post">
+                    <?php next_posts_link('Next'); ?>
+                </div>
+          <?php } ?>
+      </div>
     </div>
 
     <?php wp_reset_query(); ?>

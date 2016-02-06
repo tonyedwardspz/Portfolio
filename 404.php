@@ -6,16 +6,16 @@
 
 <?php get_header(); ?>
 
-                <div class="blog-archive">
+	  <div class="blog-archive row">
 
-                    <div class="unit blog-archive-item two-of-three">
+	      <div class="column">
 
-                        <h1>404: Page not found</h1>
+	          <h1>404: Page not found</h1>
 
-                        <p>Im just as supprised as you are! Maybe we should just move along back to the <a href="<?php bloginfo('home'); ?>">homepage.</a></p>
+	          <p>Im just as supprised as you are! Maybe we should just move along back to the <a href="<?php bloginfo('home'); ?>">homepage.</a></p>
 
-                    </div>
+	      </div>
 
-                </div>
+	  </div>
 
 <?php get_footer(); ?>

@@ -10,26 +10,29 @@
 
     <?php if (have_posts() ) : while (have_posts() ) : the_post(); ?>
 
-    <div class="unit blog-archive-item two-of-three">
+    <div class="row">
 
-        <h1><span class="post-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></span></h1>
-        <span class="post-info">By <?php the_author(); ?></span>
+        <div class="column blog-archive-item">
 
-        <?php the_content('Read More'); ?>
+            <h1><span class="post-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></span></h1>
+            <span class="post-info">By <?php the_author(); ?></span>
 
-    </div>
+            <?php the_content('Read More'); ?>
 
-    <div class="unit one-of-three post-meta">
+        </div>
 
-        <?php
-            if ( has_post_thumbnail() ) {
-                the_post_thumbnail('blog-post-thumb');
-            }
-        ?>
+        <div class="unit one-of-three post-meta">
 
-        <span class="post-info"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_time('l F d, Y'); ?></a></span>
-        <span class="post-info"><?php wp_get_post_tags(); ?></span>
+            <?php
+                if ( has_post_thumbnail() ) {
+                    the_post_thumbnail('blog-post-thumb');
+                }
+            ?>
 
+            <span class="post-info"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_time('l F d, Y'); ?></a></span>
+            <span class="post-info"><?php wp_get_post_tags(); ?></span>
+
+        </div>
     </div>
 
     <?php endwhile ; else: ?>

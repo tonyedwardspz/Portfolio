@@ -46,6 +46,10 @@ $j(document).ready(function(e){
     imageSlider();
 
     applyRainbowHiliteWidth();
+
+    $j('pre code').each(function(i, block) {
+      hljs.highlightBlock(block);
+    });
 });
 
 
@@ -161,9 +165,9 @@ function toggleMenu(){
     var isDisplay = $j('.menu').css('display');
 
     if (isDisplay == 'none'){
-        $j('.menu').css('display', 'block');
+        $j('.menu').show(500);
     }else if (isDisplay == 'block'){
-        $j('.menu').css('display', 'none');
+        $j('.menu').hide(500);
     }
 
     changeMenuColor();

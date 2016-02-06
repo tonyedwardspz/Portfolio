@@ -11,10 +11,11 @@ var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require("gulp-rename");
 var header = require('gulp-header');
+var csso = require('gulp-csso');
 
-var scriptFiles = ['./script/rainbow.js',
-                   './bower_components/picturefill/dist/picturefill.min.js',
+var scriptFiles = ['./bower_components/picturefill/dist/picturefill.min.js',
                    './bower_components/mixitup/build/jquery.mixitup.min.js',
+                   './bower_components/highlightjs/highlight.pack.min.js',
                    './script/script.js'];
 
 var plumberErrorHandler = { errorHandler: notify.onError({
@@ -46,10 +47,12 @@ gulp.task('css', ['sass'], function(){
   return gulp.src(['./bower_components/normalize.css/normalize.css',
                    './bower_components/milligram/dist/milligram.css',
                    './style/font-awesome.css',
+                   './bower_components/highlightjs/styles/github-gist.css',
                    './style.css'])
     .pipe(plumber(plumberErrorHandler))
     .pipe(sourceMaps.init())
     .pipe(concat('style.css'))
+    .pipe(csso())
     .pipe(autoprefixer({
             browsers: ['last 5 versions'],
             cascade: false

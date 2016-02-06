@@ -150,7 +150,7 @@ add_filter('next_posts_link_attributes', 'posts_link_attributes');
 add_filter('previous_posts_link_attributes', 'posts_link_attributes');
 
 function posts_link_attributes() {
-    return 'class="button button-blue"';
+    return 'class="button button-outline"';
 }
 
 // Add a summary metabox to all posts to use in theme

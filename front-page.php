@@ -39,7 +39,7 @@
                     <span class="post-info"><?php the_time('l F d, Y'); ?></span>
                     <?php echo wp_trim_words( get_the_content(), 60, '...' ); ?>
                     <div class="button-wrap">
-                        <a href="<?php the_permalink(); ?>" class="button button-blue" title="<?php the_title(); ?>">Read More &raquo;</a>
+                        <a href="<?php the_permalink(); ?>" class="button button-outline" title="<?php the_title(); ?>">Read More &raquo;</a>
                     </div>
                 </div>
                 <div class="column">
@@ -59,22 +59,20 @@
     </div>
 
 
-    <div class="row">
+    <div id="mixPortfolio" class="portfolioWrapper">
 
-        <?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => 3 ) ); ?>
+        <?php $loop = new WP_Query( array( 'post_type' => 'portfolio', 'posts_per_page' => 4 ) ); ?>
         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-            <div class="column portfolioItem">
+            <div class="portfolioItem mix">
+                <div class="mask">
+                    <a href="<?php the_permalink(); ?>" class="portImage">
+                        <?php the_post_thumbnail('portfolio-item-thumb'); ?>
+                    </a>
+                </div>
 
-                <div class="view view-first">
-                    <a href="<?php the_permalink(); ?>" class="portImage"><?php the_post_thumbnail('portfolio-item-thumb'); ?></a>
-
-                    <div class="mask">
-                        <h2 class="force-white">
-                          <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-                        </h2>
-                        <p></p>
-                    </div>
+                <div class="portfolio-overlay">
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </div>
             </div>
 
@@ -84,7 +82,7 @@
 
     <div class="row">
         <div class="column button-wrap">
-            <a href="http://purelywebdesign.co.uk/?post_type=portfolio" title="My portfolio" class="button button-blue">View Portfolio</a>
+            <a href="http://purelywebdesign.co.uk/?post_type=portfolio" title="My portfolio" class="button button-outline">View Portfolio</a>
         </div>
     </div>
 
