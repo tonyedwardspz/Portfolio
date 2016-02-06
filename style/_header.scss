@@ -117,8 +117,29 @@ nav {
       background-color: $mainBlue;
       z-index: 10;
     }
-  }
 
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      color: #555;
+    }
+  }
+}
+
+@media screen and (max-width: 720px) { 
+  nav {
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      color: #fff;
+    }
+
+    ul li:nth-of-type(5n) {
+      width: 100%;
+    }
+  }
 }
 
 @media screen and (max-width: 340px) {

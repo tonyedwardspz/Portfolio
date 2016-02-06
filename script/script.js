@@ -3,8 +3,6 @@ var $j = jQuery.noConflict();
 
 $j(document).ready(function(e){
 
-    changeMenuColor();
-
     // Handle the menu icon click.
     $j('#pull').click(function () {
         toggleMenu();
@@ -45,8 +43,6 @@ $j(document).ready(function(e){
     }
     imageSlider();
 
-    applyRainbowHiliteWidth();
-
     $j('pre code').each(function(i, block) {
       hljs.highlightBlock(block);
     });
@@ -55,15 +51,12 @@ $j(document).ready(function(e){
 
 // detect window resize
 $j(window).resize(function() {
-    var browserWidth = $j(window).width();
-
-    if (browserWidth <= breakpoint) {
-        $j('.menu').removeAttr('style');
+    if ($j(window).width() <= 720) {
+      $j('.menu').removeAttr('style');
+      $j('nav').width($j('header').width());
+    } else {
+      $j('nav').css('width','');
     }
-
-    changeMenuColor();
-    applyRainbowHiliteWidth();
-
 });
 
 function imageSlider() {
@@ -165,28 +158,14 @@ function toggleMenu(){
     var isDisplay = $j('.menu').css('display');
 
     if (isDisplay == 'none'){
-        $j('.menu').show(500);
+      $j('.menu').show(500);
     }else if (isDisplay == 'block'){
-        $j('.menu').hide(500);
+      $j('.menu').hide(500);
     }
 
-    changeMenuColor();
-}
-
-// change the default psuedo classes for the main navigation on smaller screens
-function changeMenuColor() {
-  var menuWidth = $j('header').width();
-  var menu = $j('.menu');
-
     if ($j(window).width() <= 720) {
-        menu.removeClass('force-darkgrey');
-        menu.addClass('force-white');
-        $j('nav').width(menuWidth);
-
+        $j('nav').width($j('header').width());
     } else {
-        menu.removeClass('force-white');
-        menu.addClass('force-darkgrey');
-        menu.css('display', 'block');
         $j('nav').css('width','');
     }
 }
