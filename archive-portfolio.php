@@ -24,7 +24,12 @@
         <?php if (have_posts()) : while ($loop->have_posts()) : $loop->the_post(); ?>
 
         <div class="portfolioItem mix <?php echo custom_taxonomies_terms_links();?>">
-            <a href="<?php the_permalink(); ?>" class="portImage"><?php the_post_thumbnail('portfolio-item-thumb'); ?></a>
+            <div class="mask">
+                <a href="<?php the_permalink(); ?>" class="portImage">
+                    <?php the_post_thumbnail('portfolio-item-thumb'); ?>
+                </a>
+            </div>
+
             <div class="portfolio-overlay">
                 <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
             </div>
