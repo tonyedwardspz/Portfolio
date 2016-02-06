@@ -1,23 +1,25 @@
-/*
-Theme Name:     Tony Edwards Protfolio
-Theme URI:      https://github.com/tonyedwardspz/Portfolio
-Description:    The wordpress theme for my personal portfolio website
-Version:        1.0
-Author:         Tony Edwards
-Aurhor URI:     http://www.purelywebdesign.co.uk
-*/
-
 /*-------------VARIABLES-------------*/
 $mainBlue: #27afef;
 $mainOrange: #fcbf32;
+
+$lightestPurple: #CEA5EE;
+$lightPurple: #AF73DD;
+$mainPurple: #9b4dca;
+$darkPurple: #7D30B8;
+$darkestPurple: #650DA8;
+
+$lightYellow: #FFFCAB;
+$mainYellow: #FFFA58;
+$darkYellow: #FAF303;
+
+$contrastGreen: #A0EA03;
 
 /*-----------------------------------*\
 NORMALIZE STUFF
 \*-----------------------------------*/
 * {margin: 0;padding: 0; box-sizing: border-box;}
-/*-----------------------------------*\
-WORDPRESS DEFAULT STYLES
-\*-----------------------------------*/
+
+@import "style/typography";
 
 body{ background-image: url("
   data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAI0lEQVQIW2NkYGAwBuKzQAwGjFBaEkg/RxYAscGCMBUwHQwAd4IDBdrsmYMAAAAASUVORK5CYII=
@@ -27,6 +29,10 @@ body{ background-image: url("
 img.centered, .aligncenter, div.aligncenter{
   display:block;
   margin: 0 auto;
+}
+
+.content {
+  overflow: visible;
 }
 
 .alignleft{ float: left; }
@@ -53,24 +59,25 @@ img.centered, .aligncenter, div.aligncenter{
   }
 }
 
-@import "style/grid.scss";
-@import "style/typography.scss";
-
 /* ------------------------------------------ *\
 GLOBAL STYLINGS
 \*------------------------------------------- */
 
+.container {
+  overflow: auto;
+}
+
 a { text-decoration: none;}
 
 a:link {
-  color: $mainBlue;
+  color: $darkPurple;
   transition: all 0.2s ease;
 }
 
-a:visited { color: #9b59b6; }
+a:visited { color: $lightPurple; }
 
 a:hover,{
-  color: #2ecc71;
+  color: $contrastGreen;
   transition: color 0.2s linear;
 }
 
@@ -119,130 +126,7 @@ img {
 .containerBackground{ background-color: #fff; }
 
 
-/* ------------------------------------------ *\
-HEADER & NAVIGATION
-\*------------------------------------------- */
-
-header {
-  margin-top: 10px;
-}
-
-.activeLink,
-.current-menu-item > a,
-.current-menu-ancestor > a,
-.current_page_parent > a,
-.current_page_item > a,
-.current_page_ancestor > a,
-body.post-type-archive-portfolio nav ul li#menu-item-124 > a,
-body.single-portfolio nav ul li#menu-item-124 > a {
-  border-bottom: 2px solid $mainOrange;
-}
-
-.menu-menu-1-container a:link{ transition: all 0.2s ease; }
-
-.menu-menu-1-container a:hover,
-body.post-type-archive-portfolio nav ul li#menu-item- > a:hover,
-body.single-portfolio nav ul li#menu-item-21 > a:hover{
-  border-bottom: 5px solid $mainBlue;
-  transition: all 0.2s ease;
-}
-
-.menu-menu-1-container a:active{ border-bottom: 5px solid #f39c12; }
-
-body.single-portfolio nav ul li#menu-item-21 > a,
-body.post-type-archive-portfolio nav ul li#menu-item-21 > a{
-  border-bottom: 0;
-}
-
-nav {
-  float: right;
-  margin-top: 35px;
-
-  a{
-    padding: 10px 15px;
-    color: #555;
-  }
-
-  li { display: inline-block; }
-}
-
-#toggle-menu {
-  display: none;
-  z-index: 1;
-}
-
-.menu { display: block; }
-
-.small-screen-nav { display: inherit; }
-
-@media screen and (max-width: 720px) {
-
-  #toggle-menu {
-    display: inherit;
-    margin-top: -60px;
-
-    li {
-      float: right;
-      list-style-type: none;
-    }
-
-    li:after{
-      clear: both;
-    }
-
-    ul { width: 40px;
-
-      li {
-        float: right;
-        width: 50px;
-        background-color: #fff;
-      }
-    }
-  }
-  .menu { display: none;
-
-    li {
-      width: 50%;
-      float: left;
-      position: relative;
-      min-height: 40px;
-      background-color: $mainBlue;
-      text-align: center;
-      padding-top: 10px
-    }
-
-    a {
-      width: 100%;
-      padding: 0px;
-      color: #fff;
-    }
-  }
-
-  nav {
-    margin-top: 25px;
-    height: auto;
-
-    ul {
-      margin-bottom: 0;
-      display: list-item;
-      width: 100%;
-      height: auto;
-      background-color: $mainBlue;
-      z-index: 10;
-    }
-  }
-
-}
-
-@media screen and (max-width: 340px) {
-  #logoImage{
-    width:200px !important;
-  }
-
-  .menu li {
-    width: 100%;
-  }
-}
+@import "style/header";
 
 
 /* ------------------------------------------ *\
@@ -251,7 +135,7 @@ CONTENT
 
 .in-your-face {
   text-align: center;
-  color: #333;
+  color: #666;
   overflow: visible;
   margin-bottom: 40px;
 }
@@ -279,14 +163,6 @@ CONTENT
     margin-top: 90px;
   }
 }
-
-
-/* ------------------------------------------ *\
-HOMEPAGE
-\*------------------------------------------- */
-
-.homeButton{ margin-bottom: 20px; }
-
 
 /* ------------------------------------------ *\
 BLOG
@@ -336,7 +212,8 @@ BLOG
     border-right: 10px solid $mainBlue;
     margin-left:0;
     margin-right: 0;
-    padding: 0 40px 0 40px;
+    margin-bottom: 30px;
+    padding: 0 40px;
     background: linear-gradient(to right, rgba(0,0,0,0.1), transparent 60%);
 
     p{
@@ -367,46 +244,50 @@ BLOG
 
 .post-info {
   display: block;
-  margin-bottom: 5px;
+  clear:both;
+  margin-bottom: 0.5em;
+  font-weight: 200;
+  font-style: italic;
+  color: #ccc;
 }
 
-@import "style/portfolio.scss";
-@import "style/contact.scss";
+.blog-snippet {
+  margin-bottom: 2em;
+}
+
+
+@import "style/contact";
 
 /* ------------------------------------------ *\
 ELEMENT STYLINGS
 \*------------------------------------------- */
-
-.more-link{
-  border-radius: 10px;
-  color: #fff;
-  background-color: $mainBlue;
-  padding: 10px 20px;
-  margin-top: 25px;
-}
-
-.more-link:hover { background-color: #2ecc71; }
 
 .post-readmore {
   margin-top: 15px;
   overflow: visible;
 }
 
-.button, button{
-  -webkit-appearance: none;
-  border-radius: 10px;
+.button-blue{
   color: #fff;
   background-color: $mainBlue;
-  padding: 10px 20px;
-  overflow: visible;
-  transition: background-color 0.2s linear;
-  border:0;
-  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  cursor: pointer;
+  border-color: darken( $mainBlue, 10% );
 }
 
-.button:hover, button:hover { background-color: #2ecc71; }
+.button-blue:visited,
+.button-blue:link{
+  color: #fff;
+  background-color: $mainBlue;
+}
 
+.button-blue:hover {
+  color: #fff;
+  background-color: $mainBlue;
+  border-color: lighten( $mainBlue, 20% );
+}
+
+.button-wrap {
+  margin: 1em 0;
+}
 
 @import "style/footer.scss";
 
@@ -471,13 +352,18 @@ MISC
   margin-right: 20px;
 }
 
-.micro-about {
+.column.micro-about {
   background-color: #eee;
   border: 1px solid #ddd;
-  padding: 10px;
+  padding: 1.5em;
+  margin-bottom: 1em;
 
   &:after {
     clear: both;
+  }
+
+  p {
+    margin-bottom: 0;
   }
 }
 
@@ -509,13 +395,6 @@ MISC
   h2{
     margin-bottom: 10px;
   }
-}
-
-.blog-archive .post-info {
-  margin-bottom: 30px;
-  font-weight: 200;
-  font-style: italic;
-  color: #ccc;
 }
 
 .blog-content img {
@@ -575,11 +454,6 @@ a#pull:before {
 }
 
 @media screen and (max-width: 720px){
-  nav {
-    position: absolute;
-    background-color: $mainBlue;
-  }
-
   .post-tag {
     margin-bottom: 9px;
   }
@@ -593,19 +467,20 @@ a#pull:before {
     float: right;
     margin-left: 15px;
   }
-
-  .post-info {
-    clear:both;
-    margin-bottom: 20px;
-    font-weight: 200;
-    font-style: italic;
-    color: #ccc;
-  }
-
-  .button {
-    margin: 10px 0;
-    display: table;
-  }
 }
 
-@import "style/rainbow.scss";
+pre code {
+  border: 1px solid $lightestPurple;
+  border-left: none;
+  margin-left: 0;
+  background-color: white;
+}
+
+@import "style/portfolio";
+
+@media screen and (max-width: 40rem) {
+  .row div.column.column-75,
+  .row div.column.column-66 {
+    max-width: 100%;
+  }
+}

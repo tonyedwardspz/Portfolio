@@ -1,6 +1,14 @@
-<?php get_header(); ?>
+<?php 
+/**
+ * The default template for displaying content
+ *
+ * Used for both single and index/archive/search.
+ */
 
-<div class="blog-archive BLOGROLL">
+get_header(); 
+?>
+
+<div class="blog-archive INDEX">
 
     <?php
     // limit the loop to non custom post types (i.e only blog posts)
@@ -12,47 +20,50 @@
 
     if (have_posts() ) : while (have_posts() ) : the_post(); ?>
 
-    <div class="blog-item-wrap">
-
-      <div class="unit blog-archive-item two-of-three">
-
-          <h2 class="post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-          <span class="post-info"><?php the_time('l F d, Y'); ?></span>
-
-          <?php the_excerpt(); ?>
-
-          <span class="button force-white">
-            <a href="<?php the_permalink(); ?>">Read More &raquo;</a>
-          </span>
-
+    <div class="blog-snippet">
+      <div class="row">
+          <div class="column">
+              <h3 class="post-title"><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+          </div>
       </div>
 
-      <div class="unit one-of-three post-meta">
+      <div class="row">
+          <div class="column column-75">
+              <span class="post-info"><?php the_time('l F d, Y'); ?></span>
+              <?php the_excerpt(); ?>
+              <div class="button-wrap">
+                  <a href="<?php the_permalink(); ?>" class="button button-outline" title="<?php the_title(); ?>">Read More &raquo;</a>
+              </div>
+          </div>
+          <div class="column">
+              <?php if ( has_post_thumbnail() ) the_post_thumbnail('blog-archive-thumb'); ?>
 
-          <?php
-              if ( has_post_thumbnail() ) the_post_thumbnail('blog-archive-thumb');
-          ?>
-
-          <span class="post-info"><?php the_tags(); ?></span>
-
+          </div>
       </div>
-  </div>
+    </div>
 
     <?php endwhile ; else: ?>
         <p><?php _e('No posts were found. Sorry!'); ?></p>
     <?php endif; ?>
 
-    <div class="pagination">
-         <?php
-            $prev = get_previous_posts_link();
-            if ( !empty($prev) ) { ?>
-                <span class="unit previous-post button force-white"><?php previous_posts_link('Previous'); ?></span>
-        <?php } ?>
-        <?php
-            $next = get_next_posts_link();
-            if ( !empty($next) ) { ?>
-                <span class="unit next-post button force-white"><?php next_posts_link('Next'); ?></span>
-        <?php } ?>
+    <div class="row">
+
+      <div class="column pagination">
+           <?php
+              $prev = get_previous_posts_link();
+              if ( !empty($prev) ) { ?>
+                <div class="button-wrap previous-post">
+                    <?php previous_posts_link('Previous'); ?>
+                </div>
+          <?php } ?>
+          <?php
+              $next = get_next_posts_link();
+              if ( !empty($next) ) { ?>
+                <div class="button-wrap next-post">
+                    <?php next_posts_link('Next'); ?>
+                </div>
+          <?php } ?>
+      </div>
     </div>
 
     <?php wp_reset_query(); ?>

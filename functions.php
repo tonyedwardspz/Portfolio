@@ -15,7 +15,7 @@ define( 'SCRIPT', TEMPPATH. "/script");
 add_theme_support( 'post-thumbnails' );
 add_image_size( 'blog-post-thumb', 340, 0, true ); //340 pixels x unlimited height
 add_image_size( 'blog-archive-thumb', 340, 300, true ); //340 pixels x unlimited height
-add_image_size('portfolio-item-thumb', 275, 210, ture);
+add_image_size('portfolio-item-thumb', 375, 286, true);
 
 // picture fill images
 add_image_size('large', 1000, 9999);
@@ -119,31 +119,13 @@ add_filter( 'script_loader_tag', 'asyncScripts', 10, 2);
 // enqueue styles, loading them in the header
 function load_my_styes(){
 
-		$fontAwesomeURL = getFontAwesomeURL();
-	  wp_register_style( 'font-awesome', $fontAwesomeURL,  array(), '4.1.0', 'all' );
-	  wp_enqueue_style( 'font-awesome' );
+		// $fontAwesomeURL = getFontAwesomeURL();
+	 //  wp_register_style( 'font-awesome', $fontAwesomeURL,  array(), '4.1.0', 'all' );
+	 //  wp_enqueue_style( 'font-awesome' );
+	wp_enqueue_style( 'style', get_stylesheet_uri() );
 
 }
 add_action( 'wp_enqueue_scripts', 'load_my_styes');
-
-
-// modify the more link to introduce styling
-// (WPSE 63748)
-function wpse63748_add_morelink_class( $link, $text )
-{
-    return str_replace(
-        'more-link',
-        'more-link button gamma',
-        $link
-    );
-}
-add_action( 'the_content_more_link', 'wpse63748_add_morelink_class', 10, 2 );
-
-
-function wrap_readmore($more_link) {
-    return '<div class="post-readmore force-white">'.$more_link.'</div>';
-}
-add_filter('the_content_more_link', 'wrap_readmore', 10, 1);
 
 // show the portfolio post type on the front page. MOVE TO PLUGIN????
 function my_get_posts( $query ) {
@@ -162,6 +144,13 @@ function getAttachedImages(){
 	foreach ($attachments as $attachment_id => $attachment) {
 		echo "<li>".wp_get_attachment_image( $attachment_id, 'large' )."</li>";
 	}
+}
+
+add_filter('next_posts_link_attributes', 'posts_link_attributes');
+add_filter('previous_posts_link_attributes', 'posts_link_attributes');
+
+function posts_link_attributes() {
+    return 'class="button button-outline"';
 }
 
 // Add a summary metabox to all posts to use in theme

@@ -10,10 +10,12 @@ var livereload = require('gulp-livereload');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var rename = require("gulp-rename");
+var header = require('gulp-header');
+var csso = require('gulp-csso');
 
-var scriptFiles = ['./script/rainbow.js',
-                   './bower_components/picturefill/dist/picturefill.min.js',
+var scriptFiles = ['./bower_components/picturefill/dist/picturefill.min.js',
                    './bower_components/mixitup/build/jquery.mixitup.min.js',
+                   './bower_components/highlightjs/highlight.pack.min.js',
                    './script/script.js'];
 
 var plumberErrorHandler = { errorHandler: notify.onError({
@@ -22,22 +24,48 @@ var plumberErrorHandler = { errorHandler: notify.onError({
   })
 };
 
-gulp.task('process-sass', function(){
-  gulp.src('./*.scss')
+var banner =  '/*\n' +
+              'Theme Name:     Tony Edwards Protfolio\n' +
+              'Theme URI:      https://github.com/tonyedwardspz/Portfolio\n' +
+              'Description:    The wordpress theme for my personal portfolio website\n' +
+              'Version:        1.0\n' +
+              'Author:         Tony Edwards\n' +
+              'Aurhor URI:     http://www.purelywebdesign.co.uk\n' +
+              '*/\n';
+
+
+gulp.task('sass', function () {
+  return gulp.src('./*.scss')
+    .pipe(plumber(plumberErrorHandler))
+    .pipe(sass.sync().on('error', sass.logError))
+    .pipe(plumber.stop())
+    .pipe(gulp.dest('./'));
+});
+
+
+gulp.task('css', ['sass'], function(){
+  return gulp.src(['./bower_components/normalize.css/normalize.css',
+                   './bower_components/milligram/dist/milligram.css',
+                   './style/font-awesome.css',
+                   './bower_components/highlightjs/styles/github-gist.css',
+                   './style.css'])
     .pipe(plumber(plumberErrorHandler))
     .pipe(sourceMaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(concat('style.css'))
+    .pipe(csso())
     .pipe(autoprefixer({
-            browsers: ['last 3 versions'],
+            browsers: ['last 5 versions'],
             cascade: false
         }))
     .pipe(minifyCss({compatibility: 'ie8'}))
+    .pipe(header(banner))
+    .pipe(plumber.stop())
     .pipe(sourceMaps.write('./'))
     .pipe(gulp.dest('./'))
     .pipe(livereload());
 });
 
-gulp.task('process-javascript', function(){
+gulp.task('javascript', function(){
   return gulp.src(scriptFiles)
     .pipe(sourceMaps.init())
     .pipe(concat('scripts.js'))
@@ -48,10 +76,11 @@ gulp.task('process-javascript', function(){
     .pipe(livereload());
 });
 
+
 gulp.task('watch', function () {
   livereload.listen();
-  gulp.watch('./*.scss', ['process-sass']);
-  gulp.watch('./script/script.js', ['process-javascript']);
+  gulp.watch(['./*.scss', './style/*.*'], ['css']);
+  gulp.watch('./script/script.js', ['javascript']);
 });
 
 gulp.task('clean', function(){
@@ -59,9 +88,9 @@ gulp.task('clean', function(){
         .pipe(clean());
 });
 
-gulp.task('process', function (callback) {
+gulp.task('default', function (callback) {
   runSequence(
-    ['process-sass', 'process-javascript'],
+    ['css', 'javascript'],
     'watch',
     callback);
 });

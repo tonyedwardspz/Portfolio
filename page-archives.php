@@ -5,9 +5,9 @@
 ?>
 <?php get_header(); ?>
 
-                <div class="blog-archive">
+                <div class="blog-archive PAGEARCHIVES row">
 
-                    <div class="unit blog-archive-item two-of-three">
+                    <div class="blog-archive-item column">
 
                         <h2>Archives by Month:</h2>
                         <ul>

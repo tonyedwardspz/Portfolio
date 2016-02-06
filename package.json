@@ -1,0 +1,20 @@
+{
+  "name": "Purely Web Desiign",
+  "version": "0.0.1",
+  "homepage": "http://www.purelywebdesign.co.uk",
+  "description": "My Personal Protfolio Website",
+  "keywords": [
+    "Portfolio"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:tonyedwardspz/portfolio.git"
+  },
+  "author": {
+    "name": "Tony Edwards",
+    "url": "http://www.purelywebdesign.co.uk"
+  },
+  "license": "MIT",
+  "private": true
+}
+

@@ -24,6 +24,10 @@
   ],
   "dependencies": {
     "picturefill": "~3.0.1",
-    "mixitup": "~2.1.11"
+    "mixitup": "~2.1.11",
+    "milligram": "~1.0.3"
+  },
+  "devDependencies": {
+    "highlightjs": "^9.1.0"
   }
 }

@@ -7,7 +7,6 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
-    <link rel="stylesheet" type="text/css" href="<?php bloginfo('stylesheet_url'); ?>" media="screen"/>
     <link rel="stylesheet" type="text/css" href="<?php echo STYLE.'/print.css'; ?>" media="print"/>
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
@@ -20,28 +19,28 @@
     <![endif]-->
 
     <?php wp_head(); ?>
-		<?php
-		$single = (is_single() ? TRUE : FALSE);
-		if ($single){
-			$prevPost = get_previous_post();
-			if (!empty( $prevPost )){ ?>
-				<link rel="prev" href="<?php echo get_permalink($prevPost->ID); ?>"/>
-			<?php }
-			$nextPost = get_next_post();
-			if (!empty( $nextPost )) { ?>
-				<link rel="next" href="<?php echo get_permalink($nextPost->ID); ?>"/>
-			<?php }
-    }
-		?>
+    
+	<?php
+	$single = (is_single() ? TRUE : FALSE);
+	if ($single){
+		$prevPost = get_previous_post();
+		if (!empty( $prevPost )){ ?>
+			<link rel="prev" href="<?php echo get_permalink($prevPost->ID); ?>"/>
+		<?php }
+		$nextPost = get_next_post();
+		if (!empty( $nextPost )) { ?>
+			<link rel="next" href="<?php echo get_permalink($nextPost->ID); ?>"/>
+		<?php }
+    } ?>
 </head>
 
-<body <?php body_class( $class ); ?>>
+<body <?php body_class(); ?>> 
 
 
     <div class="container containerBackground">
-        <div class="grid">
+        <div class="row">
 
-            <header class="unit full-width">
+            <header class="column">
 
                 <?php $logo= get_option('portfolio_logo', IMAGES.'/tony_edwards.png'); ?>
                 <span>
@@ -60,4 +59,4 @@
 
             </header>
 
-            <div class="content">
+        </div>

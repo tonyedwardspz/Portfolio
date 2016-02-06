@@ -4,25 +4,34 @@ CONTACT FORM
 
 .wpcf7{
 
-  form{ text-align: left;
+  form{ 
+    text-align: left;
+    padding-right: 2em;
 
     label{
       display: block;
       font-weight: bold;
       width:100%;
     }
-    input, select, textarea{ padding: 5px; }
-    textarea{
+    input, select, textarea{ 
+      padding: 5px;
       width: 60%;
+    }
+
+    textarea{
+      width: 100%;
       height: 150px;
       display: block;
     }
+
     input[type="submit"]{
       border-radius: 10px;
       border: 1px sold #999999;
       width:25%;
     }
-    input[type="submit"]:hover{ border: 2px solid #cfcfcf; }
+    input[type="submit"]:hover{ 
+      border: 2px solid #cfcfcf; 
+    }
   }
   div{ margin: 15px 0; }
 }
