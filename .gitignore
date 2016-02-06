@@ -38,3 +38,7 @@ Icon
 *.cfg
 node_modules
 bower_components
+script/min/script.min.js
+script/min/script.min.js.map
+style.css
+style.css.map
