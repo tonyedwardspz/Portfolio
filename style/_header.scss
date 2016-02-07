@@ -27,7 +27,9 @@ body.single-portfolio nav ul li#menu-item-21 > a:hover{
   transition: all 0.2s ease;
 }
 
-.menu-menu-1-container a:active{ border-bottom: 5px solid #f39c12; }
+.menu-menu-1-container a:active{ 
+  border-bottom: 5px solid #f39c12; 
+}
 
 body.single-portfolio nav ul li#menu-item-21 > a,
 body.post-type-archive-portfolio nav ul li#menu-item-21 > a{
@@ -39,7 +41,7 @@ nav {
   margin-top: 35px;
   z-index: 999;
 
-  a{
+  #menu-menu-1 a{
     padding: 10px 15px;
     color: #555;
   }
@@ -85,7 +87,6 @@ nav {
   .menu { 
   	display: none;
 
-
     li {
       width: 50%;
       float: left;
@@ -117,22 +118,15 @@ nav {
       background-color: $mainBlue;
       z-index: 10;
     }
-
-    a:link,
-    a:visited,
-    a:hover,
-    a:active {
-      color: #555;
-    }
   }
 }
 
 @media screen and (max-width: 720px) { 
   nav {
-    a:link,
-    a:visited,
-    a:hover,
-    a:active {
+    #menu-menu-1 a:link,
+    #menu-menu-1 a:visited,
+    #menu-menu-1 a:hover,
+    #menu-menu-1 a:active {
       color: #fff;
     }
 
