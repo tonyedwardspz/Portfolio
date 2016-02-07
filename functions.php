@@ -291,7 +291,7 @@ add_shortcode( 'resp_image', 'responsive_insert_image' );
 function responsive_editor_filter($html, $id, $caption, $title, $align, $url){
 	return "[resp_image id='$id']";
 }
-add_filter( 'image_send_to_editor', 'responsive_editor_filter', 10, 9);
+// add_filter( 'image_send_to_editor', 'responsive_editor_filter', 10, 9);
 
 // prevent brute force amplification attacks againt XMLRPC
 add_filter('xmlrpc_enabled','__return_false');
