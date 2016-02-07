@@ -15,11 +15,15 @@
 
     <div class="row">
       <div class="column blog-content blog-archive-item">
+
+        <div class="post-image">
         <?php
             if ( has_post_thumbnail() ) {
                 the_post_thumbnail('blog-post-thumb');
-            }
-
+            } 
+        ?>
+        </div>
+        <?php
             the_content();
         ?>
       </div>
