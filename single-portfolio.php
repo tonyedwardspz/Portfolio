@@ -25,7 +25,7 @@
 								$te_link = te_projects_get_link($post->ID);
 
 								if($te_link) { ?>
-						<span class="button gamma force-white"><a href="<?php echo $te_link; ?>">Visit the Site</a></span>
+						<span class="button button-outline"><a href="<?php echo $te_link; ?>">Visit the Site</a></span>
 
 					</div>
 
